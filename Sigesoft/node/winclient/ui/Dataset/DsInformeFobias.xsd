@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsInformeFobias" targetNamespace="http://tempuri.org/DsInformeFobias.xsd" xmlns:mstns="http://tempuri.org/DsInformeFobias.xsd" xmlns="http://tempuri.org/DsInformeFobias.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsInformeFobias" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsInformeFobias" msprop:Generator_UserDSName="DsInformeFobias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtInformeFobias" msprop:Generator_TableClassName="dtInformeFobiasDataTable" msprop:Generator_TableVarName="tabledtInformeFobias" msprop:Generator_TablePropName="dtInformeFobias" msprop:Generator_RowDeletingName="dtInformeFobiasRowDeleting" msprop:Generator_RowChangingName="dtInformeFobiasRowChanging" msprop:Generator_RowEvHandlerName="dtInformeFobiasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtInformeFobiasRowDeleted" msprop:Generator_UserTableName="dtInformeFobias" msprop:Generator_RowChangedName="dtInformeFobiasRowChanged" msprop:Generator_RowEvArgName="dtInformeFobiasRowChangeEvent" msprop:Generator_RowClassName="dtInformeFobiasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="APELLIDOS_NOMBRES" msprop:Generator_ColumnVarNameInTable="columnAPELLIDOS_NOMBRES" msprop:Generator_ColumnPropNameInRow="APELLIDOS_NOMBRES" msprop:Generator_ColumnPropNameInTable="APELLIDOS_NOMBRESColumn" msprop:Generator_UserColumnName="APELLIDOS_NOMBRES" type="xs:string" minOccurs="0" />
+              <xs:element name="EDAD" msprop:Generator_ColumnVarNameInTable="columnEDAD" msprop:Generator_ColumnPropNameInRow="EDAD" msprop:Generator_ColumnPropNameInTable="EDADColumn" msprop:Generator_UserColumnName="EDAD" type="xs:string" minOccurs="0" />
+              <xs:element name="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_UserColumnName="DNI" type="xs:string" minOccurs="0" />
+              <xs:element name="PUESTO_TRABAJO" msprop:Generator_ColumnVarNameInTable="columnPUESTO_TRABAJO" msprop:Generator_ColumnPropNameInRow="PUESTO_TRABAJO" msprop:Generator_ColumnPropNameInTable="PUESTO_TRABAJOColumn" msprop:Generator_UserColumnName="PUESTO_TRABAJO" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPRESA_CLIENTE" msprop:Generator_ColumnVarNameInTable="columnEMPRESA_CLIENTE" msprop:Generator_ColumnPropNameInRow="EMPRESA_CLIENTE" msprop:Generator_ColumnPropNameInTable="EMPRESA_CLIENTEColumn" msprop:Generator_UserColumnName="EMPRESA_CLIENTE" type="xs:string" minOccurs="0" />
+              <xs:element name="LOGO_PROPIETARIA" msprop:Generator_ColumnVarNameInTable="columnLOGO_PROPIETARIA" msprop:Generator_ColumnPropNameInRow="LOGO_PROPIETARIA" msprop:Generator_ColumnPropNameInTable="LOGO_PROPIETARIAColumn" msprop:Generator_UserColumnName="LOGO_PROPIETARIA" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="TIPO_EXAMEN" msprop:Generator_ColumnVarNameInTable="columnTIPO_EXAMEN" msprop:Generator_ColumnPropNameInRow="TIPO_EXAMEN" msprop:Generator_ColumnPropNameInTable="TIPO_EXAMENColumn" msprop:Generator_UserColumnName="TIPO_EXAMEN" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_EXAMEN" msprop:Generator_ColumnVarNameInTable="columnFECHA_EXAMEN" msprop:Generator_ColumnPropNameInRow="FECHA_EXAMEN" msprop:Generator_ColumnPropNameInTable="FECHA_EXAMENColumn" msprop:Generator_UserColumnName="FECHA_EXAMEN" type="xs:string" minOccurs="0" />
+              <xs:element name="RESULTADOS" msprop:Generator_ColumnVarNameInTable="columnRESULTADOS" msprop:Generator_ColumnPropNameInRow="RESULTADOS" msprop:Generator_ColumnPropNameInTable="RESULTADOSColumn" msprop:Generator_UserColumnName="RESULTADOS" type="xs:string" minOccurs="0" />
+              <xs:element name="RECOMENDACIONES" msprop:Generator_ColumnVarNameInTable="columnRECOMENDACIONES" msprop:Generator_ColumnPropNameInRow="RECOMENDACIONES" msprop:Generator_ColumnPropNameInTable="RECOMENDACIONESColumn" msprop:Generator_UserColumnName="RECOMENDACIONES" type="xs:string" minOccurs="0" />
+              <xs:element name="CONCLUSION" msprop:Generator_ColumnVarNameInTable="columnCONCLUSION" msprop:Generator_ColumnPropNameInRow="CONCLUSION" msprop:Generator_ColumnPropNameInTable="CONCLUSIONColumn" msprop:Generator_UserColumnName="CONCLUSION" type="xs:string" minOccurs="0" />
+              <xs:element name="DX_EXAMEN" msprop:Generator_ColumnVarNameInTable="columnDX_EXAMEN" msprop:Generator_ColumnPropNameInRow="DX_EXAMEN" msprop:Generator_ColumnPropNameInTable="DX_EXAMENColumn" msprop:Generator_UserColumnName="DX_EXAMEN" type="xs:string" minOccurs="0" />
+              <xs:element name="FIRMA" msprop:Generator_ColumnVarNameInTable="columnFIRMA" msprop:Generator_ColumnPropNameInRow="FIRMA" msprop:Generator_ColumnPropNameInTable="FIRMAColumn" msprop:Generator_UserColumnName="FIRMA" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
