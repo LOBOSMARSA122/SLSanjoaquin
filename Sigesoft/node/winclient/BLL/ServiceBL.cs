@@ -27560,7 +27560,7 @@ namespace Sigesoft.Node.WinClient.BLL
                         oserviceDto.r_Costo = item.r_Costo;
                         oserviceDto.i_EnvioHistoria = item.i_EnvioHistoria;
                         oserviceDto.i_EnvioCertificado = item.i_EnvioCertificado;
-                        //oserviceDto.i_IsCapanias = item.i_IsCapanias;
+                        oserviceDto.i_IsCapanias = item.i_IsCapanias;
 
                         service objEntity = serviceAssembler.ToEntity(oserviceDto);
                         dbContext.AddToservice(objEntity);

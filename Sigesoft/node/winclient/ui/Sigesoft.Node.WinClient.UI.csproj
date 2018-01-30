@@ -344,6 +344,12 @@
     <Compile Include="frmAddExam.Designer.cs">
       <DependentUpon>frmAddExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendar.Designer.cs">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClonServicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -850,12 +856,6 @@
     </Compile>
     <Compile Include="frmBuscarServicioPendiente.Designer.cs">
       <DependentUpon>frmBuscarServicioPendiente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCalendar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCalendar.Designer.cs">
-      <DependentUpon>frmCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCamera.cs">
       <SubType>Form</SubType>
@@ -2750,6 +2750,9 @@
     <EmbeddedResource Include="frmAddExam.resx">
       <DependentUpon>frmAddExam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendar.resx">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClonServicio.resx">
       <DependentUpon>frmClonServicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -2788,9 +2791,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarServicioPendiente.resx">
       <DependentUpon>frmBuscarServicioPendiente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCalendar.resx">
-      <DependentUpon>frmCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCamera.resx">
       <DependentUpon>frmCamera.cs</DependentUpon>
