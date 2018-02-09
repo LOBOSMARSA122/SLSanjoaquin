@@ -473,9 +473,9 @@ namespace Sigesoft.Node.WinClient.UI
 
                     OperationResult objOperationResult = new OperationResult();
                     ServiceBL objServiceBL = new ServiceBL();
-                    List<ServiceComponentList> ListServiceComponent1 = new List<ServiceComponentList>();
-                    _strServicelId = grdDataCalendar.Selected.Rows[0].Cells["v_ServiceId"].Value.ToString();
-                    var ListServiceComponent = objServiceBL.GetAllComponentsByService(ref objOperationResult, _strServicelId);
+                    List<ServiceComponentList> ListServiceComponent = new List<ServiceComponentList>();
+                    _strServicelId = grdDataCalendar.Selected.Rows[0].Cells[5].Value.ToString();
+                    ListServiceComponent = objServiceBL.GetServiceComponents(ref objOperationResult, _strServicelId);
                     grdDataServiceComponent.DataSource = ListServiceComponent;
 
                 } 
@@ -495,14 +495,14 @@ namespace Sigesoft.Node.WinClient.UI
                 {
                     OperationResult objOperationResult = new OperationResult();
                     ServiceBL objServiceBL = new ServiceBL();
-                    List<ServiceComponentList> ListServiceComponent1 = new List<ServiceComponentList>();
+                    List<ServiceComponentList> ListServiceComponent = new List<ServiceComponentList>();
                     PacientBL objPacientBL = new PacientBL();
                     personDto objpersonDto = new personDto();
                     if (grdDataCalendar.Selected.Rows.Count == 0) return;
                     _PacientId = grdDataCalendar.Selected.Rows[0].Cells["v_PersonId"].Value.ToString();
                     //string strServicelId = grdDataCalendar.Selected.Rows[0].Cells[5].Value.ToString();
-                    _strServicelId = grdDataCalendar.Selected.Rows[0].Cells["v_ServiceId"].Value.ToString();
-                    var ListServiceComponent = objServiceBL.GetAllComponentsByService(ref objOperationResult, _strServicelId);
+                    _strServicelId = grdDataCalendar.Selected.Rows[0].Cells[5].Value.ToString();
+                    ListServiceComponent = objServiceBL.GetServiceComponents(ref objOperationResult, _strServicelId);
                     grdDataServiceComponent.DataSource = ListServiceComponent;
 
                     txtTrabajador.Text = grdDataCalendar.Selected.Rows[0].Cells["v_Pacient"].Value.ToString();
@@ -773,7 +773,7 @@ namespace Sigesoft.Node.WinClient.UI
 
         private void btnImprimirHojaRuta_Click(object sender, EventArgs e)
         {
-            var frm = new Reports.frmRoadMap(_strServicelId, _calendarId);
+            var frm = new Reports.frmConsentimientoHojaRuta(_strServicelId, _calendarId);
             frm.ShowDialog();
             
         }

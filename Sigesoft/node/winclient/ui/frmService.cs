@@ -400,6 +400,7 @@ namespace Sigesoft.Node.WinClient.UI
                 if (rowSelected.Band.Index.ToString() == "1")
                 {
                     btnEditarESO.Enabled = false;
+                    button1.Enabled = false;
                     btnAdminReportes.Enabled = false;
                     btnGenerarLiquidacion.Enabled = false;
                     btnInterconsulta.Enabled = false;
@@ -426,7 +427,8 @@ namespace Sigesoft.Node.WinClient.UI
             btnInformeRadiologicoOIT.Enabled = 
             btnEstudioEKG.Enabled =
             btnDermatologico.Enabled = 
-            btnEditarESO.Enabled = 
+            btnEditarESO.Enabled =
+             button1.Enabled =
             btnImprimirCertificadoAptitud.Enabled = 
             btnInformeMedicoTrabajador.Enabled =
             btnImprimirInformeMedicoEPS.Enabled = 
