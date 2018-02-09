@@ -53,7 +53,8 @@ namespace Sigesoft.Node.WinClient.UI
                 File.Copy(openFileDialog1.FileName, destino);
             }
             else { File.Copy(openFileDialog1.FileName, destino); }
-
+            MessageBox.Show("Se adjunto correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
             //File.Copy(openFileDialog1.FileName, ruta + "N009-SR000017530" + "-" + "GONZALES PALOMINO LUIS" + ".pdf");
         }
     }

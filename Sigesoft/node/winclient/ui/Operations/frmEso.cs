@@ -7087,6 +7087,11 @@ namespace Sigesoft.Node.WinClient.UI.Operations
             frmSubirInterconsulta frm = new frmSubirInterconsulta(_serviceId, _personName);
             frm.ShowDialog();
         }
+
+        private void chkinterconsulta_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

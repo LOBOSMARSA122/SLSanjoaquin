@@ -178,7 +178,7 @@
             Infragistics.Win.Appearance appearance62 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance63 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance64 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance65 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance66 = new Infragistics.Win.Appearance();
             this.tcSubMain = new System.Windows.Forms.TabControl();
             this.tpAntecedentes = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -299,6 +299,7 @@
             this.lblRecordCountTotalDiagnosticos = new System.Windows.Forms.Label();
             this.btnAceptarDX = new System.Windows.Forms.Button();
             this.tpConclusion = new System.Windows.Forms.TabPage();
+            this.btnSubirInterconsulta = new System.Windows.Forms.Button();
             this.chkinterconsulta = new System.Windows.Forms.CheckBox();
             this.btn7C = new System.Windows.Forms.Button();
             this.btnInterConsulta = new System.Windows.Forms.Button();
@@ -354,7 +355,6 @@
             this.pnlLeftPrincipal = new System.Windows.Forms.Panel();
             this.bgwSaveExamen = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.btnSubirInterconsulta = new System.Windows.Forms.Button();
             this.tcSubMain.SuspendLayout();
             this.tpAntecedentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -413,10 +413,10 @@
             this.tcSubMain.Controls.Add(this.tpExam);
             this.tcSubMain.Controls.Add(this.tpAnalisisDx);
             this.tcSubMain.Controls.Add(this.tpConclusion);
-            this.tcSubMain.Location = new System.Drawing.Point(12, 78);
+            this.tcSubMain.Location = new System.Drawing.Point(8, 78);
             this.tcSubMain.Name = "tcSubMain";
             this.tcSubMain.SelectedIndex = 0;
-            this.tcSubMain.Size = new System.Drawing.Size(1271, 558);
+            this.tcSubMain.Size = new System.Drawing.Size(1338, 608);
             this.tcSubMain.TabIndex = 0;
             // 
             // tpAntecedentes
@@ -757,7 +757,7 @@
             this.General.Location = new System.Drawing.Point(4, 22);
             this.General.Name = "General";
             this.General.Padding = new System.Windows.Forms.Padding(3);
-            this.General.Size = new System.Drawing.Size(1263, 532);
+            this.General.Size = new System.Drawing.Size(1326, 606);
             this.General.TabIndex = 0;
             this.General.Text = "ANAMNESIS";
             this.General.UseVisualStyleBackColor = true;
@@ -1244,7 +1244,7 @@
             this.btnGuardarAnamnesis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarAnamnesis.Image = global::Sigesoft.Node.WinClient.UI.Resources.system_save;
             this.btnGuardarAnamnesis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarAnamnesis.Location = new System.Drawing.Point(1079, 459);
+            this.btnGuardarAnamnesis.Location = new System.Drawing.Point(1079, 533);
             this.btnGuardarAnamnesis.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarAnamnesis.Name = "btnGuardarAnamnesis";
             this.btnGuardarAnamnesis.Size = new System.Drawing.Size(130, 24);
@@ -1261,7 +1261,7 @@
             this.tpExam.Location = new System.Drawing.Point(4, 22);
             this.tpExam.Name = "tpExam";
             this.tpExam.Padding = new System.Windows.Forms.Padding(3);
-            this.tpExam.Size = new System.Drawing.Size(1263, 532);
+            this.tpExam.Size = new System.Drawing.Size(1330, 582);
             this.tpExam.TabIndex = 1;
             this.tpExam.Text = "EXÁMENES";
             this.tpExam.ToolTipText = "EXAMENES";
@@ -1277,7 +1277,7 @@
             this.btnGuardarExamen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarExamen.Image = global::Sigesoft.Node.WinClient.UI.Resources.system_save;
             this.btnGuardarExamen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarExamen.Location = new System.Drawing.Point(983, 503);
+            this.btnGuardarExamen.Location = new System.Drawing.Point(983, 553);
             this.btnGuardarExamen.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarExamen.Name = "btnGuardarExamen";
             this.btnGuardarExamen.Size = new System.Drawing.Size(272, 24);
@@ -1301,8 +1301,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox4);
             this.splitContainer2.Panel2.Controls.Add(this.gbDiagnosticoExamen);
-            this.splitContainer2.Size = new System.Drawing.Size(1246, 494);
-            this.splitContainer2.SplitterDistance = 307;
+            this.splitContainer2.Size = new System.Drawing.Size(1314, 549);
+            this.splitContainer2.SplitterDistance = 356;
             this.splitContainer2.TabIndex = 59;
             // 
             // tcExamList
@@ -1314,7 +1314,7 @@
             this.tcExamList.Location = new System.Drawing.Point(12, 11);
             this.tcExamList.Name = "tcExamList";
             this.tcExamList.SharedControlsPage = this.ultraTabSharedControlsPage1;
-            this.tcExamList.Size = new System.Drawing.Size(1227, 289);
+            this.tcExamList.Size = new System.Drawing.Size(1295, 338);
             this.tcExamList.TabIndex = 0;
             this.tcExamList.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.LeftTop;
             this.tcExamList.TextOrientation = Infragistics.Win.UltraWinTabs.TextOrientation.Horizontal;
@@ -1326,7 +1326,7 @@
             // 
             this.ultraTabSharedControlsPage1.Location = new System.Drawing.Point(20, 1);
             this.ultraTabSharedControlsPage1.Name = "ultraTabSharedControlsPage1";
-            this.ultraTabSharedControlsPage1.Size = new System.Drawing.Size(1206, 287);
+            this.ultraTabSharedControlsPage1.Size = new System.Drawing.Size(1274, 336);
             // 
             // groupBox4
             // 
@@ -1345,7 +1345,7 @@
             this.groupBox4.Controls.Add(this.txtComentario);
             this.groupBox4.Location = new System.Drawing.Point(609, 7);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(620, 165);
+            this.groupBox4.Size = new System.Drawing.Size(688, 165);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             // 
@@ -1429,7 +1429,7 @@
             // 
             this.EXAMENES_lblEstadoComponente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EXAMENES_lblEstadoComponente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EXAMENES_lblEstadoComponente.Location = new System.Drawing.Point(12, 85);
+            this.EXAMENES_lblEstadoComponente.Location = new System.Drawing.Point(80, 85);
             this.EXAMENES_lblEstadoComponente.Name = "EXAMENES_lblEstadoComponente";
             this.EXAMENES_lblEstadoComponente.Size = new System.Drawing.Size(120, 18);
             this.EXAMENES_lblEstadoComponente.TabIndex = 51;
@@ -1450,7 +1450,7 @@
             this.cbEstadoComponente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cbEstadoComponente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoComponente.FormattingEnabled = true;
-            this.cbEstadoComponente.Location = new System.Drawing.Point(138, 85);
+            this.cbEstadoComponente.Location = new System.Drawing.Point(206, 85);
             this.cbEstadoComponente.Name = "cbEstadoComponente";
             this.cbEstadoComponente.Size = new System.Drawing.Size(179, 21);
             this.cbEstadoComponente.TabIndex = 0;
@@ -1465,7 +1465,7 @@
             this.EXAMENES_lblComentarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EXAMENES_lblComentarios.AutoSize = true;
             this.EXAMENES_lblComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EXAMENES_lblComentarios.Location = new System.Drawing.Point(12, 11);
+            this.EXAMENES_lblComentarios.Location = new System.Drawing.Point(80, 11);
             this.EXAMENES_lblComentarios.Name = "EXAMENES_lblComentarios";
             this.EXAMENES_lblComentarios.Size = new System.Drawing.Size(97, 13);
             this.EXAMENES_lblComentarios.TabIndex = 49;
@@ -1475,7 +1475,7 @@
             // 
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 114);
+            this.label23.Location = new System.Drawing.Point(80, 114);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(84, 13);
             this.label23.TabIndex = 52;
@@ -1486,7 +1486,7 @@
             this.cbTipoProcedenciaExamen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cbTipoProcedenciaExamen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoProcedenciaExamen.FormattingEnabled = true;
-            this.cbTipoProcedenciaExamen.Location = new System.Drawing.Point(138, 112);
+            this.cbTipoProcedenciaExamen.Location = new System.Drawing.Point(206, 112);
             this.cbTipoProcedenciaExamen.Name = "cbTipoProcedenciaExamen";
             this.cbTipoProcedenciaExamen.Size = new System.Drawing.Size(179, 21);
             this.cbTipoProcedenciaExamen.TabIndex = 53;
@@ -1498,7 +1498,7 @@
             // txtComentario
             // 
             this.txtComentario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComentario.Location = new System.Drawing.Point(12, 27);
+            this.txtComentario.Location = new System.Drawing.Point(80, 27);
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1710,9 +1710,9 @@
             this.tslFechaCrea,
             this.tslUsuarioAct,
             this.tslFechaAct});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 499);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 549);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1257, 30);
+            this.statusStrip1.Size = new System.Drawing.Size(1324, 30);
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1752,7 +1752,7 @@
             this.tpAnalisisDx.Controls.Add(this.btnAceptarDX);
             this.tpAnalisisDx.Location = new System.Drawing.Point(4, 22);
             this.tpAnalisisDx.Name = "tpAnalisisDx";
-            this.tpAnalisisDx.Size = new System.Drawing.Size(1263, 532);
+            this.tpAnalisisDx.Size = new System.Drawing.Size(1330, 582);
             this.tpAnalisisDx.TabIndex = 3;
             this.tpAnalisisDx.Text = "CONTROL DE CALIDAD";
             this.tpAnalisisDx.ToolTipText = "ANÁLISIS DE DIAGNÓSTICOS";
@@ -1761,7 +1761,7 @@
             // chkUtilizaFirmaControlAuditoria
             // 
             this.chkUtilizaFirmaControlAuditoria.AutoSize = true;
-            this.chkUtilizaFirmaControlAuditoria.Location = new System.Drawing.Point(10, 503);
+            this.chkUtilizaFirmaControlAuditoria.Location = new System.Drawing.Point(938, 559);
             this.chkUtilizaFirmaControlAuditoria.Name = "chkUtilizaFirmaControlAuditoria";
             this.chkUtilizaFirmaControlAuditoria.Size = new System.Drawing.Size(98, 17);
             this.chkUtilizaFirmaControlAuditoria.TabIndex = 62;
@@ -1788,9 +1788,9 @@
             this.gbEdicionDiagnosticoTotal.Controls.Add(this.label30);
             this.gbEdicionDiagnosticoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbEdicionDiagnosticoTotal.ForeColor = System.Drawing.Color.MediumBlue;
-            this.gbEdicionDiagnosticoTotal.Location = new System.Drawing.Point(10, 238);
+            this.gbEdicionDiagnosticoTotal.Location = new System.Drawing.Point(10, 288);
             this.gbEdicionDiagnosticoTotal.Name = "gbEdicionDiagnosticoTotal";
-            this.gbEdicionDiagnosticoTotal.Size = new System.Drawing.Size(1241, 259);
+            this.gbEdicionDiagnosticoTotal.Size = new System.Drawing.Size(1308, 259);
             this.gbEdicionDiagnosticoTotal.TabIndex = 51;
             this.gbEdicionDiagnosticoTotal.TabStop = false;
             this.gbEdicionDiagnosticoTotal.Text = "Edición del Diagnóstico";
@@ -2112,7 +2112,7 @@
             // 
             this.btnAgregarDX.Image = global::Sigesoft.Node.WinClient.UI.Resources.system_search;
             this.btnAgregarDX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarDX.Location = new System.Drawing.Point(1284, 20);
+            this.btnAgregarDX.Location = new System.Drawing.Point(1199, 16);
             this.btnAgregarDX.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarDX.Name = "btnAgregarDX";
             this.btnAgregarDX.Size = new System.Drawing.Size(26, 24);
@@ -2264,7 +2264,7 @@
             this.gbTotalDiagnostico.ForeColor = System.Drawing.Color.MediumBlue;
             this.gbTotalDiagnostico.Location = new System.Drawing.Point(10, 4);
             this.gbTotalDiagnostico.Name = "gbTotalDiagnostico";
-            this.gbTotalDiagnostico.Size = new System.Drawing.Size(1241, 228);
+            this.gbTotalDiagnostico.Size = new System.Drawing.Size(1308, 278);
             this.gbTotalDiagnostico.TabIndex = 50;
             this.gbTotalDiagnostico.TabStop = false;
             this.gbTotalDiagnostico.Text = "TOTAL DE DIAGNÓSTICOS";
@@ -2282,7 +2282,7 @@
             this.btnRemoverTotalDiagnostico.ForeColor = System.Drawing.Color.Black;
             this.btnRemoverTotalDiagnostico.Image = global::Sigesoft.Node.WinClient.UI.Resources.delete;
             this.btnRemoverTotalDiagnostico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoverTotalDiagnostico.Location = new System.Drawing.Point(1154, 55);
+            this.btnRemoverTotalDiagnostico.Location = new System.Drawing.Point(1221, 104);
             this.btnRemoverTotalDiagnostico.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoverTotalDiagnostico.Name = "btnRemoverTotalDiagnostico";
             this.btnRemoverTotalDiagnostico.Size = new System.Drawing.Size(80, 24);
@@ -2304,7 +2304,7 @@
             this.btnAgregarTotalDiagnostico.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarTotalDiagnostico.Image = global::Sigesoft.Node.WinClient.UI.Resources.add;
             this.btnAgregarTotalDiagnostico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarTotalDiagnostico.Location = new System.Drawing.Point(1154, 27);
+            this.btnAgregarTotalDiagnostico.Location = new System.Drawing.Point(1221, 76);
             this.btnAgregarTotalDiagnostico.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarTotalDiagnostico.Name = "btnAgregarTotalDiagnostico";
             this.btnAgregarTotalDiagnostico.Size = new System.Drawing.Size(80, 24);
@@ -2325,7 +2325,7 @@
             this.btnRefrescarTotalDiagnostico.ForeColor = System.Drawing.Color.Black;
             this.btnRefrescarTotalDiagnostico.Image = global::Sigesoft.Node.WinClient.UI.Resources.arrow_refresh;
             this.btnRefrescarTotalDiagnostico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefrescarTotalDiagnostico.Location = new System.Drawing.Point(1154, 83);
+            this.btnRefrescarTotalDiagnostico.Location = new System.Drawing.Point(1221, 132);
             this.btnRefrescarTotalDiagnostico.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefrescarTotalDiagnostico.Name = "btnRefrescarTotalDiagnostico";
             this.btnRefrescarTotalDiagnostico.Size = new System.Drawing.Size(80, 24);
@@ -2457,7 +2457,7 @@
             this.grdTotalDiagnosticos.Location = new System.Drawing.Point(11, 26);
             this.grdTotalDiagnosticos.Margin = new System.Windows.Forms.Padding(2);
             this.grdTotalDiagnosticos.Name = "grdTotalDiagnosticos";
-            this.grdTotalDiagnosticos.Size = new System.Drawing.Size(1139, 195);
+            this.grdTotalDiagnosticos.Size = new System.Drawing.Size(1206, 245);
             this.grdTotalDiagnosticos.TabIndex = 50;
             this.grdTotalDiagnosticos.InitializeRow += new Infragistics.Win.UltraWinGrid.InitializeRowEventHandler(this.grdTotalDiagnosticos_InitializeRow);
             this.grdTotalDiagnosticos.AfterSelectChange += new Infragistics.Win.UltraWinGrid.AfterSelectChangeEventHandler(this.grdTotalDiagnosticos_AfterSelectChange);
@@ -2486,10 +2486,10 @@
             this.lblRecordCountTotalDiagnosticos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRecordCountTotalDiagnosticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordCountTotalDiagnosticos.Location = new System.Drawing.Point(925, 5);
+            this.lblRecordCountTotalDiagnosticos.Location = new System.Drawing.Point(925, 55);
             this.lblRecordCountTotalDiagnosticos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecordCountTotalDiagnosticos.Name = "lblRecordCountTotalDiagnosticos";
-            this.lblRecordCountTotalDiagnosticos.Size = new System.Drawing.Size(225, 19);
+            this.lblRecordCountTotalDiagnosticos.Size = new System.Drawing.Size(292, 19);
             this.lblRecordCountTotalDiagnosticos.TabIndex = 49;
             this.lblRecordCountTotalDiagnosticos.Text = "No se ha realizado la búsqueda aún.";
             this.lblRecordCountTotalDiagnosticos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2504,7 +2504,7 @@
             this.btnAceptarDX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarDX.Image = global::Sigesoft.Node.WinClient.UI.Resources.system_save;
             this.btnAceptarDX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptarDX.Location = new System.Drawing.Point(1099, 504);
+            this.btnAceptarDX.Location = new System.Drawing.Point(1099, 554);
             this.btnAceptarDX.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptarDX.Name = "btnAceptarDX";
             this.btnAceptarDX.Size = new System.Drawing.Size(152, 24);
@@ -2519,12 +2519,12 @@
             this.tpConclusion.Controls.Add(this.chkinterconsulta);
             this.tpConclusion.Controls.Add(this.btn7C);
             this.tpConclusion.Controls.Add(this.btnInterConsulta);
+            this.tpConclusion.Controls.Add(this.chkUtilizaFirmaAptitud);
             this.tpConclusion.Controls.Add(this.btn312);
             this.tpConclusion.Controls.Add(this.btnCertificadoAptitud);
             this.tpConclusion.Controls.Add(this.dptDateGlobalExp);
             this.tpConclusion.Controls.Add(this.label34);
             this.tpConclusion.Controls.Add(this.txtComentarioAptitud);
-            this.tpConclusion.Controls.Add(this.chkUtilizaFirmaAptitud);
             this.tpConclusion.Controls.Add(this.gbRecomendaciones_Conclusiones);
             this.tpConclusion.Controls.Add(this.gbRestricciones_Conclusiones);
             this.tpConclusion.Controls.Add(this.gbConclusionesDiagnosticas);
@@ -2536,21 +2536,43 @@
             this.tpConclusion.Controls.Add(this.btnGuardarConclusiones);
             this.tpConclusion.Location = new System.Drawing.Point(4, 22);
             this.tpConclusion.Name = "tpConclusion";
-            this.tpConclusion.Size = new System.Drawing.Size(1263, 532);
+            this.tpConclusion.Size = new System.Drawing.Size(1330, 582);
             this.tpConclusion.TabIndex = 2;
             this.tpConclusion.Text = "APTITUD";
             this.tpConclusion.ToolTipText = "CONCLUSIONES";
             this.tpConclusion.UseVisualStyleBackColor = true;
             // 
+            // btnSubirInterconsulta
+            // 
+            this.btnSubirInterconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSubirInterconsulta.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSubirInterconsulta.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnSubirInterconsulta.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSubirInterconsulta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnSubirInterconsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirInterconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubirInterconsulta.ForeColor = System.Drawing.Color.Black;
+            this.btnSubirInterconsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.report;
+            this.btnSubirInterconsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubirInterconsulta.Location = new System.Drawing.Point(637, 541);
+            this.btnSubirInterconsulta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubirInterconsulta.Name = "btnSubirInterconsulta";
+            this.btnSubirInterconsulta.Size = new System.Drawing.Size(158, 24);
+            this.btnSubirInterconsulta.TabIndex = 106;
+            this.btnSubirInterconsulta.Text = "Subir Interconsulta";
+            this.btnSubirInterconsulta.UseVisualStyleBackColor = false;
+            this.btnSubirInterconsulta.Click += new System.EventHandler(this.btnSubirInterconsulta_Click);
+            // 
             // chkinterconsulta
             // 
             this.chkinterconsulta.AutoSize = true;
-            this.chkinterconsulta.Location = new System.Drawing.Point(853, 508);
+            this.chkinterconsulta.Location = new System.Drawing.Point(821, 545);
             this.chkinterconsulta.Name = "chkinterconsulta";
             this.chkinterconsulta.Size = new System.Drawing.Size(87, 17);
             this.chkinterconsulta.TabIndex = 105;
             this.chkinterconsulta.Text = "Interconsulta";
             this.chkinterconsulta.UseVisualStyleBackColor = true;
+            this.chkinterconsulta.CheckedChanged += new System.EventHandler(this.chkinterconsulta_CheckedChanged);
             // 
             // btn7C
             // 
@@ -2565,7 +2587,7 @@
             this.btn7C.ForeColor = System.Drawing.Color.Black;
             this.btn7C.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
             this.btn7C.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn7C.Location = new System.Drawing.Point(337, 491);
+            this.btn7C.Location = new System.Drawing.Point(337, 541);
             this.btn7C.Margin = new System.Windows.Forms.Padding(2);
             this.btn7C.Name = "btn7C";
             this.btn7C.Size = new System.Drawing.Size(123, 24);
@@ -2586,7 +2608,7 @@
             this.btnInterConsulta.ForeColor = System.Drawing.Color.Black;
             this.btnInterConsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.arrow_refresh;
             this.btnInterConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInterConsulta.Location = new System.Drawing.Point(464, 491);
+            this.btnInterConsulta.Location = new System.Drawing.Point(464, 541);
             this.btnInterConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.btnInterConsulta.Name = "btnInterConsulta";
             this.btnInterConsulta.Size = new System.Drawing.Size(158, 24);
@@ -2608,7 +2630,7 @@
             this.btn312.ForeColor = System.Drawing.Color.Black;
             this.btn312.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
             this.btn312.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn312.Location = new System.Drawing.Point(174, 491);
+            this.btn312.Location = new System.Drawing.Point(174, 541);
             this.btn312.Margin = new System.Windows.Forms.Padding(2);
             this.btn312.Name = "btn312";
             this.btn312.Size = new System.Drawing.Size(159, 24);
@@ -2629,7 +2651,7 @@
             this.btnCertificadoAptitud.ForeColor = System.Drawing.Color.Black;
             this.btnCertificadoAptitud.Image = global::Sigesoft.Node.WinClient.UI.Resources.building_add;
             this.btnCertificadoAptitud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCertificadoAptitud.Location = new System.Drawing.Point(11, 491);
+            this.btnCertificadoAptitud.Location = new System.Drawing.Point(11, 541);
             this.btnCertificadoAptitud.Margin = new System.Windows.Forms.Padding(2);
             this.btnCertificadoAptitud.Name = "btnCertificadoAptitud";
             this.btnCertificadoAptitud.Size = new System.Drawing.Size(159, 24);
@@ -2674,7 +2696,7 @@
             // 
             this.chkUtilizaFirmaAptitud.AutoSize = true;
             this.chkUtilizaFirmaAptitud.Enabled = false;
-            this.chkUtilizaFirmaAptitud.Location = new System.Drawing.Point(981, 508);
+            this.chkUtilizaFirmaAptitud.Location = new System.Drawing.Point(926, 545);
             this.chkUtilizaFirmaAptitud.Name = "chkUtilizaFirmaAptitud";
             this.chkUtilizaFirmaAptitud.Size = new System.Drawing.Size(98, 17);
             this.chkUtilizaFirmaAptitud.TabIndex = 95;
@@ -2685,12 +2707,13 @@
             // 
             this.gbRecomendaciones_Conclusiones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbRecomendaciones_Conclusiones.Controls.Add(this.lblRecordCountRecomendaciones_Conclusiones);
+            this.gbRecomendaciones_Conclusiones.Controls.Add(this.lblFecVctoGlobal);
             this.gbRecomendaciones_Conclusiones.Controls.Add(this.grdRecomendaciones_Conclusiones);
             this.gbRecomendaciones_Conclusiones.Controls.Add(this.btnAgregarRecomendaciones_Conclusiones);
             this.gbRecomendaciones_Conclusiones.Controls.Add(this.btnRemoverRecomendaciones_Conclusiones);
             this.gbRecomendaciones_Conclusiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbRecomendaciones_Conclusiones.ForeColor = System.Drawing.Color.MediumBlue;
-            this.gbRecomendaciones_Conclusiones.Location = new System.Drawing.Point(11, 258);
+            this.gbRecomendaciones_Conclusiones.Location = new System.Drawing.Point(20, 311);
             this.gbRecomendaciones_Conclusiones.Name = "gbRecomendaciones_Conclusiones";
             this.gbRecomendaciones_Conclusiones.Size = new System.Drawing.Size(611, 228);
             this.gbRecomendaciones_Conclusiones.TabIndex = 95;
@@ -2854,7 +2877,7 @@
             this.gbRestricciones_Conclusiones.Controls.Add(this.btnRemoverRestricciones_ConclusionesTratamiento);
             this.gbRestricciones_Conclusiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbRestricciones_Conclusiones.ForeColor = System.Drawing.Color.MediumBlue;
-            this.gbRestricciones_Conclusiones.Location = new System.Drawing.Point(637, 258);
+            this.gbRestricciones_Conclusiones.Location = new System.Drawing.Point(704, 311);
             this.gbRestricciones_Conclusiones.Name = "gbRestricciones_Conclusiones";
             this.gbRestricciones_Conclusiones.Size = new System.Drawing.Size(616, 228);
             this.gbRestricciones_Conclusiones.TabIndex = 94;
@@ -3016,7 +3039,7 @@
             this.gbConclusionesDiagnosticas.ForeColor = System.Drawing.Color.MediumBlue;
             this.gbConclusionesDiagnosticas.Location = new System.Drawing.Point(10, 37);
             this.gbConclusionesDiagnosticas.Name = "gbConclusionesDiagnosticas";
-            this.gbConclusionesDiagnosticas.Size = new System.Drawing.Size(1243, 215);
+            this.gbConclusionesDiagnosticas.Size = new System.Drawing.Size(1310, 265);
             this.gbConclusionesDiagnosticas.TabIndex = 51;
             this.gbConclusionesDiagnosticas.TabStop = false;
             this.gbConclusionesDiagnosticas.Text = "Conclusiones Diagnósticas";
@@ -3138,7 +3161,7 @@
             this.grdConclusionesDiagnosticas.Location = new System.Drawing.Point(8, 21);
             this.grdConclusionesDiagnosticas.Margin = new System.Windows.Forms.Padding(2);
             this.grdConclusionesDiagnosticas.Name = "grdConclusionesDiagnosticas";
-            this.grdConclusionesDiagnosticas.Size = new System.Drawing.Size(1230, 189);
+            this.grdConclusionesDiagnosticas.Size = new System.Drawing.Size(1297, 239);
             this.grdConclusionesDiagnosticas.TabIndex = 51;
             this.grdConclusionesDiagnosticas.InitializeRow += new Infragistics.Win.UltraWinGrid.InitializeRowEventHandler(this.grdConclusionesDiagnosticas_InitializeRow);
             this.grdConclusionesDiagnosticas.ClickCell += new Infragistics.Win.UltraWinGrid.ClickCellEventHandler(this.grdConclusionesDiagnosticas_ClickCell);
@@ -3148,10 +3171,10 @@
             this.lblRecordCountConclusionesDiagnosticas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRecordCountConclusionesDiagnosticas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordCountConclusionesDiagnosticas.Location = new System.Drawing.Point(883, 0);
+            this.lblRecordCountConclusionesDiagnosticas.Location = new System.Drawing.Point(883, 50);
             this.lblRecordCountConclusionesDiagnosticas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecordCountConclusionesDiagnosticas.Name = "lblRecordCountConclusionesDiagnosticas";
-            this.lblRecordCountConclusionesDiagnosticas.Size = new System.Drawing.Size(360, 19);
+            this.lblRecordCountConclusionesDiagnosticas.Size = new System.Drawing.Size(427, 19);
             this.lblRecordCountConclusionesDiagnosticas.TabIndex = 52;
             this.lblRecordCountConclusionesDiagnosticas.Text = "No se ha realizado la búsqueda aún.";
             this.lblRecordCountConclusionesDiagnosticas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -3217,7 +3240,7 @@
             this.btnGuardarConclusiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarConclusiones.Image = global::Sigesoft.Node.WinClient.UI.Resources.system_save;
             this.btnGuardarConclusiones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarConclusiones.Location = new System.Drawing.Point(1101, 504);
+            this.btnGuardarConclusiones.Location = new System.Drawing.Point(1163, 540);
             this.btnGuardarConclusiones.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarConclusiones.Name = "btnGuardarConclusiones";
             this.btnGuardarConclusiones.Size = new System.Drawing.Size(152, 24);
@@ -3251,7 +3274,7 @@
             // 
             this.lblFecVctoGlobal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lblFecVctoGlobal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFecVctoGlobal.Location = new System.Drawing.Point(18, 635);
+            this.lblFecVctoGlobal.Location = new System.Drawing.Point(14, 14);
             this.lblFecVctoGlobal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecVctoGlobal.Name = "lblFecVctoGlobal";
             this.lblFecVctoGlobal.Size = new System.Drawing.Size(89, 20);
@@ -3279,7 +3302,7 @@
             this.gbDatosPaciente.Controls.Add(this.lblTipoEso);
             this.gbDatosPaciente.Controls.Add(this.label17);
             this.gbDatosPaciente.Controls.Add(this.label16);
-            this.gbDatosPaciente.Location = new System.Drawing.Point(8, 7);
+            this.gbDatosPaciente.Location = new System.Drawing.Point(41, 3);
             this.gbDatosPaciente.Name = "gbDatosPaciente";
             this.gbDatosPaciente.Size = new System.Drawing.Size(1273, 69);
             this.gbDatosPaciente.TabIndex = 2;
@@ -3492,14 +3515,14 @@
             // 
             // uvExamen
             // 
-            appearance65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            appearance65.BackColor2 = System.Drawing.Color.Transparent;
-            appearance65.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance65.BorderAlpha = Infragistics.Win.Alpha.Opaque;
-            appearance65.BorderColor = System.Drawing.Color.Red;
-            appearance65.BorderColor2 = System.Drawing.Color.Red;
-            appearance65.BorderColor3DBase = System.Drawing.Color.Red;
-            this.uvExamen.ErrorAppearance = appearance65;
+            appearance66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            appearance66.BackColor2 = System.Drawing.Color.Transparent;
+            appearance66.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance66.BorderAlpha = Infragistics.Win.Alpha.Opaque;
+            appearance66.BorderColor = System.Drawing.Color.Red;
+            appearance66.BorderColor2 = System.Drawing.Color.Red;
+            appearance66.BorderColor3DBase = System.Drawing.Color.Red;
+            this.uvExamen.ErrorAppearance = appearance66;
             this.uvExamen.ErrorImageAlignment = System.Windows.Forms.ErrorIconAlignment.TopLeft;
             this.uvExamen.ErrorImageTransparentColor = System.Drawing.Color.Transparent;
             this.uvExamen.MessageBoxIcon = System.Windows.Forms.MessageBoxIcon.None;
@@ -3509,12 +3532,11 @@
             // 
             this.pnlLeftPrincipal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pnlLeftPrincipal.Controls.Add(this.gbDatosPaciente);
-            this.pnlLeftPrincipal.Controls.Add(this.lblFecVctoGlobal);
             this.pnlLeftPrincipal.Controls.Add(this.tcSubMain);
             this.pnlLeftPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeftPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnlLeftPrincipal.Name = "pnlLeftPrincipal";
-            this.pnlLeftPrincipal.Size = new System.Drawing.Size(1370, 638);
+            this.pnlLeftPrincipal.Size = new System.Drawing.Size(1370, 713);
             this.pnlLeftPrincipal.TabIndex = 6;
             // 
             // bgwSaveExamen
@@ -3522,33 +3544,12 @@
             this.bgwSaveExamen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwSaveExamen_DoWork);
             this.bgwSaveExamen.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwSaveExamen_RunWorkerCompleted);
             // 
-            // btnSubirInterconsulta
-            // 
-            this.btnSubirInterconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSubirInterconsulta.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSubirInterconsulta.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnSubirInterconsulta.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnSubirInterconsulta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnSubirInterconsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubirInterconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubirInterconsulta.ForeColor = System.Drawing.Color.Black;
-            this.btnSubirInterconsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.report;
-            this.btnSubirInterconsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubirInterconsulta.Location = new System.Drawing.Point(637, 491);
-            this.btnSubirInterconsulta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSubirInterconsulta.Name = "btnSubirInterconsulta";
-            this.btnSubirInterconsulta.Size = new System.Drawing.Size(158, 24);
-            this.btnSubirInterconsulta.TabIndex = 106;
-            this.btnSubirInterconsulta.Text = "Subir Interconsulta";
-            this.btnSubirInterconsulta.UseVisualStyleBackColor = false;
-            this.btnSubirInterconsulta.Click += new System.EventHandler(this.btnSubirInterconsulta_Click);
-            // 
             // frmEso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1028, 655);
+            this.ClientSize = new System.Drawing.Size(1350, 730);
             this.Controls.Add(this.pnlLeftPrincipal);
             this.Name = "frmEso";
             this.ShowIcon = false;

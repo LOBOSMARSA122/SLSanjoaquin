@@ -34,29 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Controls">
-      <HintPath>..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="FineUI">
-      <HintPath>..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\FineUI.dll</HintPath>
-    </Reference>
     <Reference Include="Ionic.Zip.Reduced">
-      <HintPath>..\..\..\..\REPLICACION\dll\Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>..\..\ExternalLibraries\Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>..\..\..\..\REPLICACION\dll\itextsharp.dll</HintPath>
+      <HintPath>..\..\ExternalLibraries\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="NCalc">
-      <HintPath>..\..\..\..\REPLICACION\dll\NCalc.dll</HintPath>
-    </Reference>
-    <Reference Include="PdfViewer">
-      <HintPath>..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\PdfViewer.dll</HintPath>
-    </Reference>
-    <Reference Include="SigPlusNET">
-      <HintPath>..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\SigPlusNET.dll</HintPath>
+      <HintPath>..\..\ExternalLibraries\NCalc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -71,9 +56,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebCam_Capture">
-      <HintPath>..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\WebCam_Capture.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CertificadoAptitudCompleto.cs" />

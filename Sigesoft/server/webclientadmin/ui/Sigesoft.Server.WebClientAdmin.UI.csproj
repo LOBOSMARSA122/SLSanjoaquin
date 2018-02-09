@@ -46,9 +46,6 @@
     <Reference Include="Bytescout.Spreadsheet">
       <HintPath>..\..\..\..\..\..\Compartida\Debug\Bytescout.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Controls">
-      <HintPath>..\..\..\common\bin\Debug\Controls.dll</HintPath>
-    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine">
       <HintPath>c:\program files\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
     </Reference>
@@ -61,12 +58,11 @@
     <Reference Include="CrystalDecisions.Web">
       <HintPath>c:\program files\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Web.dll</HintPath>
     </Reference>
-    <Reference Include="FineUI, Version=3.2.6.0, Culture=neutral, PublicKeyToken=0ff1835d01c384a9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\SLSigesoftClinicaInternacional\server\webclientadmin\ui\bin\FineUI.dll</HintPath>
+    <Reference Include="FineUI">
+      <HintPath>..\..\..\..\ExternalLibraries\FineUI.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>..\..\..\common\bin\Debug\itextsharp.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <Private>True</Private>
@@ -75,12 +71,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\RepSIGSO_v1.0_Postgres\dev\externallibraries\Web\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PdfViewer, Version=1.0.5485.17827, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\REPLICACION\dll\PdfViewer.dll</HintPath>
-    </Reference>
-    <Reference Include="SigPlusNET">
-      <HintPath>..\..\..\common\bin\Debug\SigPlusNET.dll</HintPath>
+    <Reference Include="PdfViewer">
+      <HintPath>..\..\..\..\ExternalLibraries\PdfViewer.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData">
       <Private>True</Private>
