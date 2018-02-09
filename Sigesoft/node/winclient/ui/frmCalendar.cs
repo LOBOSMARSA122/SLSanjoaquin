@@ -773,7 +773,7 @@ namespace Sigesoft.Node.WinClient.UI
 
         private void btnImprimirHojaRuta_Click(object sender, EventArgs e)
         {
-            var frm = new Reports.frmRoadMap(_strServicelId, _calendarId);
+            var frm = new Reports.frmConsentimientoHojaRuta(_strServicelId, _calendarId);
             frm.ShowDialog();
             
         }

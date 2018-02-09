@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crCotizacion : ReportClass {
+    public class crConsentimientoHojaRuta : ReportClass {
         
-        public crCotizacion() {
+        public crConsentimientoHojaRuta() {
         }
         
         public override string ResourceName {
             get {
-                return "crCotizacion.rpt";
+                return "crConsentimientoHojaRuta.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.crCotizacion.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.crConsentimientoHojaRuta.rpt";
             }
             set {
                 // Do nothing
@@ -74,7 +74,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section DetailSection1 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,17 +82,25 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[5];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrCotizacion : Component, ICachedReport {
+    public class CachedcrConsentimientoHojaRuta : Component, ICachedReport {
         
-        public CachedcrCotizacion() {
+        public CachedcrConsentimientoHojaRuta() {
         }
         
         [Browsable(false)]
@@ -129,7 +137,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crCotizacion rpt = new crCotizacion();
+            crConsentimientoHojaRuta rpt = new crConsentimientoHojaRuta();
             rpt.Site = this.Site;
             return rpt;
         }

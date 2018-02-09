@@ -1186,6 +1186,12 @@
     </Compile>
     <Compile Include="ReportDocument.cs" />
     <Compile Include="ReporteAsistencia.cs" />
+    <Compile Include="Reports\crConsentimientoHojaRuta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crConsentimientoHojaRuta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\crRoadMap_2.cs">
       <DependentUpon>crRoadMap_2.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1458,6 +1464,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Factura2.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\frmConsentimientoHojaRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmConsentimientoHojaRuta.Designer.cs">
+      <DependentUpon>frmConsentimientoHojaRuta.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\frmMatrizDatosAbreviada.cs">
       <SubType>Form</SubType>
@@ -2954,6 +2966,10 @@
     <EmbeddedResource Include="Operations\Popups\frmSelectSignature.resx">
       <DependentUpon>frmSelectSignature.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crConsentimientoHojaRuta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crConsentimientoHojaRuta.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\crRoadMap_2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crRoadMap_2.cs</LastGenOutput>
@@ -3137,6 +3153,9 @@
     <EmbeddedResource Include="Reports\Factura2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Factura2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmConsentimientoHojaRuta.resx">
+      <DependentUpon>frmConsentimientoHojaRuta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmMatrizDatosAbreviada.resx">
       <DependentUpon>frmMatrizDatosAbreviada.cs</DependentUpon>
