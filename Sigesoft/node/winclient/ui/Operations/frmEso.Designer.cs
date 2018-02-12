@@ -178,7 +178,7 @@
             Infragistics.Win.Appearance appearance62 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance63 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance64 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance65 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
             this.tcSubMain = new System.Windows.Forms.TabControl();
             this.tpAntecedentes = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -299,6 +299,7 @@
             this.lblRecordCountTotalDiagnosticos = new System.Windows.Forms.Label();
             this.btnAceptarDX = new System.Windows.Forms.Button();
             this.tpConclusion = new System.Windows.Forms.TabPage();
+            this.btnSubirInterconsulta = new System.Windows.Forms.Button();
             this.chkinterconsulta = new System.Windows.Forms.CheckBox();
             this.btn7C = new System.Windows.Forms.Button();
             this.btnInterConsulta = new System.Windows.Forms.Button();
@@ -354,7 +355,6 @@
             this.pnlLeftPrincipal = new System.Windows.Forms.Panel();
             this.bgwSaveExamen = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.btnSubirInterconsulta = new System.Windows.Forms.Button();
             this.tcSubMain.SuspendLayout();
             this.tpAntecedentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -2542,6 +2542,27 @@
             this.tpConclusion.ToolTipText = "CONCLUSIONES";
             this.tpConclusion.UseVisualStyleBackColor = true;
             // 
+            // btnSubirInterconsulta
+            // 
+            this.btnSubirInterconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSubirInterconsulta.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSubirInterconsulta.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnSubirInterconsulta.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSubirInterconsulta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnSubirInterconsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirInterconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubirInterconsulta.ForeColor = System.Drawing.Color.Black;
+            this.btnSubirInterconsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.report;
+            this.btnSubirInterconsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubirInterconsulta.Location = new System.Drawing.Point(637, 491);
+            this.btnSubirInterconsulta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubirInterconsulta.Name = "btnSubirInterconsulta";
+            this.btnSubirInterconsulta.Size = new System.Drawing.Size(158, 24);
+            this.btnSubirInterconsulta.TabIndex = 106;
+            this.btnSubirInterconsulta.Text = "Subir Interconsulta";
+            this.btnSubirInterconsulta.UseVisualStyleBackColor = false;
+            this.btnSubirInterconsulta.Click += new System.EventHandler(this.btnSubirInterconsulta_Click);
+            // 
             // chkinterconsulta
             // 
             this.chkinterconsulta.AutoSize = true;
@@ -3492,14 +3513,14 @@
             // 
             // uvExamen
             // 
-            appearance65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            appearance65.BackColor2 = System.Drawing.Color.Transparent;
-            appearance65.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance65.BorderAlpha = Infragistics.Win.Alpha.Opaque;
-            appearance65.BorderColor = System.Drawing.Color.Red;
-            appearance65.BorderColor2 = System.Drawing.Color.Red;
-            appearance65.BorderColor3DBase = System.Drawing.Color.Red;
-            this.uvExamen.ErrorAppearance = appearance65;
+            appearance15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            appearance15.BackColor2 = System.Drawing.Color.Transparent;
+            appearance15.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance15.BorderAlpha = Infragistics.Win.Alpha.Opaque;
+            appearance15.BorderColor = System.Drawing.Color.Red;
+            appearance15.BorderColor2 = System.Drawing.Color.Red;
+            appearance15.BorderColor3DBase = System.Drawing.Color.Red;
+            this.uvExamen.ErrorAppearance = appearance15;
             this.uvExamen.ErrorImageAlignment = System.Windows.Forms.ErrorIconAlignment.TopLeft;
             this.uvExamen.ErrorImageTransparentColor = System.Drawing.Color.Transparent;
             this.uvExamen.MessageBoxIcon = System.Windows.Forms.MessageBoxIcon.None;
@@ -3521,27 +3542,6 @@
             // 
             this.bgwSaveExamen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwSaveExamen_DoWork);
             this.bgwSaveExamen.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwSaveExamen_RunWorkerCompleted);
-            // 
-            // btnSubirInterconsulta
-            // 
-            this.btnSubirInterconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSubirInterconsulta.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSubirInterconsulta.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnSubirInterconsulta.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnSubirInterconsulta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnSubirInterconsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubirInterconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubirInterconsulta.ForeColor = System.Drawing.Color.Black;
-            this.btnSubirInterconsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.report;
-            this.btnSubirInterconsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubirInterconsulta.Location = new System.Drawing.Point(637, 491);
-            this.btnSubirInterconsulta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSubirInterconsulta.Name = "btnSubirInterconsulta";
-            this.btnSubirInterconsulta.Size = new System.Drawing.Size(158, 24);
-            this.btnSubirInterconsulta.TabIndex = 106;
-            this.btnSubirInterconsulta.Text = "Subir Interconsulta";
-            this.btnSubirInterconsulta.UseVisualStyleBackColor = false;
-            this.btnSubirInterconsulta.Click += new System.EventHandler(this.btnSubirInterconsulta_Click);
             // 
             // frmEso
             // 

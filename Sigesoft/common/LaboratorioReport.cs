@@ -601,6 +601,8 @@ namespace NetPdf
                 document.Add(table);
 
                 #endregion
+
+
           
                 #region Imprimir todos los examenes de laboratorio
 
@@ -1897,6 +1899,55 @@ namespace NetPdf
                     #endregion
 
                     break;
+
+                case "N009-ME000000326":
+
+                    #region COLINESTERASA
+
+                    cells = new List<PdfPCell>();
+
+                    // Subtitulo  ******************
+                    cell = new PdfPCell(new Phrase(serviceComponent.v_ComponentName.ToUpper(), fontSubTitle))
+                    {
+                        Colspan = 4,
+                        BackgroundColor = SubtitleBackgroundColor,
+                        HorizontalAlignment = Element.ALIGN_CENTER,
+                    };
+
+                    cells.Add(cell);
+                    //*****************************************
+
+                    if (serviceComponent.ServiceComponentFields.Count > 0)
+                    {
+                        var resultadosColinesterasa = serviceComponent.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == "N009-MF000002843");
+                        var ColinesterasaVD = serviceComponent.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == "N009-MF000002844");
+
+                        // titulo
+                        cells.Add(new PdfPCell(new Phrase("EXAMEN", fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+                        cells.Add(new PdfPCell(new Phrase("RESULTADO", fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+                        cells.Add(new PdfPCell(new Phrase("VALORES DESEABLES", fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+                        cells.Add(new PdfPCell(new Phrase("UNIDADES", fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+
+                        // 1era fila
+                        cells.Add(new PdfPCell(new Phrase("COLINESTERSA", fontColumnValue)));
+                        cells.Add(new PdfPCell(new Phrase(resultadosColinesterasa == null ? string.Empty : resultadosColinesterasa.v_Value1Name, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+                        cells.Add(new PdfPCell(new Phrase(ColinesterasaVD == null ? string.Empty : ColinesterasaVD.v_Value1Name, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+                        cells.Add(new PdfPCell(new Phrase(ColinesterasaVD == null ? string.Empty : ColinesterasaVD.v_MeasurementUnitName, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+
+                        columnWidths = new float[] { 25f, 25f, 25f, 25f };
+                    }
+                    else
+                    {
+                        cells.Add(new PdfPCell(new Phrase("No se han registrado datos.", fontColumnValue)));
+                        columnWidths = new float[] { 100f };
+                    }
+
+                    table = HandlingItextSharp.GenerateTableFromCells(cells, columnWidths);
+
+                    #endregion
+
+                    break;
+
 
                 //case Sigesoft.Common.Constants.BK_DIRECTO_ID:
 

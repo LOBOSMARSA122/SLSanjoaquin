@@ -51,8 +51,8 @@ namespace Sigesoft.Node.WinClient.UI.Reports
 
                 ds.Tables.Add(dtHeader);
                 ds.Tables.Add(dtDetail);
-                rp.Subreports["crConsentimiento.rpt"].SetDataSource(ds);
-                rp.Section3.SectionFormat.EnableSuppress = false;
+                rp.Subreports["crRoadMap.rpt"].SetDataSource(ds);
+                rp.DetailSection1.SectionFormat.EnableSuppress = false;
 
                 ////Consentimiento
 
@@ -64,8 +64,8 @@ namespace Sigesoft.Node.WinClient.UI.Reports
                 dt.TableName = "dtConsentimiento";
 
                 ds1.Tables.Add(dt);
-                rp.Subreports["crRoadMap.rpt"].SetDataSource(ds);
-                rp.DetailSection1.SectionFormat.EnableSuppress = false;
+                rp.Subreports["crConsentimiento.rpt"].SetDataSource(ds1);
+                rp.Section3.SectionFormat.EnableSuppress = false;
 
                 crystalReportViewer1.EnableDrillDown = false;
                 var Path = Application.StartupPath;
