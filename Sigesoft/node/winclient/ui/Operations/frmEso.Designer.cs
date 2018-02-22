@@ -178,7 +178,7 @@
             Infragistics.Win.Appearance appearance62 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance63 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance64 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance66 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
             this.tcSubMain = new System.Windows.Forms.TabControl();
             this.tpAntecedentes = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -303,14 +303,15 @@
             this.chkinterconsulta = new System.Windows.Forms.CheckBox();
             this.btn7C = new System.Windows.Forms.Button();
             this.btnInterConsulta = new System.Windows.Forms.Button();
+            this.chkUtilizaFirmaAptitud = new System.Windows.Forms.CheckBox();
             this.btn312 = new System.Windows.Forms.Button();
             this.btnCertificadoAptitud = new System.Windows.Forms.Button();
             this.dptDateGlobalExp = new System.Windows.Forms.DateTimePicker();
             this.label34 = new System.Windows.Forms.Label();
             this.txtComentarioAptitud = new System.Windows.Forms.TextBox();
-            this.chkUtilizaFirmaAptitud = new System.Windows.Forms.CheckBox();
             this.gbRecomendaciones_Conclusiones = new System.Windows.Forms.GroupBox();
             this.lblRecordCountRecomendaciones_Conclusiones = new System.Windows.Forms.Label();
+            this.lblFecVctoGlobal = new System.Windows.Forms.Label();
             this.grdRecomendaciones_Conclusiones = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.btnAgregarRecomendaciones_Conclusiones = new System.Windows.Forms.Button();
             this.btnRemoverRecomendaciones_Conclusiones = new System.Windows.Forms.Button();
@@ -329,7 +330,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.btnGuardarConclusiones = new System.Windows.Forms.Button();
             this.btnAntecedentes = new System.Windows.Forms.Button();
-            this.lblFecVctoGlobal = new System.Windows.Forms.Label();
             this.gbDatosPaciente = new System.Windows.Forms.GroupBox();
             this.btnServiciosAnteriores = new System.Windows.Forms.Button();
             this.btnAddListaNerga = new System.Windows.Forms.Button();
@@ -425,7 +425,7 @@
             this.tpAntecedentes.Location = new System.Drawing.Point(4, 22);
             this.tpAntecedentes.Name = "tpAntecedentes";
             this.tpAntecedentes.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAntecedentes.Size = new System.Drawing.Size(1263, 532);
+            this.tpAntecedentes.Size = new System.Drawing.Size(1330, 582);
             this.tpAntecedentes.TabIndex = 5;
             this.tpAntecedentes.Text = "ANTECEDENTES";
             this.tpAntecedentes.UseVisualStyleBackColor = true;
@@ -757,7 +757,7 @@
             this.General.Location = new System.Drawing.Point(4, 22);
             this.General.Name = "General";
             this.General.Padding = new System.Windows.Forms.Padding(3);
-            this.General.Size = new System.Drawing.Size(1326, 606);
+            this.General.Size = new System.Drawing.Size(1330, 582);
             this.General.TabIndex = 0;
             this.General.Text = "ANAMNESIS";
             this.General.UseVisualStyleBackColor = true;
@@ -2554,7 +2554,7 @@
             this.btnSubirInterconsulta.ForeColor = System.Drawing.Color.Black;
             this.btnSubirInterconsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.report;
             this.btnSubirInterconsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubirInterconsulta.Location = new System.Drawing.Point(637, 541);
+            this.btnSubirInterconsulta.Location = new System.Drawing.Point(637, 491);
             this.btnSubirInterconsulta.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubirInterconsulta.Name = "btnSubirInterconsulta";
             this.btnSubirInterconsulta.Size = new System.Drawing.Size(158, 24);
@@ -2616,6 +2616,17 @@
             this.btnInterConsulta.Text = "Interconsulta";
             this.btnInterConsulta.UseVisualStyleBackColor = false;
             this.btnInterConsulta.Click += new System.EventHandler(this.btnInterConsulta_Click);
+            // 
+            // chkUtilizaFirmaAptitud
+            // 
+            this.chkUtilizaFirmaAptitud.AutoSize = true;
+            this.chkUtilizaFirmaAptitud.Enabled = false;
+            this.chkUtilizaFirmaAptitud.Location = new System.Drawing.Point(926, 545);
+            this.chkUtilizaFirmaAptitud.Name = "chkUtilizaFirmaAptitud";
+            this.chkUtilizaFirmaAptitud.Size = new System.Drawing.Size(98, 17);
+            this.chkUtilizaFirmaAptitud.TabIndex = 95;
+            this.chkUtilizaFirmaAptitud.Text = "SI Utilizar Firma";
+            this.chkUtilizaFirmaAptitud.UseVisualStyleBackColor = true;
             // 
             // btn312
             // 
@@ -2692,17 +2703,6 @@
             this.txtComentarioAptitud.TabIndex = 98;
             this.txtComentarioAptitud.Text = "NINGUNA";
             // 
-            // chkUtilizaFirmaAptitud
-            // 
-            this.chkUtilizaFirmaAptitud.AutoSize = true;
-            this.chkUtilizaFirmaAptitud.Enabled = false;
-            this.chkUtilizaFirmaAptitud.Location = new System.Drawing.Point(926, 545);
-            this.chkUtilizaFirmaAptitud.Name = "chkUtilizaFirmaAptitud";
-            this.chkUtilizaFirmaAptitud.Size = new System.Drawing.Size(98, 17);
-            this.chkUtilizaFirmaAptitud.TabIndex = 95;
-            this.chkUtilizaFirmaAptitud.Text = "SI Utilizar Firma";
-            this.chkUtilizaFirmaAptitud.UseVisualStyleBackColor = true;
-            // 
             // gbRecomendaciones_Conclusiones
             // 
             this.gbRecomendaciones_Conclusiones.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -2731,6 +2731,18 @@
             this.lblRecordCountRecomendaciones_Conclusiones.TabIndex = 85;
             this.lblRecordCountRecomendaciones_Conclusiones.Text = "No se ha realizado la búsqueda aún.";
             this.lblRecordCountRecomendaciones_Conclusiones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFecVctoGlobal
+            // 
+            this.lblFecVctoGlobal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lblFecVctoGlobal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFecVctoGlobal.Location = new System.Drawing.Point(14, 14);
+            this.lblFecVctoGlobal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecVctoGlobal.Name = "lblFecVctoGlobal";
+            this.lblFecVctoGlobal.Size = new System.Drawing.Size(89, 20);
+            this.lblFecVctoGlobal.TabIndex = 13;
+            this.lblFecVctoGlobal.Text = "lblFecVctoGlobal";
+            this.lblFecVctoGlobal.Visible = false;
             // 
             // grdRecomendaciones_Conclusiones
             // 
@@ -3270,18 +3282,6 @@
             this.btnAntecedentes.UseVisualStyleBackColor = false;
             this.btnAntecedentes.Click += new System.EventHandler(this.btnAntecedentes_Click);
             // 
-            // lblFecVctoGlobal
-            // 
-            this.lblFecVctoGlobal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lblFecVctoGlobal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFecVctoGlobal.Location = new System.Drawing.Point(14, 14);
-            this.lblFecVctoGlobal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFecVctoGlobal.Name = "lblFecVctoGlobal";
-            this.lblFecVctoGlobal.Size = new System.Drawing.Size(89, 20);
-            this.lblFecVctoGlobal.TabIndex = 13;
-            this.lblFecVctoGlobal.Text = "lblFecVctoGlobal";
-            this.lblFecVctoGlobal.Visible = false;
-            // 
             // gbDatosPaciente
             // 
             this.gbDatosPaciente.Controls.Add(this.btnServiciosAnteriores);
@@ -3515,14 +3515,14 @@
             // 
             // uvExamen
             // 
-            appearance66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            appearance66.BackColor2 = System.Drawing.Color.Transparent;
-            appearance66.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance66.BorderAlpha = Infragistics.Win.Alpha.Opaque;
-            appearance66.BorderColor = System.Drawing.Color.Red;
-            appearance66.BorderColor2 = System.Drawing.Color.Red;
-            appearance66.BorderColor3DBase = System.Drawing.Color.Red;
-            this.uvExamen.ErrorAppearance = appearance66;
+            appearance15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            appearance15.BackColor2 = System.Drawing.Color.Transparent;
+            appearance15.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance15.BorderAlpha = Infragistics.Win.Alpha.Opaque;
+            appearance15.BorderColor = System.Drawing.Color.Red;
+            appearance15.BorderColor2 = System.Drawing.Color.Red;
+            appearance15.BorderColor3DBase = System.Drawing.Color.Red;
+            this.uvExamen.ErrorAppearance = appearance15;
             this.uvExamen.ErrorImageAlignment = System.Windows.Forms.ErrorIconAlignment.TopLeft;
             this.uvExamen.ErrorImageTransparentColor = System.Drawing.Color.Transparent;
             this.uvExamen.MessageBoxIcon = System.Windows.Forms.MessageBoxIcon.None;

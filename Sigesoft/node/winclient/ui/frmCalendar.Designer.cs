@@ -135,6 +135,7 @@
             this.btnRemoverEsamen = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregarExamen = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnEnviarAsistencia = new System.Windows.Forms.Button();
             this.btnEnviarCertificados = new System.Windows.Forms.Button();
             this.btnIniciarCircuitoMasivo = new System.Windows.Forms.Button();
             this.btnSendEmail = new System.Windows.Forms.Button();
@@ -149,7 +150,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
             this.ultraGridDocumentExporter1 = new Infragistics.Win.UltraWinGrid.DocumentExport.UltraGridDocumentExporter(this.components);
-            this.btnEnviarAsistencia = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataCalendar)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -1136,7 +1136,6 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btnDetallado);
-            this.splitContainer1.Panel2.Controls.Add(this.btnConsentimiento);
             this.splitContainer1.Panel2.Controls.Add(this.btnImprimirHojaRuta);
             this.splitContainer1.Panel2.Controls.Add(this.grdDataServiceComponent);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
@@ -1144,6 +1143,27 @@
             this.splitContainer1.Size = new System.Drawing.Size(1077, 452);
             this.splitContainer1.SplitterDistance = 622;
             this.splitContainer1.TabIndex = 53;
+            // 
+            // btnEnviarAsistencia
+            // 
+            this.btnEnviarAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEnviarAsistencia.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEnviarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnEnviarAsistencia.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnEnviarAsistencia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnEnviarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarAsistencia.ForeColor = System.Drawing.Color.Black;
+            this.btnEnviarAsistencia.Image = global::Sigesoft.Node.WinClient.UI.Resources.group_add;
+            this.btnEnviarAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviarAsistencia.Location = new System.Drawing.Point(352, 419);
+            this.btnEnviarAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEnviarAsistencia.Name = "btnEnviarAsistencia";
+            this.btnEnviarAsistencia.Size = new System.Drawing.Size(122, 24);
+            this.btnEnviarAsistencia.TabIndex = 99;
+            this.btnEnviarAsistencia.Text = "Enviar Asistencia";
+            this.btnEnviarAsistencia.UseVisualStyleBackColor = false;
+            this.btnEnviarAsistencia.Click += new System.EventHandler(this.btnEnviarAsistencia_Click);
             // 
             // btnEnviarCertificados
             // 
@@ -1346,7 +1366,7 @@
             this.btnConsentimiento.ForeColor = System.Drawing.Color.Black;
             this.btnConsentimiento.Image = global::Sigesoft.Node.WinClient.UI.Resources.printer_mono;
             this.btnConsentimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsentimiento.Location = new System.Drawing.Point(137, 418);
+            this.btnConsentimiento.Location = new System.Drawing.Point(481, 574);
             this.btnConsentimiento.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsentimiento.Name = "btnConsentimiento";
             this.btnConsentimiento.Size = new System.Drawing.Size(157, 24);
@@ -1354,6 +1374,7 @@
             this.btnConsentimiento.Text = "Consentimiento Informado";
             this.btnConsentimiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsentimiento.UseVisualStyleBackColor = false;
+            this.btnConsentimiento.Visible = false;
             this.btnConsentimiento.Click += new System.EventHandler(this.btnConsentimiento_Click);
             // 
             // btnImprimirHojaRuta
@@ -1369,36 +1390,15 @@
             this.btnImprimirHojaRuta.ForeColor = System.Drawing.Color.Black;
             this.btnImprimirHojaRuta.Image = global::Sigesoft.Node.WinClient.UI.Resources.printer_go;
             this.btnImprimirHojaRuta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimirHojaRuta.Location = new System.Drawing.Point(298, 418);
+            this.btnImprimirHojaRuta.Location = new System.Drawing.Point(162, 418);
             this.btnImprimirHojaRuta.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimirHojaRuta.Name = "btnImprimirHojaRuta";
-            this.btnImprimirHojaRuta.Size = new System.Drawing.Size(138, 24);
+            this.btnImprimirHojaRuta.Size = new System.Drawing.Size(274, 24);
             this.btnImprimirHojaRuta.TabIndex = 95;
-            this.btnImprimirHojaRuta.Text = "Imprimir Hoja de Ruta";
+            this.btnImprimirHojaRuta.Text = "Imprimir Hoja de Ruta y Consentimiento para firmar";
             this.btnImprimirHojaRuta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimirHojaRuta.UseVisualStyleBackColor = false;
             this.btnImprimirHojaRuta.Click += new System.EventHandler(this.btnImprimirHojaRuta_Click);
-            // 
-            // btnEnviarAsistencia
-            // 
-            this.btnEnviarAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEnviarAsistencia.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEnviarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnEnviarAsistencia.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEnviarAsistencia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnEnviarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviarAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarAsistencia.ForeColor = System.Drawing.Color.Black;
-            this.btnEnviarAsistencia.Image = global::Sigesoft.Node.WinClient.UI.Resources.group_add;
-            this.btnEnviarAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnviarAsistencia.Location = new System.Drawing.Point(352, 419);
-            this.btnEnviarAsistencia.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEnviarAsistencia.Name = "btnEnviarAsistencia";
-            this.btnEnviarAsistencia.Size = new System.Drawing.Size(122, 24);
-            this.btnEnviarAsistencia.TabIndex = 99;
-            this.btnEnviarAsistencia.Text = "Enviar Asistencia";
-            this.btnEnviarAsistencia.UseVisualStyleBackColor = false;
-            this.btnEnviarAsistencia.Click += new System.EventHandler(this.btnEnviarAsistencia_Click);
             // 
             // frmCalendar
             // 
@@ -1406,6 +1406,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1116, 589);
+            this.Controls.Add(this.btnConsentimiento);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);

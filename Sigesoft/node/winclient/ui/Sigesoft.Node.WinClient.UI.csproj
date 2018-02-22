@@ -1174,6 +1174,12 @@
     </Compile>
     <Compile Include="ReportDocument.cs" />
     <Compile Include="ReporteAsistencia.cs" />
+    <Compile Include="Reports\crOccupationalCertificate_SeguroC.cs">
+      <DependentUpon>crOccupationalCertificate_SeguroC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\crConsentimientoHojaRuta.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2953,6 +2959,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Operations\Popups\frmSelectSignature.resx">
       <DependentUpon>frmSelectSignature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crOccupationalCertificate_SeguroC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crOccupationalCertificate_SeguroC.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\crConsentimientoHojaRuta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

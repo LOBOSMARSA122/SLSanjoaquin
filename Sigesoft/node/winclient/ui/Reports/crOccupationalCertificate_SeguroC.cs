@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Factura2 : ReportClass {
+    public class crOccupationalCertificate_SeguroC : ReportClass {
         
-        public Factura2() {
+        public crOccupationalCertificate_SeguroC() {
         }
         
         public override string ResourceName {
             get {
-                return "Factura2.rpt";
+                return "crOccupationalCertificate_SeguroC.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.Factura2.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.crOccupationalCertificate_SeguroC.rpt";
             }
             set {
                 // Do nothing
@@ -82,17 +82,33 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section ReportFooterSection3 {
             get {
                 return this.ReportDefinition.Sections[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section ReportFooterSection2 {
+            get {
+                return this.ReportDefinition.Sections[5];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[6];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedFactura2 : Component, ICachedReport {
+    public class CachedcrOccupationalCertificate_SeguroC : Component, ICachedReport {
         
-        public CachedFactura2() {
+        public CachedcrOccupationalCertificate_SeguroC() {
         }
         
         [Browsable(false)]
@@ -129,7 +145,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Factura2 rpt = new Factura2();
+            crOccupationalCertificate_SeguroC rpt = new crOccupationalCertificate_SeguroC();
             rpt.Site = this.Site;
             return rpt;
         }
