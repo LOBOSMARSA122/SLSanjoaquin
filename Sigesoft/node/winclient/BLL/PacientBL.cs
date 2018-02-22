@@ -3328,7 +3328,7 @@ namespace Sigesoft.Node.WinClient.BLL
                                     join pe in dbContext.person on me.v_PersonId equals pe.v_PersonId into pe_join
                                     from pe in pe_join.DefaultIfEmpty()
 
-                                    where A.d_ServiceDate >= FechaInicio && A.d_ServiceDate <= FechaFin && A.i_ServiceStatusId == (int)ServiceStatus.Culminado
+                                    where A.d_ServiceDate >= FechaInicio && A.d_ServiceDate <= FechaFin && A.i_ServiceStatusId == (int)ServiceStatus.Culminado && (A.i_IsCapanias == 0 || A.i_IsCapanias == 1)
                                     select new MatrizExcel
                                     {
                                         IdServicio = A.v_ServiceId,
@@ -3451,9 +3451,9 @@ namespace Sigesoft.Node.WinClient.BLL
                                //let X = varValores.Find(p => p.ServicioId == a.IdServicio).CampoValores.FindAll(o => o.IdComponente == Constants.OIT_ID)
                                //let Y = X.Count == 0 ? "" : X.Find(p => CamposIndiceNeumoconiosis.Contains(p.IdCampo) && p.Valor == "1").NombreCampo
 
-                               let AudiometriaValores = ValoresComponenteOdontogramaValue1(a.IdServicio, Constants.AUDIOMETRIA_ID)
+                               let AudiometriaValores = ValoresComponenteOdontogramaValue2Audios(a.IdServicio, Constants.AUDIOMETRIA_ID, "N009-ME000000325")
 
-                               let AudiometriaDx = varDx.Find(p => p.ServicioId == a.IdServicio).DetalleDxRecomendaciones.FindAll(o => o.IdComponente == Constants.AUDIOMETRIA_ID)
+                               let AudiometriaDx = varDx.Find(p => p.ServicioId == a.IdServicio).DetalleDxRecomendaciones.FindAll(o => o.IdComponente == Constants.AUDIOMETRIA_ID || o.IdComponente == "N009-ME000000325")
                                let AudiometriaDxs = AudiometriaDx != null ? string.Join("/ ", AudiometriaDx.Select(p => p.Descripcion)) : "Audición Normal"
 
                                let EspirometriaDx = varDx.Find(p => p.ServicioId == a.IdServicio).DetalleDxRecomendaciones.FindAll(o => o.IdComponente == Constants.ESPIROMETRIA_ID)
@@ -4347,6 +4347,44 @@ namespace Sigesoft.Node.WinClient.BLL
             }
 
         }
+
+
+        public List<ServiceComponentFieldValuesList> ValoresComponenteOdontogramaValue2Audios(string pstrServiceId, string pstrComponentIdOLD, string pstrComponentIdNEW)
+        {
+            SigesoftEntitiesModel dbContext = new SigesoftEntitiesModel();
+            try
+            {
+                List<ServiceComponentFieldValuesList> serviceComponentFieldValues = (from A in dbContext.service
+                                                                                     join B in dbContext.servicecomponent on A.v_ServiceId equals B.v_ServiceId
+                                                                                     join C in dbContext.servicecomponentfields on B.v_ServiceComponentId equals C.v_ServiceComponentId
+                                                                                     join D in dbContext.servicecomponentfieldvalues on C.v_ServiceComponentFieldsId equals D.v_ServiceComponentFieldsId
+
+                                                                                     where (A.v_ServiceId == pstrServiceId)
+                                                                                           && (B.v_ComponentId == pstrComponentIdOLD || B.v_ComponentId == pstrComponentIdNEW)
+                                                                                           && (B.i_IsDeleted == 0)
+                                                                                           && (C.i_IsDeleted == 0)
+
+                                                                                     select new ServiceComponentFieldValuesList
+                                                                                     {
+                                                                                         //v_ComponentId = B.v_ComponentId,
+                                                                                         v_ComponentFieldId = C.v_ComponentFieldId,
+                                                                                         //v_ComponentFieldId = G.v_ComponentFieldId,
+                                                                                         //v_ComponentFielName = G.v_TextLabel,
+                                                                                         v_ServiceComponentFieldsId = C.v_ServiceComponentFieldsId,
+                                                                                         v_Value1 = D.v_Value1
+                                                                                     }).ToList();
+
+
+                return serviceComponentFieldValues;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
 
         public string AntecedentesPatologicosConcatenados(List<PersonMedicalHistoryList> Lista)
         {
