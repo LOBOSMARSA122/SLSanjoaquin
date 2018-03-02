@@ -1929,9 +1929,9 @@ namespace NetPdf
                         cells.Add(new PdfPCell(new Phrase("UNIDADES", fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
 
                         // 1era fila
-                        cells.Add(new PdfPCell(new Phrase("COLINESTERSA", fontColumnValue)));
-                        cells.Add(new PdfPCell(new Phrase(resultadosColinesterasa == null ? string.Empty : resultadosColinesterasa.v_Value1, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
-                        cells.Add(new PdfPCell(new Phrase(ColinesterasaVD == null ? string.Empty : ColinesterasaVD.v_Value1, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+                        cells.Add(new PdfPCell(new Phrase("COLINESTERASA", fontColumnValue)));
+                        cells.Add(new PdfPCell(new Phrase(resultadosColinesterasa == null ? string.Empty : resultadosColinesterasa.v_Value1Name, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
+                        cells.Add(new PdfPCell(new Phrase(ColinesterasaVD == null ? string.Empty : ColinesterasaVD.v_Value1Name, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
                         cells.Add(new PdfPCell(new Phrase(ColinesterasaVD == null ? string.Empty : ColinesterasaVD.v_MeasurementUnitName, fontColumnValue)) { HorizontalAlignment = Element.ALIGN_CENTER });
 
                         columnWidths = new float[] { 25f, 25f, 25f, 25f };
