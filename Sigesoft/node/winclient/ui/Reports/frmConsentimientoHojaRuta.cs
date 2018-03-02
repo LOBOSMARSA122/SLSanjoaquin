@@ -51,6 +51,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports
 
                 ds.Tables.Add(dtHeader);
                 ds.Tables.Add(dtDetail);
+                rp.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape;
                 rp.Subreports["crRoadMap.rpt"].SetDataSource(ds);
                 rp.DetailSection1.SectionFormat.EnableSuppress = false;
 

@@ -580,7 +580,7 @@ namespace Sigesoft.Node.WinClient.UI
 
         private void grdDataCalendar_AfterSelectChange(object sender, Infragistics.Win.UltraWinGrid.AfterSelectChangeEventArgs e)
         {
-            btnConsentimiento.Enabled = btnExportExcel.Enabled = btnExportPdf.Enabled = (grdDataCalendar.Selected.Rows.Count > 0);
+            btnConsentimiento.Enabled = btnExportExcel.Enabled = btnExportPdf.Enabled =  btnAdjuntar.Enabled =(grdDataCalendar.Selected.Rows.Count > 0);
             btnSendEmail.Enabled = (grdDataCalendar.Selected.Rows.Count > 0 && _sendEmailEnabled);
             
 
@@ -1251,6 +1251,12 @@ namespace Sigesoft.Node.WinClient.UI
 
             frmEnvioEmailCalendar frm = new frmEnvioEmailCalendar(FechaInicio, FechaFin, ee[0].ToString());
             frm.ShowDialog();
+        }
+
+        private void btnAdjuntar_Click(object sender, EventArgs e)
+        {
+            frmAdjuntarConsentimiento frm = new frmAdjuntarConsentimiento(_serviceId);
+            frm.Show();
         }
     
     }
