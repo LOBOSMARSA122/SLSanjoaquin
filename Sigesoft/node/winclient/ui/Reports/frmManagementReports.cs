@@ -1315,10 +1315,6 @@ namespace Sigesoft.Node.WinClient.UI.Reports
             }
             else
             {
-            string rutaConsentimiento = Common.Utils.GetApplicationConfigValue("Consentimiento");
-              var indexOld =  _filesNameToMerge.IndexOf(rutaConsentimiento + _serviceId + "-CI.pdf");
-              var item = _filesNameToMerge[indexOld];
-
                 var x = _filesNameToMerge.ToList();
                 _mergeExPDF.FilesName = x;
                 _mergeExPDF.DestinationFile = Application.StartupPath + @"\TempMerge\" + _serviceId + ".pdf"; ;
