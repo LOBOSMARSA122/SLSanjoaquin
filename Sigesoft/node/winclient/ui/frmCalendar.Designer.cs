@@ -150,6 +150,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
             this.ultraGridDocumentExporter1 = new Infragistics.Win.UltraWinGrid.DocumentExport.UltraGridDocumentExporter(this.components);
+            this.btnAdjuntar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataCalendar)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -1121,6 +1122,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnAdjuntar);
             this.splitContainer1.Panel1.Controls.Add(this.btnEnviarAsistencia);
             this.splitContainer1.Panel1.Controls.Add(this.btnEnviarCertificados);
             this.splitContainer1.Panel1.Controls.Add(this.btnIniciarCircuitoMasivo);
@@ -1400,6 +1402,28 @@
             this.btnImprimirHojaRuta.UseVisualStyleBackColor = false;
             this.btnImprimirHojaRuta.Click += new System.EventHandler(this.btnImprimirHojaRuta_Click);
             // 
+            // btnAdjuntar
+            // 
+            this.btnAdjuntar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdjuntar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdjuntar.Enabled = false;
+            this.btnAdjuntar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAdjuntar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAdjuntar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdjuntar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdjuntar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdjuntar.ForeColor = System.Drawing.Color.Black;
+            this.btnAdjuntar.Image = global::Sigesoft.Node.WinClient.UI.Resources.attach;
+            this.btnAdjuntar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdjuntar.Location = new System.Drawing.Point(524, 418);
+            this.btnAdjuntar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdjuntar.Name = "btnAdjuntar";
+            this.btnAdjuntar.Size = new System.Drawing.Size(86, 24);
+            this.btnAdjuntar.TabIndex = 100;
+            this.btnAdjuntar.Text = "Adjuntar";
+            this.btnAdjuntar.UseVisualStyleBackColor = false;
+            this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
+            // 
             // frmCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1518,5 +1542,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnAgregarExamen;
         private System.Windows.Forms.Button btnEnviarCertificados;
         private System.Windows.Forms.Button btnEnviarAsistencia;
+        private System.Windows.Forms.Button btnAdjuntar;
     }
 }

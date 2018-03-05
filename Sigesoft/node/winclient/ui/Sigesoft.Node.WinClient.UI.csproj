@@ -332,6 +332,12 @@
     <Compile Include="frmAddExam.Designer.cs">
       <DependentUpon>frmAddExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdjuntarConsentimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdjuntarConsentimiento.Designer.cs">
+      <DependentUpon>frmAdjuntarConsentimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2755,6 +2761,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddExam.resx">
       <DependentUpon>frmAddExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdjuntarConsentimiento.resx">
+      <DependentUpon>frmAdjuntarConsentimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalendar.resx">
       <DependentUpon>frmCalendar.cs</DependentUpon>

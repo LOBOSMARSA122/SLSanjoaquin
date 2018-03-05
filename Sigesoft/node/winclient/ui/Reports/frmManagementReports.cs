@@ -1441,6 +1441,17 @@ namespace Sigesoft.Node.WinClient.UI.Reports
                 }
 
 
+                string rutaConsentimiento= Common.Utils.GetApplicationConfigValue("Consentimiento").ToString();
+
+                List<string> filesConsentimientos = Directory.GetFiles(rutaConsentimiento, "*.pdf").ToList();
+
+                var resultadoConsentimiento = filesConsentimientos.Find(p => p == rutaConsentimiento + serviceId + "-CI.pdf");
+                if (resultadoConsentimiento != null)
+                {
+                    _filesNameToMerge.Add(rutaConsentimiento + _serviceId + "-CI.pdf");
+                }
+
+
                 var ListaPdf = _serviceBL.GetFilePdfsByServiceId(ref objOperationResult, _serviceId);
                 if (ListaPdf != null)
                 {
@@ -1687,26 +1698,26 @@ namespace Sigesoft.Node.WinClient.UI.Reports
                     rp.Close();
                     break;
 
-                case Constants.CONSENTIMIENTO_INFORMADO:
-                    var CONSENTIMIENTO_INFORMADO = new PacientBL().GetReportConsentimiento(_serviceId);
+                //case Constants.CONSENTIMIENTO_INFORMADO:
+                //    var CONSENTIMIENTO_INFORMADO = new PacientBL().GetReportConsentimiento(_serviceId);
 
-                    dsGetRepo = new DataSet();
-                    DataTable dtCONSENTIMIENTO_INFORMADO = Sigesoft.Node.WinClient.BLL.Utils.ConvertToDatatable(CONSENTIMIENTO_INFORMADO);
-                    dtCONSENTIMIENTO_INFORMADO.TableName = "dtConsentimiento";
-                    dsGetRepo.Tables.Add(dtCONSENTIMIENTO_INFORMADO);
-                    rp = new Reports.crConsentimiento();
-                    rp.SetDataSource(dsGetRepo);
+                //    dsGetRepo = new DataSet();
+                //    DataTable dtCONSENTIMIENTO_INFORMADO = Sigesoft.Node.WinClient.BLL.Utils.ConvertToDatatable(CONSENTIMIENTO_INFORMADO);
+                //    dtCONSENTIMIENTO_INFORMADO.TableName = "dtConsentimiento";
+                //    dsGetRepo.Tables.Add(dtCONSENTIMIENTO_INFORMADO);
+                //    rp = new Reports.crConsentimiento();
+                //    rp.SetDataSource(dsGetRepo);
 
-                    rp.ExportOptions.ExportFormatType = ExportFormatType.PortableDocFormat;
-                    rp.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile;
-                    objDiskOpt = new DiskFileDestinationOptions();
-                    //objDiskOpt.DiskFileName = Application.StartupPath + @"\TempMerge\" + Constants.CONSENTIMIENTO_INFORMADO + ".pdf";
-                    objDiskOpt.DiskFileName = ruta + serviceId + "-" + Constants.CONSENTIMIENTO_INFORMADO + ".pdf";
-                    _filesNameToMerge.Add(objDiskOpt.DiskFileName);
-                    rp.ExportOptions.DestinationOptions = objDiskOpt;
-                    rp.Export();
-                    rp.Close();
-                    break;
+                //    rp.ExportOptions.ExportFormatType = ExportFormatType.PortableDocFormat;
+                //    rp.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile;
+                //    objDiskOpt = new DiskFileDestinationOptions();
+                //    //objDiskOpt.DiskFileName = Application.StartupPath + @"\TempMerge\" + Constants.CONSENTIMIENTO_INFORMADO + ".pdf";
+                //    objDiskOpt.DiskFileName = ruta + serviceId + "-" + Constants.CONSENTIMIENTO_INFORMADO + ".pdf";
+                //    _filesNameToMerge.Add(objDiskOpt.DiskFileName);
+                //    rp.ExportOptions.DestinationOptions = objDiskOpt;
+                //    rp.Export();
+                //    rp.Close();
+                //    break;
 
                 case Constants.HOJA_RUTA:
                     // Cabecera
