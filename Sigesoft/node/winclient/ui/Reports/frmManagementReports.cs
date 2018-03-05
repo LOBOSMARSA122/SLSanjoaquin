@@ -1441,15 +1441,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports
                 }
 
 
-                string rutaConsentimiento= Common.Utils.GetApplicationConfigValue("Consentimiento").ToString();
-
-                List<string> filesConsentimientos = Directory.GetFiles(rutaConsentimiento, "*.pdf").ToList();
-
-                var resultadoConsentimiento = filesConsentimientos.Find(p => p == rutaConsentimiento + serviceId + "-CI.pdf");
-                if (resultadoConsentimiento != null)
-                {
-                    _filesNameToMerge.Add(rutaConsentimiento + _serviceId + "-CI.pdf");
-                }
+              
 
 
                 var ListaPdf = _serviceBL.GetFilePdfsByServiceId(ref objOperationResult, _serviceId);
@@ -1539,7 +1531,15 @@ namespace Sigesoft.Node.WinClient.UI.Reports
                     //     }
                     // }
 
+                    string rutaConsentimiento = Common.Utils.GetApplicationConfigValue("Consentimiento").ToString();
 
+                    List<string> filesConsentimientos = Directory.GetFiles(rutaConsentimiento, "*.pdf").ToList();
+
+                    var resultadoConsentimiento = filesConsentimientos.Find(p => p == rutaConsentimiento + serviceId + "-CI.pdf");
+                    if (resultadoConsentimiento != null)
+                    {
+                        _filesNameToMerge.Add(rutaConsentimiento + _serviceId + "-CI.pdf");
+                    }
                      var x = _filesNameToMerge.ToList();
                      _mergeExPDF.FilesName = x;
                      _mergeExPDF.DestinationFile = Application.StartupPath + @"\TempMerge\" + _serviceId + ".pdf"; ;
