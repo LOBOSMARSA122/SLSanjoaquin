@@ -1807,5 +1807,54 @@ namespace Sigesoft.Node.WinClient.BLL
             }
         }
 
+        public void AgregarUsuarioExterno(string pOrganizationId, string pProtocolId,List<string> ClientSession)
+        {
+            try
+            {
+                SigesoftEntitiesModel dbContext = new SigesoftEntitiesModel();
+
+                var protocolos = (from a in dbContext.protocol
+                    where a.v_CustomerOrganizationId == pOrganizationId
+                    select a).ToList();
+
+                if (protocolos.Any())
+                {
+                    //Buscar si el protocolo tiene un usuario externo asignado
+                    foreach (var item in protocolos)
+                    {
+                        var protocolsystemusers = (from a in dbContext.protocolsystemuser
+                            where a.v_ProtocolId == item.v_ProtocolId
+                            select a).ToList();
+
+                        if (protocolsystemusers.Any())
+                        {
+                            var systemUserId = protocolsystemusers.ToList()[0].i_SystemUserId; 
+                            List<protocolsystemuserDto> listprProtocolsystemuserDtos = new  List<protocolsystemuserDto>();
+                            foreach (var protocolsystemuser in protocolsystemusers)
+                            {
+                                var protocolsystemuserDto = new protocolsystemuserDto();
+                                protocolsystemuserDto.v_ProtocolId = pProtocolId;
+                                protocolsystemuserDto.i_ApplicationHierarchyId =
+                                    protocolsystemuser.i_ApplicationHierarchyId;
+                                listprProtocolsystemuserDtos.Add(protocolsystemuserDto);
+                            }
+                            ProtocolBL oProtocolBL = new ProtocolBL();
+                            OperationResult objOperationResult = new OperationResult();
+                            oProtocolBL.AddSystemUserExternal_(ref objOperationResult, listprProtocolsystemuserDtos,
+                                ClientSession, systemUserId);
+                            break;
+
+                        }
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
     }
 }

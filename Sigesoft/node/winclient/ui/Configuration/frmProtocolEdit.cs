@@ -259,6 +259,9 @@ namespace Sigesoft.Node.WinClient.UI.Configuration
                             
                    _protocolId = _protocolBL.AddProtocol(ref objOperationResult, _protocolDTO, _protocolcomponentListDTO, Globals.ClientSession.GetAsList());
 
+                    //Agregar Usuario Externo
+                   _protocolBL.AgregarUsuarioExterno(_protocolDTO.v_CustomerOrganizationId, _protocolId, Globals.ClientSession.GetAsList());
+
                    if (!string.IsNullOrEmpty(_protocolId))
                    {
                        _mode = "Edit";
