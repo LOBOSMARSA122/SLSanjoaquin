@@ -2501,12 +2501,12 @@ namespace Sigesoft.Common
         public const string OBLITANG_IZQ_PLACA = "N009-MF000002119";
 
 
-        public const string CAMPOS_PULMONARES = "N009-MF000002497";
-        public const string HILOS = "N009-MF000002499";
-        public const string MEDIASTINOS = "N009-MF000002498";
-        public const string SENOS = "N009-MF000002496";
-        public const string SILUETA_CARDIOVASCULAR = "N009-MF000002500";
-        public const string VERTICES = "N009-MF000002501";
+        public const string CAMPOS_PULMONARES = "N009-MF000000591";
+        public const string HILOS = "N009-MF000000592";
+        public const string MEDIASTINOS = "N009-MF000000594";
+        public const string SENOS = "N009-MF000000593";
+        public const string SILUETA_CARDIOVASCULAR = "N009-MF000000595";
+        public const string VERTICES = "N009-MF000000590";
         #endregion
 
         #region Vacunas

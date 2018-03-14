@@ -894,6 +894,7 @@ namespace Sigesoft.Node.WinClient.BLL
 
                 var sql = (from a in objEntity.ToList()
                            let FirmaMedicoMedicina = ObtenerFirmaMedicoExamen(pstrServiceId, Constants.EXAMEN_FISICO_ID, Constants.EXAMEN_FISICO_7C_ID)
+                           let DatosDoctoMedicina = ObtenerDatosMedicoMedicina(pstrServiceId, Constants.EXAMEN_FISICO_ID, Constants.EXAMEN_FISICO_7C_ID)
 
                            select new ServiceList
                            {
@@ -958,8 +959,8 @@ namespace Sigesoft.Node.WinClient.BLL
 
                                //Datos del Doctor
                                FirmaDoctor = a.FirmaDoctor,
-                               NombreDoctor = a.NombreDoctor,
-                               CMP = a.CMP,
+                               NombreDoctor = DatosDoctoMedicina.NombreDoctor +  " " + DatosDoctoMedicina.ApellidosDoctor,
+                               CMP = DatosDoctoMedicina.CMP,
 
                                d_Fur = a.d_Fur,
                                v_CatemenialRegime = a.v_CatemenialRegime,

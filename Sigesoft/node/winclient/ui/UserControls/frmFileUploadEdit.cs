@@ -497,6 +497,10 @@ namespace Sigesoft.Node.WinClient.UI.UserControls
                     {
                         rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgLABOrigen").ToString());
                     }
+                    else if (Consultorio == "PSICOLOGIA")
+                    {
+                        rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgPsicoOrigen").ToString());
+                    }
                     if (rutaOrigen == null)
                     {
                         MessageBox.Show("No se ha configurado una ruta para subir el archivo.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -548,6 +552,10 @@ namespace Sigesoft.Node.WinClient.UI.UserControls
                     else if (Consultorio == "LABORATORIO")
                     {
                         rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgLABOrigen").ToString());
+                    }
+                    else if (Consultorio == "PSICOLOGIA")
+                    {
+                        rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgPsicoOrigen").ToString());
                     }
                     if (rutaOrigen == null)
                     {

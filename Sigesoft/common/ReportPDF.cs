@@ -998,9 +998,39 @@ namespace NetPdf
                 ReportBuilderReportForTheWorker(serviceComponent, orderPrint, fontTitleTable, fontSubTitleNegroNegrita, fontColumnValue, subTitleBackGroundColor, document, diagnosticRepository);
 
                 #endregion
+                #region Firma y sello Médico 1
+
+                table = new PdfPTable(2);
+                table.HorizontalAlignment = Element.ALIGN_RIGHT;
+                table.WidthPercentage = 30;
+
+                columnWidths = new float[] { 15f, 45f };
+                table.SetWidths(columnWidths);
+
+                PdfPCell cellFirma1 = null;
+
+                if (filiationData.FirmaDoctorAuditor != null)
+                    cellFirma1 = new PdfPCell(HandlingItextSharp.GetImage(filiationData.FirmaDoctorAuditor, null, null, 100, 35));
+                else
+                    cellFirma1 = new PdfPCell(new Phrase(" ", fontColumnValue));
+
+                cellFirma1.HorizontalAlignment = Element.ALIGN_CENTER;
+                cellFirma1.VerticalAlignment = Element.ALIGN_MIDDLE;
+                cellFirma1.FixedHeight = 50F;
+
+                cell = new PdfPCell(new Phrase("FIRMA Y SELLO MÉDICO", fontColumnValue));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.VerticalAlignment = Element.ALIGN_MIDDLE;
+
+                table.AddCell(cell);
+                table.AddCell(cellFirma1);
+
+                document.Add(table);
+
+                #endregion
 
                 ////Salto de Pàgina
-                //document.NewPage();
+                document.NewPage();
                 #region Hallazgos y recomendaciones
 
                 cells = new List<PdfPCell>();
@@ -4981,38 +5011,38 @@ namespace NetPdf
                 }
 
 
-                var Vertices = findOIT.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.VERTICES);
+                var Vertices = findRayosX.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.RX_VERTICES_ID);
                 if (Vertices != null)
                 {
                     ValorVertices = Vertices.v_Value1;
                 }
 
-                var CamposPulmonares = findOIT.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.CAMPOS_PULMONARES);
+                var CamposPulmonares = findRayosX.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.RX_CAMPOS_PULMONARES_ID);
                 if (CamposPulmonares != null)
                 {
                     ValorCamposPulmonares = CamposPulmonares.v_Value1;
                 }
 
-                var Hilos = findOIT.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.HILOS);
+                var Hilos = findRayosX.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.RX_HILOS_ID);
                 if (Hilos != null)
                 {
                     ValorHilos = Hilos.v_Value1;
                 }
 
-                var Diafragmaticos = findOIT.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.SENOS);
+                var Diafragmaticos = findRayosX.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.RX_COSTO_ODIAFRAGMATICO_ID);
                 if (Diafragmaticos != null)
                 {
                     ValorDiafragmaticos = Diafragmaticos.v_Value1;
                 }
 
 
-                var Mediastinos = findOIT.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.MEDIASTINOS);
+                var Mediastinos = findRayosX.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.RX_MEDIASTINOS_DESCRIPCION_ID);
                 if (Mediastinos != null)
                 {
                     ValorMediastinos = Mediastinos.v_Value1;
                 }
 
-                var SiluetaCardiaca = findOIT.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.SILUETA_CARDIOVASCULAR);
+                var SiluetaCardiaca = findRayosX.ServiceComponentFields.Find(p => p.v_ComponentFieldsId == Sigesoft.Common.Constants.RX_SILUETA_CARDIACA_DESCRIPCION_ID);
                 if (SiluetaCardiaca != null)
                 {
                     ValorSiluetaCardiaca = SiluetaCardiaca.v_Value1;

@@ -74,6 +74,7 @@
     <Compile Include="Custom\ComponentFieldValuesRestrictionList.cs" />
     <Compile Include="Custom\ControlVacunasList.cs" />
     <Compile Include="Custom\DatosDoctorMedicina.cs" />
+    <Compile Include="Custom\DatosMedicoMedicina.cs" />
     <Compile Include="Custom\DiagnosticosRecomendaciones.cs" />
     <Compile Include="Custom\DiagnosticosRecomendacionesList.cs" />
     <Compile Include="Custom\DiagnosticRepositoryJerarquizada.cs" />
