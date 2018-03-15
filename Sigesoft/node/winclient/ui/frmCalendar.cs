@@ -1288,7 +1288,16 @@ namespace Sigesoft.Node.WinClient.UI
 
             //Recorerer los que tienen el check
 
+            var check = grdDataCalendar.Rows;
+            var count = 0;
+            foreach (var item in check)
+            {
+                if ((bool)item.Cells["b_Seleccionar"].Value)
+                {
+                    count += 1;
+                }
 
+            }
 
 
 
