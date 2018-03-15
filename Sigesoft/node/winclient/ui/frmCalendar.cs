@@ -20,6 +20,7 @@ namespace Sigesoft.Node.WinClient.UI
 {
     public partial class frmCalendar : Form
     {
+        
         string strFilterExpression;
         string _PacientId;
         List<string> _ListaCalendar;
@@ -1280,27 +1281,36 @@ namespace Sigesoft.Node.WinClient.UI
 
         private void btnCambiarProtocolo_Click(object sender, EventArgs e)
         {
-            frmProtocolManagement frm = new frmProtocolManagement("View", (int)MasterService.Eso, 0);
-            frm.Show();
+            ServiceBL oServiceBL = new ServiceBL();
+            frmProtocolManagement frm = new frmProtocolManagement("View",  (int)ServiceType.Empresarial,(int)MasterService.Eso);
+            frm.ShowDialog();
 
-            var protocolId = frm._pstrProtocolId;
+            if (frm.DialogResult == System.Windows.Forms.DialogResult.Cancel)
+                return;
 
+            if (string.IsNullOrEmpty(frm._pstrProtocolId))
+                return;
 
-            //Recorerer los que tienen el check
+           var protocolId = frm._pstrProtocolId;
 
             var check = grdDataCalendar.Rows;
-            var count = 0;
             foreach (var item in check)
             {
                 if ((bool)item.Cells["b_Seleccionar"].Value)
                 {
-                    count += 1;
+                    var serviceId = item.Cells["v_ServiceId"].Value.ToString();
+                    oServiceBL.CambiarProtocoloDeServicio(serviceId, protocolId);
                 }
-
             }
+            btnFilter_Click(sender, e);
+            MessageBox.Show("Se completo correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            
 
-
+            
+         
+           
+            
        
         }       
     
