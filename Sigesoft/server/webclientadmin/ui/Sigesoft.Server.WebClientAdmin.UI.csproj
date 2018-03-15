@@ -44,7 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bytescout.Spreadsheet">
-      <HintPath>..\..\..\..\..\..\Compartida\Debug\Bytescout.Spreadsheet.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\Bytescout.Spreadsheet.dll</HintPath>
     </Reference>
     <Reference Include="Controls">
       <HintPath>..\..\..\common\bin\Debug\Controls.dll</HintPath>

@@ -14,6 +14,7 @@ using Infragistics.Win;
 using Infragistics.Win.UltraWinGrid.DocumentExport;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using Sigesoft.Node.WinClient.UI.Configuration;
 
 namespace Sigesoft.Node.WinClient.UI
 {
@@ -267,6 +268,7 @@ namespace Sigesoft.Node.WinClient.UI
             List<ServiceComponentList> ListServiceComponent = new List<ServiceComponentList>();
 
             DateTime FechaAgenda = DateTime.Parse(grdDataCalendar.Selected.Rows[0].Cells[4].Value.ToString());
+
             if (FechaAgenda.Date != DateTime.Now.Date)
             {
                 MessageBox.Show("No se permite Iniciar Circuito con una fecha que no sea la actual.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -582,7 +584,8 @@ namespace Sigesoft.Node.WinClient.UI
         {
             btnConsentimiento.Enabled = btnExportExcel.Enabled = btnExportPdf.Enabled =  btnAdjuntar.Enabled =(grdDataCalendar.Selected.Rows.Count > 0);
             btnSendEmail.Enabled = (grdDataCalendar.Selected.Rows.Count > 0 && _sendEmailEnabled);
-            
+
+            btnCambiarProtocolo.Enabled = (grdDataCalendar.Selected.Rows.Count > 0);
 
             if (grdDataCalendar.Selected.Rows.Count != 0)
             {
@@ -1258,6 +1261,14 @@ namespace Sigesoft.Node.WinClient.UI
             frmAdjuntarConsentimiento frm = new frmAdjuntarConsentimiento(_serviceId);
             frm.Show();
         }
+
+        private void btnCambiarProtocolo_Click(object sender, EventArgs e)
+        {
+            frmProtocolManagement frm = new frmProtocolManagement();
+            frm.Show();
+        }
+
+       
     
     }
 }

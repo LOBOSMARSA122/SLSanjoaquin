@@ -65,13 +65,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime">
-      <HintPath>..\..\..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\Antlr3.Runtime.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="AxInterop.ZKFPEngXControl">
-      <HintPath>..\..\..\..\..\SLSigesoftDesarrollo\Sigesoft\common\bin\Debug\AxInterop.ZKFPEngXControl.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\AxInterop.ZKFPEngXControl.dll</HintPath>
     </Reference>
     <Reference Include="Controls">
-      <HintPath>..\..\..\..\..\..\REPLICACION\dll\Controls.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\Controls.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <Private>False</Private>
@@ -86,7 +86,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="FineUI">
-      <HintPath>..\..\..\..\..\..\REPLICACION\dll\FineUI.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\FineUI.dll</HintPath>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <Private>True</Private>
@@ -127,8 +127,10 @@
     <Reference Include="itextsharp">
       <HintPath>..\..\..\common\bin\Debug\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -152,7 +154,7 @@
       <HintPath>Utils\ScrapperReniecSunat.dll</HintPath>
     </Reference>
     <Reference Include="SigPlusNET">
-      <HintPath>..\..\..\..\..\..\REPLICACION\dll\SigPlusNET.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\SigPlusNET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -180,7 +182,7 @@
     <Reference Include="UIAutomationProvider" />
     <Reference Include="UIAutomationTypes" />
     <Reference Include="WebCam_Capture">
-      <HintPath>..\..\..\..\..\..\REPLICACION\dll\WebCam_Capture.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\WebCam_Capture.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>

@@ -61,9 +61,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="GeneratedAssemblers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
