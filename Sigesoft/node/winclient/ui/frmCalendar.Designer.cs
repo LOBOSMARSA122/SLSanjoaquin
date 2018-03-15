@@ -152,7 +152,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
             this.ultraGridDocumentExporter1 = new Infragistics.Win.UltraWinGrid.DocumentExport.UltraGridDocumentExporter(this.components);
-            this.ucBoton1 = new Sigesoft.Node.WinClient.UI.UserControls.ucBoton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataCalendar)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -1125,7 +1124,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btnCambiarProtocolo);
-            this.splitContainer1.Panel1.Controls.Add(this.ucBoton1);
             this.splitContainer1.Panel1.Controls.Add(this.btnAdjuntar);
             this.splitContainer1.Panel1.Controls.Add(this.btnEnviarAsistencia);
             this.splitContainer1.Panel1.Controls.Add(this.btnEnviarCertificados);
@@ -1162,13 +1160,15 @@
             this.btnCambiarProtocolo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarProtocolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarProtocolo.ForeColor = System.Drawing.Color.Black;
+            this.btnCambiarProtocolo.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_form_edit;
             this.btnCambiarProtocolo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarProtocolo.Location = new System.Drawing.Point(444, 418);
+            this.btnCambiarProtocolo.Location = new System.Drawing.Point(395, 418);
             this.btnCambiarProtocolo.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiarProtocolo.Name = "btnCambiarProtocolo";
-            this.btnCambiarProtocolo.Size = new System.Drawing.Size(76, 24);
+            this.btnCambiarProtocolo.Size = new System.Drawing.Size(125, 24);
             this.btnCambiarProtocolo.TabIndex = 102;
             this.btnCambiarProtocolo.Text = "Cambiar Protocolo";
+            this.btnCambiarProtocolo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCambiarProtocolo.UseVisualStyleBackColor = false;
             this.btnCambiarProtocolo.Click += new System.EventHandler(this.btnCambiarProtocolo_Click);
             // 
@@ -1206,12 +1206,13 @@
             this.btnEnviarAsistencia.ForeColor = System.Drawing.Color.Black;
             this.btnEnviarAsistencia.Image = global::Sigesoft.Node.WinClient.UI.Resources.group_add;
             this.btnEnviarAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnviarAsistencia.Location = new System.Drawing.Point(307, 419);
+            this.btnEnviarAsistencia.Location = new System.Drawing.Point(276, 419);
             this.btnEnviarAsistencia.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviarAsistencia.Name = "btnEnviarAsistencia";
-            this.btnEnviarAsistencia.Size = new System.Drawing.Size(133, 24);
+            this.btnEnviarAsistencia.Size = new System.Drawing.Size(115, 24);
             this.btnEnviarAsistencia.TabIndex = 99;
             this.btnEnviarAsistencia.Text = "Enviar Asistencia";
+            this.btnEnviarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEnviarAsistencia.UseVisualStyleBackColor = false;
             this.btnEnviarAsistencia.Click += new System.EventHandler(this.btnEnviarAsistencia_Click);
             // 
@@ -1230,9 +1231,9 @@
             this.btnEnviarCertificados.Location = new System.Drawing.Point(152, 419);
             this.btnEnviarCertificados.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviarCertificados.Name = "btnEnviarCertificados";
-            this.btnEnviarCertificados.Size = new System.Drawing.Size(151, 24);
+            this.btnEnviarCertificados.Size = new System.Drawing.Size(120, 24);
             this.btnEnviarCertificados.TabIndex = 98;
-            this.btnEnviarCertificados.Text = "Formatos Ocupacionales";
+            this.btnEnviarCertificados.Text = "Formatos Ocupa.";
             this.btnEnviarCertificados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEnviarCertificados.UseVisualStyleBackColor = false;
             this.btnEnviarCertificados.Click += new System.EventHandler(this.btnEnviarCertificados_Click);
@@ -1449,16 +1450,6 @@
             this.btnImprimirHojaRuta.UseVisualStyleBackColor = false;
             this.btnImprimirHojaRuta.Click += new System.EventHandler(this.btnImprimirHojaRuta_Click);
             // 
-            // ucBoton1
-            // 
-            this.ucBoton1.Dni = null;
-            this.ucBoton1.Examen = null;
-            this.ucBoton1.FechaServicio = new System.DateTime(((long)(0)));
-            this.ucBoton1.Location = new System.Drawing.Point(0, 0);
-            this.ucBoton1.Name = "ucBoton1";
-            this.ucBoton1.Size = new System.Drawing.Size(84, 32);
-            this.ucBoton1.TabIndex = 101;
-            // 
             // frmCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1578,6 +1569,5 @@
         private System.Windows.Forms.Button btnEnviarAsistencia;
         private System.Windows.Forms.Button btnAdjuntar;
         private System.Windows.Forms.Button btnCambiarProtocolo;
-        private UserControls.ucBoton ucBoton1;
     }
 }
