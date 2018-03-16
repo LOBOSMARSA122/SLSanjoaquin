@@ -2637,6 +2637,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AudiometriaAfterValueChangeEventArgs.cs" />
+    <Compile Include="UserControls\ucHisorialTriaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHisorialTriaje.Designer.cs">
+      <DependentUpon>ucHisorialTriaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucHistorialGrupoFactor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHistorialGrupoFactor.Designer.cs">
+      <DependentUpon>ucHistorialGrupoFactor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucOsteo_SJ.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -3843,6 +3855,12 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHisorialTriaje.resx">
+      <DependentUpon>ucHisorialTriaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHistorialGrupoFactor.resx">
+      <DependentUpon>ucHistorialGrupoFactor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucOsteo_SJ.resx">
       <DependentUpon>ucOsteo_SJ.cs</DependentUpon>

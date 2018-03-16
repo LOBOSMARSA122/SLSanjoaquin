@@ -298,7 +298,9 @@ namespace Sigesoft.Common
         UcOjoSeco=19,
         UcOsteoMuscular = 20,
         UcBoton = 211,
-        ucOSTEOSJL = 21
+        ucOSTEOSJL = 21,
+        UcHistorialTriaje = 23,
+        UcHistorialGrupoSanguineo = 24
     }
 
     public enum ComponentType
