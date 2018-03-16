@@ -889,6 +889,19 @@ namespace Sigesoft.Node.WinClient.UI.Operations
                                             // Establecer evento
                                             ctl = ucRxLumboSacra;
                                             break;
+                                        case ControlType.UcHistorialTriaje:
+                                            var ucHisorialTriaje = new Sigesoft.Node.WinClient.UI.UserControls.ucHisorialTriaje();
+                                            ucHisorialTriaje.PersonId = _personId;
+                                            // Establecer evento
+                                            ctl = ucHisorialTriaje;
+                                            break;
+
+                                        case ControlType.UcHistorialGrupoSanguineo:
+                                            var ucHisorialGrupoSanguineo = new Sigesoft.Node.WinClient.UI.UserControls.ucHistorialGrupoFactor();
+                                            ucHisorialGrupoSanguineo.PersonId = _personId;
+                                            // Establecer evento
+                                            ctl = ucHisorialGrupoSanguineo;
+                                            break;
                                         case ControlType.UcOjoSeco:
                                             var ucOjoSeco = new Sigesoft.Node.WinClient.UI.UserControls.ucOjoSeco();
                                             ucOjoSeco.Name = f.v_ComponentFieldId;
@@ -1365,6 +1378,19 @@ namespace Sigesoft.Node.WinClient.UI.Operations
                                         ucRxLumboSacra.Name = f.v_ComponentFieldId;
                                         // Establecer evento
                                         ctl = ucRxLumboSacra;
+                                        break;
+                                    case ControlType.UcHistorialTriaje:
+                                        var ucHisorialTriaje = new Sigesoft.Node.WinClient.UI.UserControls.ucHisorialTriaje();
+                                        ucHisorialTriaje.PersonId = _personId;
+                                        // Establecer evento
+                                        ctl = ucHisorialTriaje;
+                                        break;
+
+                                    case ControlType.UcHistorialGrupoSanguineo:
+                                        var ucHisorialGrupoSanguineo = new Sigesoft.Node.WinClient.UI.UserControls.ucHistorialGrupoFactor();
+                                        ucHisorialGrupoSanguineo.PersonId = _personId;
+                                        // Establecer evento
+                                        ctl = ucHisorialGrupoSanguineo;
                                         break;
                                     case ControlType.UcOjoSeco:
                                         var ucOjoSeco = new Sigesoft.Node.WinClient.UI.UserControls.ucOjoSeco();
