@@ -218,6 +218,29 @@
     <Compile Include="Configuration\frmProtocolManagement.Designer.cs">
       <DependentUpon>frmProtocolManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\Apendice01_HistOcup.cs">
+      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\Apendice01_HistOcup.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsAnexo02_HistoriaOcupacional.cs">
+      <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\dsAnexo02_HistoriaOcupacional.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsApendice05_EKG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsApendice05_EKG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\dsAudiometria.cs">
       <DependentUpon>dsAudiometria.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -275,6 +298,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsFobiasocialAdmin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsHistoriaOcupacional.cs">
+      <DependentUpon>dsHistoriaOcupacional.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Dataset\DsInformeFobias.cs">
       <DependentUpon>DsInformeFobias.xsd</DependentUpon>
@@ -1194,10 +1221,64 @@
     </Compile>
     <Compile Include="ReportDocument.cs" />
     <Compile Include="ReporteAsistencia.cs" />
+    <Compile Include="Reports\crAnexo02_HistoriaOcupacional.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAnexo02_HistoriaOcupacional.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAnexo05_Espiro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAnexo05_Espiro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crApendice01_HistoriaOcupacional.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crApendice01_HistoriaOcupacional.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crApendice05_EKG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crApendice05_EKG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crApendice08_Espiro01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crApendice08_Espiro01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crApendice08_Espiro02.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crApendice08_Espiro02.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\crConsentimientoHojaRuta.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crConsentimientoHojaRuta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crEspiroCuestionarioGoldField.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crEspiroCuestionarioGoldField.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crfichaComplementariaHO_EKG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crfichaComplementariaHO_EKG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crFichaMedicaOcupacional_EKG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crFichaMedicaOcupacional_EKG.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\crRoadMap_2.cs">
@@ -1465,6 +1546,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crOftalmologia_S_J.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\csEKGInformeElectroCardiografiaoGoldField.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>csEKGInformeElectroCardiografiaoGoldField.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Factura2.cs">
@@ -2989,9 +3076,45 @@
     <EmbeddedResource Include="Operations\Popups\frmSelectSignature.resx">
       <DependentUpon>frmSelectSignature.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAnexo02_HistoriaOcupacional.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAnexo02_HistoriaOcupacional.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAnexo05_Espiro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAnexo05_Espiro.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crApendice01_HistoriaOcupacional.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crApendice01_HistoriaOcupacional.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crApendice05_EKG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crApendice05_EKG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crApendice08_Espiro01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crApendice08_Espiro01.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crApendice08_Espiro02.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crApendice08_Espiro02.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\crConsentimientoHojaRuta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crConsentimientoHojaRuta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crEspiroCuestionarioGoldField.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEspiroCuestionarioGoldField.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crfichaComplementariaHO_EKG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crfichaComplementariaHO_EKG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crFichaMedicaOcupacional_EKG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crFichaMedicaOcupacional_EKG.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\crRoadMap_2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -3172,6 +3295,10 @@
     <EmbeddedResource Include="Reports\crOftalmologia_S_J.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crOftalmologia_S_J1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\csEKGInformeElectroCardiografiaoGoldField.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>csEKGInformeElectroCardiografiaoGoldField.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Factura2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -3930,6 +4057,39 @@
     </None>
     <None Include="Dataset\Anexo7D.xss">
       <DependentUpon>Anexo7D.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Apendice01_HistOcup.xsc">
+      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\Apendice01_HistOcup.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Apendice01_HistOcup.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\Apendice01_HistOcup.xss">
+      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsAnexo02_HistoriaOcupacional.xsc">
+      <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsAnexo02_HistoriaOcupacional.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAnexo02_HistoriaOcupacional.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsAnexo02_HistoriaOcupacional.xss">
+      <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice05_EKG.xsc">
+      <DependentUpon>dsApendice05_EKG.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice05_EKG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsApendice05_EKG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsApendice05_EKG.xss">
+      <DependentUpon>dsApendice05_EKG.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DsAudiometriaAudiomax.xsc">
       <DependentUpon>DsAudiometriaAudiomax.xsd</DependentUpon>

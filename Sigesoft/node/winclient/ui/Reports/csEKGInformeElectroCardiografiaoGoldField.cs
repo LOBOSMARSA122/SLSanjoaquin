@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crHistoriaOcupacional : ReportClass {
+    public class csEKGInformeElectroCardiografiaoGoldField : ReportClass {
         
-        public crHistoriaOcupacional() {
+        public csEKGInformeElectroCardiografiaoGoldField() {
         }
         
         public override string ResourceName {
             get {
-                return "crHistoriaOcupacional.rpt";
+                return "csEKGInformeElectroCardiografiaoGoldField.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.crHistoriaOcupacional.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.csEKGInformeElectroCardiografiaoGoldField.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrHistoriaOcupacional : Component, ICachedReport {
+    public class CachedcsEKGInformeElectroCardiografiaoGoldField : Component, ICachedReport {
         
-        public CachedcrHistoriaOcupacional() {
+        public CachedcsEKGInformeElectroCardiografiaoGoldField() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crHistoriaOcupacional rpt = new crHistoriaOcupacional();
+            csEKGInformeElectroCardiografiaoGoldField rpt = new csEKGInformeElectroCardiografiaoGoldField();
             rpt.Site = this.Site;
             return rpt;
         }

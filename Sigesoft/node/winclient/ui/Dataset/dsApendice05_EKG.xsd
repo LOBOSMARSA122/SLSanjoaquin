@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsApendica05_EKG" targetNamespace="http://tempuri.org/dsApendica05_EKG.xsd" xmlns:mstns="http://tempuri.org/dsApendica05_EKG.xsd" xmlns="http://tempuri.org/dsApendica05_EKG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsApendica05_EKG" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsApendica05_EKG" msprop:Generator_UserDSName="dsApendica05_EKG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Apendice05_EKG" msprop:Generator_TableClassName="Apendice05_EKGDataTable" msprop:Generator_TableVarName="tableApendice05_EKG" msprop:Generator_TablePropName="Apendice05_EKG" msprop:Generator_RowDeletingName="Apendice05_EKGRowDeleting" msprop:Generator_RowChangingName="Apendice05_EKGRowChanging" msprop:Generator_RowEvHandlerName="Apendice05_EKGRowChangeEventHandler" msprop:Generator_RowDeletedName="Apendice05_EKGRowDeleted" msprop:Generator_UserTableName="Apendice05_EKG" msprop:Generator_RowChangedName="Apendice05_EKGRowChanged" msprop:Generator_RowEvArgName="Apendice05_EKGRowChangeEvent" msprop:Generator_RowClassName="Apendice05_EKGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ApellidoNombre" msprop:Generator_ColumnVarNameInTable="columnApellidoNombre" msprop:Generator_ColumnPropNameInRow="ApellidoNombre" msprop:Generator_ColumnPropNameInTable="ApellidoNombreColumn" msprop:Generator_UserColumnName="ApellidoNombre" type="xs:string" minOccurs="0" />
+              <xs:element name="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_UserColumnName="Edad" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaNacimiento" msprop:Generator_ColumnVarNameInTable="columnFechaNacimiento" msprop:Generator_ColumnPropNameInRow="FechaNacimiento" msprop:Generator_ColumnPropNameInTable="FechaNacimientoColumn" msprop:Generator_UserColumnName="FechaNacimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="Empresa" msprop:Generator_ColumnVarNameInTable="columnEmpresa" msprop:Generator_ColumnPropNameInRow="Empresa" msprop:Generator_ColumnPropNameInTable="EmpresaColumn" msprop:Generator_UserColumnName="Empresa" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaEvaluacion" msprop:Generator_ColumnVarNameInTable="columnFechaEvaluacion" msprop:Generator_ColumnPropNameInRow="FechaEvaluacion" msprop:Generator_ColumnPropNameInTable="FechaEvaluacionColumn" msprop:Generator_UserColumnName="FechaEvaluacion" type="xs:string" minOccurs="0" />
+              <xs:element name="PreOcupacional" msprop:Generator_ColumnVarNameInTable="columnPreOcupacional" msprop:Generator_ColumnPropNameInRow="PreOcupacional" msprop:Generator_ColumnPropNameInTable="PreOcupacionalColumn" msprop:Generator_UserColumnName="PreOcupacional" type="xs:string" minOccurs="0" />
+              <xs:element name="Ocupacional" msprop:Generator_ColumnVarNameInTable="columnOcupacional" msprop:Generator_ColumnPropNameInRow="Ocupacional" msprop:Generator_ColumnPropNameInTable="OcupacionalColumn" msprop:Generator_UserColumnName="Ocupacional" type="xs:string" minOccurs="0" />
+              <xs:element name="ProstOcupacional_x0020_" msprop:Generator_ColumnVarNameInTable="columnProstOcupacional_" msprop:Generator_ColumnPropNameInRow="ProstOcupacional_" msprop:Generator_ColumnPropNameInTable="ProstOcupacional_Column" msprop:Generator_UserColumnName="ProstOcupacional " type="xs:string" minOccurs="0" />
+              <xs:element name="FrecuenciaCardiaca" msprop:Generator_ColumnVarNameInTable="columnFrecuenciaCardiaca" msprop:Generator_ColumnPropNameInRow="FrecuenciaCardiaca" msprop:Generator_ColumnPropNameInTable="FrecuenciaCardiacaColumn" msprop:Generator_UserColumnName="FrecuenciaCardiaca" type="xs:string" minOccurs="0" />
+              <xs:element name="RitmoCardiaco" msprop:Generator_ColumnVarNameInTable="columnRitmoCardiaco" msprop:Generator_ColumnPropNameInRow="RitmoCardiaco" msprop:Generator_ColumnPropNameInTable="RitmoCardiacoColumn" msprop:Generator_UserColumnName="RitmoCardiaco" type="xs:string" minOccurs="0" />
+              <xs:element name="IntervaloPR" msprop:Generator_ColumnVarNameInTable="columnIntervaloPR" msprop:Generator_ColumnPropNameInRow="IntervaloPR" msprop:Generator_ColumnPropNameInTable="IntervaloPRColumn" msprop:Generator_UserColumnName="IntervaloPR" type="xs:string" minOccurs="0" />
+              <xs:element name="IntervaloQT" msprop:Generator_ColumnVarNameInTable="columnIntervaloQT" msprop:Generator_ColumnPropNameInRow="IntervaloQT" msprop:Generator_ColumnPropNameInTable="IntervaloQTColumn" msprop:Generator_UserColumnName="IntervaloQT" type="xs:string" minOccurs="0" />
+              <xs:element name="EjeElectrico" msprop:Generator_ColumnVarNameInTable="columnEjeElectrico" msprop:Generator_ColumnPropNameInRow="EjeElectrico" msprop:Generator_ColumnPropNameInTable="EjeElectricoColumn" msprop:Generator_UserColumnName="EjeElectrico" type="xs:string" minOccurs="0" />
+              <xs:element name="SegmentoST" msprop:Generator_ColumnVarNameInTable="columnSegmentoST" msprop:Generator_ColumnPropNameInRow="SegmentoST" msprop:Generator_ColumnPropNameInTable="SegmentoSTColumn" msprop:Generator_UserColumnName="SegmentoST" type="xs:string" minOccurs="0" />
+              <xs:element name="Electrocardiagraficas" msprop:Generator_ColumnVarNameInTable="columnElectrocardiagraficas" msprop:Generator_ColumnPropNameInRow="Electrocardiagraficas" msprop:Generator_ColumnPropNameInTable="ElectrocardiagraficasColumn" msprop:Generator_UserColumnName="Electrocardiagraficas" type="xs:string" minOccurs="0" />
+              <xs:element name="Conclusiones" msprop:Generator_ColumnVarNameInTable="columnConclusiones" msprop:Generator_ColumnPropNameInRow="Conclusiones" msprop:Generator_ColumnPropNameInTable="ConclusionesColumn" msprop:Generator_UserColumnName="Conclusiones" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmaMedicoCardiologo" msprop:Generator_ColumnVarNameInTable="columnFirmaMedicoCardiologo" msprop:Generator_ColumnPropNameInRow="FirmaMedicoCardiologo" msprop:Generator_ColumnPropNameInTable="FirmaMedicoCardiologoColumn" msprop:Generator_UserColumnName="FirmaMedicoCardiologo" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmaTrabajador" msprop:Generator_ColumnVarNameInTable="columnFirmaTrabajador" msprop:Generator_ColumnPropNameInRow="FirmaTrabajador" msprop:Generator_ColumnPropNameInTable="FirmaTrabajadorColumn" msprop:Generator_UserColumnName="FirmaTrabajador" type="xs:string" minOccurs="0" />
+              <xs:element name="HuellaTrabajador" msprop:Generator_ColumnVarNameInTable="columnHuellaTrabajador" msprop:Generator_ColumnPropNameInRow="HuellaTrabajador" msprop:Generator_ColumnPropNameInTable="HuellaTrabajadorColumn" msprop:Generator_UserColumnName="HuellaTrabajador" type="xs:string" minOccurs="0" />
+              <xs:element name="b_logo" msprop:Generator_ColumnVarNameInTable="columnb_logo" msprop:Generator_ColumnPropNameInRow="b_logo" msprop:Generator_ColumnPropNameInTable="b_logoColumn" msprop:Generator_UserColumnName="b_logo" type="xs:byte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

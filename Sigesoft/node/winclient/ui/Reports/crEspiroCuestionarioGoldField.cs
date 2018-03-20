@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crHistoriaOcupacional : ReportClass {
+    public class crEspiroCuestionarioGoldField : ReportClass {
         
-        public crHistoriaOcupacional() {
+        public crEspiroCuestionarioGoldField() {
         }
         
         public override string ResourceName {
             get {
-                return "crHistoriaOcupacional.rpt";
+                return "crEspiroCuestionarioGoldField.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.crHistoriaOcupacional.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.crEspiroCuestionarioGoldField.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrHistoriaOcupacional : Component, ICachedReport {
+    public class CachedcrEspiroCuestionarioGoldField : Component, ICachedReport {
         
-        public CachedcrHistoriaOcupacional() {
+        public CachedcrEspiroCuestionarioGoldField() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crHistoriaOcupacional rpt = new crHistoriaOcupacional();
+            crEspiroCuestionarioGoldField rpt = new crEspiroCuestionarioGoldField();
             rpt.Site = this.Site;
             return rpt;
         }

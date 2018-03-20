@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crHistoriaOcupacional : ReportClass {
+    public class crAnexo05_Espiro : ReportClass {
         
-        public crHistoriaOcupacional() {
+        public crAnexo05_Espiro() {
         }
         
         public override string ResourceName {
             get {
-                return "crHistoriaOcupacional.rpt";
+                return "crAnexo05_Espiro.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.crHistoriaOcupacional.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.crAnexo05_Espiro.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrHistoriaOcupacional : Component, ICachedReport {
+    public class CachedcrAnexo05_Espiro : Component, ICachedReport {
         
-        public CachedcrHistoriaOcupacional() {
+        public CachedcrAnexo05_Espiro() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crHistoriaOcupacional rpt = new crHistoriaOcupacional();
+            crAnexo05_Espiro rpt = new crAnexo05_Espiro();
             rpt.Site = this.Site;
             return rpt;
         }

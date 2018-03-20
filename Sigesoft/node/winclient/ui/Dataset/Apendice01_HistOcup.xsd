@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Apencice01_HO" msprop:Generator_TableClassName="Apencice01_HODataTable" msprop:Generator_TableVarName="tableApencice01_HO" msprop:Generator_RowChangedName="Apencice01_HORowChanged" msprop:Generator_TablePropName="Apencice01_HO" msprop:Generator_RowDeletingName="Apencice01_HORowDeleting" msprop:Generator_RowChangingName="Apencice01_HORowChanging" msprop:Generator_RowEvHandlerName="Apencice01_HORowChangeEventHandler" msprop:Generator_RowDeletedName="Apencice01_HORowDeleted" msprop:Generator_RowClassName="Apencice01_HORow" msprop:Generator_UserTableName="Apencice01_HO" msprop:Generator_RowEvArgName="Apencice01_HORowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ApellidoNombre" msprop:Generator_ColumnVarNameInTable="columnApellidoNombre" msprop:Generator_ColumnPropNameInRow="ApellidoNombre" msprop:Generator_ColumnPropNameInTable="ApellidoNombreColumn" msprop:Generator_UserColumnName="ApellidoNombre" type="xs:string" minOccurs="0" />
+              <xs:element name="NumeroRegistro" msprop:Generator_ColumnVarNameInTable="columnNumeroRegistro" msprop:Generator_ColumnPropNameInRow="NumeroRegistro" msprop:Generator_ColumnPropNameInTable="NumeroRegistroColumn" msprop:Generator_UserColumnName="NumeroRegistro" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaNacimiento" msprop:Generator_ColumnVarNameInTable="columnFechaNacimiento" msprop:Generator_ColumnPropNameInRow="FechaNacimiento" msprop:Generator_ColumnPropNameInTable="FechaNacimientoColumn" msprop:Generator_UserColumnName="FechaNacimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_UserColumnName="Sexo" type="xs:string" minOccurs="0" />
+              <xs:element name="LugarProcedencia" msprop:Generator_ColumnVarNameInTable="columnLugarProcedencia" msprop:Generator_ColumnPropNameInRow="LugarProcedencia" msprop:Generator_ColumnPropNameInTable="LugarProcedenciaColumn" msprop:Generator_UserColumnName="LugarProcedencia" type="xs:string" minOccurs="0" />
+              <xs:element name="Profesion" msprop:Generator_ColumnVarNameInTable="columnProfesion" msprop:Generator_ColumnPropNameInRow="Profesion" msprop:Generator_ColumnPropNameInTable="ProfesionColumn" msprop:Generator_UserColumnName="Profesion" type="xs:string" minOccurs="0" />
+              <xs:element name="LugarNacimiento" msprop:Generator_ColumnVarNameInTable="columnLugarNacimiento" msprop:Generator_ColumnPropNameInRow="LugarNacimiento" msprop:Generator_ColumnPropNameInTable="LugarNacimientoColumn" msprop:Generator_UserColumnName="LugarNacimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_UserColumnName="FechaInicio" type="xs:string" minOccurs="0" />
+              <xs:element name="Empresa" msprop:Generator_ColumnVarNameInTable="columnEmpresa" msprop:Generator_ColumnPropNameInRow="Empresa" msprop:Generator_ColumnPropNameInTable="EmpresaColumn" msprop:Generator_UserColumnName="Empresa" type="xs:string" minOccurs="0" />
+              <xs:element name="Altitud" msprop:Generator_ColumnVarNameInTable="columnAltitud" msprop:Generator_ColumnPropNameInRow="Altitud" msprop:Generator_ColumnPropNameInTable="AltitudColumn" msprop:Generator_UserColumnName="Altitud" type="xs:string" minOccurs="0" />
+              <xs:element name="ActividadEmpresa_x0020_" msprop:Generator_ColumnVarNameInTable="columnActividadEmpresa_" msprop:Generator_ColumnPropNameInRow="ActividadEmpresa_" msprop:Generator_ColumnPropNameInTable="ActividadEmpresa_Column" msprop:Generator_UserColumnName="ActividadEmpresa " type="xs:string" minOccurs="0" />
+              <xs:element name="AreaTrabajo" msprop:Generator_ColumnVarNameInTable="columnAreaTrabajo" msprop:Generator_ColumnPropNameInRow="AreaTrabajo" msprop:Generator_ColumnPropNameInTable="AreaTrabajoColumn" msprop:Generator_UserColumnName="AreaTrabajo" type="xs:string" minOccurs="0" />
+              <xs:element name="Ocupacional" msprop:Generator_ColumnVarNameInTable="columnOcupacional" msprop:Generator_ColumnPropNameInRow="Ocupacional" msprop:Generator_ColumnPropNameInTable="OcupacionalColumn" msprop:Generator_UserColumnName="Ocupacional" type="xs:string" minOccurs="0" />
+              <xs:element name="TiempoTrabajo" msprop:Generator_ColumnVarNameInTable="columnTiempoTrabajo" msprop:Generator_ColumnPropNameInRow="TiempoTrabajo" msprop:Generator_ColumnPropNameInTable="TiempoTrabajoColumn" msprop:Generator_UserColumnName="TiempoTrabajo" type="xs:string" minOccurs="0" />
+              <xs:element name="AgenteOcupacional" msprop:Generator_ColumnVarNameInTable="columnAgenteOcupacional" msprop:Generator_ColumnPropNameInRow="AgenteOcupacional" msprop:Generator_ColumnPropNameInTable="AgenteOcupacionalColumn" msprop:Generator_UserColumnName="AgenteOcupacional" type="xs:string" minOccurs="0" />
+              <xs:element name="epp" msprop:Generator_ColumnVarNameInTable="columnepp" msprop:Generator_ColumnPropNameInRow="epp" msprop:Generator_ColumnPropNameInTable="eppColumn" msprop:Generator_UserColumnName="epp" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" msprop:Generator_UserColumnName="Dia" type="xs:string" minOccurs="0" />
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:string" minOccurs="0" />
+              <xs:element name="Anio" msprop:Generator_ColumnVarNameInTable="columnAnio" msprop:Generator_ColumnPropNameInRow="Anio" msprop:Generator_ColumnPropNameInTable="AnioColumn" msprop:Generator_UserColumnName="Anio" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmaTrabajador" msprop:Generator_ColumnVarNameInTable="columnFirmaTrabajador" msprop:Generator_ColumnPropNameInRow="FirmaTrabajador" msprop:Generator_ColumnPropNameInTable="FirmaTrabajadorColumn" msprop:Generator_UserColumnName="FirmaTrabajador" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FirmaMedico" msprop:Generator_ColumnVarNameInTable="columnFirmaMedico" msprop:Generator_ColumnPropNameInRow="FirmaMedico" msprop:Generator_ColumnPropNameInTable="FirmaMedicoColumn" msprop:Generator_UserColumnName="FirmaMedico" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="HuellaTrabajador" msprop:Generator_ColumnVarNameInTable="columnHuellaTrabajador" msprop:Generator_ColumnPropNameInRow="HuellaTrabajador" msprop:Generator_ColumnPropNameInTable="HuellaTrabajadorColumn" msprop:Generator_UserColumnName="HuellaTrabajador" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="b_logo" msprop:Generator_ColumnVarNameInTable="columnb_logo" msprop:Generator_ColumnPropNameInRow="b_logo" msprop:Generator_ColumnPropNameInTable="b_logoColumn" msprop:Generator_UserColumnName="b_logo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
