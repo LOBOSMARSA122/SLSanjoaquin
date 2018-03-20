@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class csEKGInformeElectroCardiografiaoGoldField : ReportClass {
+    public class crfichaComplementaria_HO : ReportClass {
         
-        public csEKGInformeElectroCardiografiaoGoldField() {
+        public crfichaComplementaria_HO() {
         }
         
         public override string ResourceName {
             get {
-                return "csEKGInformeElectroCardiografiaoGoldField.rpt";
+                return "crfichaComplementaria_HO.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.csEKGInformeElectroCardiografiaoGoldField.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.crfichaComplementaria_HO.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcsEKGInformeElectroCardiografiaoGoldField : Component, ICachedReport {
+    public class CachedcrfichaComplementaria_HO : Component, ICachedReport {
         
-        public CachedcsEKGInformeElectroCardiografiaoGoldField() {
+        public CachedcrfichaComplementaria_HO() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            csEKGInformeElectroCardiografiaoGoldField rpt = new csEKGInformeElectroCardiografiaoGoldField();
+            crfichaComplementaria_HO rpt = new crfichaComplementaria_HO();
             rpt.Site = this.Site;
             return rpt;
         }

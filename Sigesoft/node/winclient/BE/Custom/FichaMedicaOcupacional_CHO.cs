@@ -5,13 +5,15 @@ using System.Text;
 
 namespace Sigesoft.Node.WinClient.BE
 {
-   public class Apendice01_HistOcup
+  public  class FichaMedicaOcupacional_CHO
     {
+
         public string ApellidoNombre { get; set; }
-        public string NumeroRegistro { get; set; }
+        public string LugarProcedencia { get; set; }
         public string FechaNacimiento { get; set; }
         public string Sexo { get; set; }
-        public string LugarProcedencia { get; set; }
+        public string PuestoTrabajo { get; set; }
+        public string NumeroResgistro { get; set; }
         public string Profesion { get; set; }
         public string LugarNacimiento { get; set; }
         public string FechaInicio { get; set; }
@@ -29,6 +31,5 @@ namespace Sigesoft.Node.WinClient.BE
         public byte[] FirmaTrabajador { get; set; }
         public byte[] HuellaTrabajador { get; set; }
         public byte[] FirmaMedico { get; set; }
-
-   }
+    }
 }

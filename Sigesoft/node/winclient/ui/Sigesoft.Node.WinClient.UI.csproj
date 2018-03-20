@@ -218,15 +218,6 @@
     <Compile Include="Configuration\frmProtocolManagement.Designer.cs">
       <DependentUpon>frmProtocolManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dataset\Apendice01_HistOcup.cs">
-      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Dataset\Apendice01_HistOcup.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Dataset\dsAnexo02_HistoriaOcupacional.cs">
       <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -236,10 +227,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\dsAnexo05_Espiro.cs">
+      <DependentUpon>dsAnexo05_Espiro.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\dsAnexo05_Espiro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAnexo05_Espiro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsApendice01_HistOcup.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsApendice01_HistOcup.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\dsApendice05_EKG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsApendice05_EKG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsApendice08_Espiro01.cs">
+      <DependentUpon>dsApendice08_Espiro01.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\dsApendice08_Espiro01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsApendice08_Espiro01.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsApendice08_Espiro02.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsApendice08_Espiro02.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\dsAudiometria.cs">
       <DependentUpon>dsAudiometria.xsd</DependentUpon>
@@ -285,6 +304,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCuestionariogradodeafectividad.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\dsEspiroCuestionarioGoldField.cs">
+      <DependentUpon>dsEspiroCuestionarioGoldField.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\dsEspiroCuestionarioGoldField.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEspiroCuestionarioGoldField.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsfichaComplementaria_HO.cs">
+      <DependentUpon>dsfichaComplementaria_HO.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\dsFichaMedicaOcupacional_CHO.cs">
+      <DependentUpon>dsFichaMedicaOcupacional_CHO.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\dsFichaMedicaOcupacional_CHO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFichaMedicaOcupacional_CHO.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\dsFobiasocial02.cs">
       <DependentUpon>dsFobiasocial02.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -302,6 +343,11 @@
     <Compile Include="Dataset\dsHistoriaOcupacional.cs">
       <DependentUpon>dsHistoriaOcupacional.xsd</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\dsInformeElectroCardiografiaoGoldField_EKG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInformeElectroCardiografiaoGoldField_EKG.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\DsInformeFobias.cs">
       <DependentUpon>DsInformeFobias.xsd</DependentUpon>
@@ -352,6 +398,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTestdepersonalldad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsfichaComplementaria_HO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsfichaComplementaria_HO.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\Fobiasocial01.cs">
       <DependentUpon>Fobiasocial01.xsd</DependentUpon>
@@ -1269,16 +1320,16 @@
       <DependentUpon>crEspiroCuestionarioGoldField.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\crfichaComplementariaHO_EKG.cs">
+    <Compile Include="Reports\crfichaComplementaria_HO.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crfichaComplementariaHO_EKG.rpt</DependentUpon>
+      <DependentUpon>crfichaComplementaria_HO.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\crFichaMedicaOcupacional_EKG.cs">
+    <Compile Include="Reports\crFichaMedicaOcupacional_CHO.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crFichaMedicaOcupacional_EKG.rpt</DependentUpon>
+      <DependentUpon>crFichaMedicaOcupacional_CHO.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\crRoadMap_2.cs">
@@ -1548,10 +1599,10 @@
       <DependentUpon>crOftalmologia_S_J.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\csEKGInformeElectroCardiografiaoGoldField.cs">
+    <Compile Include="Reports\crInformeElectroCardiografiaoGoldField_EKG.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>csEKGInformeElectroCardiografiaoGoldField.rpt</DependentUpon>
+      <DependentUpon>crInformeElectroCardiografiaoGoldField_EKG.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Factura2.cs">
@@ -3108,13 +3159,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crEspiroCuestionarioGoldField.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\crfichaComplementariaHO_EKG.rpt">
+    <EmbeddedResource Include="Reports\crfichaComplementaria_HO.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crfichaComplementariaHO_EKG.cs</LastGenOutput>
+      <LastGenOutput>crfichaComplementaria_HO.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\crFichaMedicaOcupacional_EKG.rpt">
+    <EmbeddedResource Include="Reports\crFichaMedicaOcupacional_CHO.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crFichaMedicaOcupacional_EKG.cs</LastGenOutput>
+      <LastGenOutput>crFichaMedicaOcupacional_CHO.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\crRoadMap_2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -3296,9 +3347,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crOftalmologia_S_J1.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\csEKGInformeElectroCardiografiaoGoldField.rpt">
+    <EmbeddedResource Include="Reports\crInformeElectroCardiografiaoGoldField_EKG.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>csEKGInformeElectroCardiografiaoGoldField.cs</LastGenOutput>
+      <LastGenOutput>crInformeElectroCardiografiaoGoldField_EKG.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Factura2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -4058,17 +4109,6 @@
     <None Include="Dataset\Anexo7D.xss">
       <DependentUpon>Anexo7D.xsd</DependentUpon>
     </None>
-    <None Include="Dataset\Apendice01_HistOcup.xsc">
-      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
-    </None>
-    <None Include="Dataset\Apendice01_HistOcup.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Apendice01_HistOcup.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Dataset\Apendice01_HistOcup.xss">
-      <DependentUpon>Apendice01_HistOcup.xsd</DependentUpon>
-    </None>
     <None Include="Dataset\dsAnexo02_HistoriaOcupacional.xsc">
       <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
     </None>
@@ -4080,6 +4120,28 @@
     <None Include="Dataset\dsAnexo02_HistoriaOcupacional.xss">
       <DependentUpon>dsAnexo02_HistoriaOcupacional.xsd</DependentUpon>
     </None>
+    <None Include="Dataset\dsAnexo05_Espiro.xsc">
+      <DependentUpon>dsAnexo05_Espiro.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsAnexo05_Espiro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAnexo05_Espiro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsAnexo05_Espiro.xss">
+      <DependentUpon>dsAnexo05_Espiro.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice01_HistOcup.xsc">
+      <DependentUpon>dsApendice01_HistOcup.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice01_HistOcup.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsApendice01_HistOcup.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsApendice01_HistOcup.xss">
+      <DependentUpon>dsApendice01_HistOcup.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\dsApendice05_EKG.xsc">
       <DependentUpon>dsApendice05_EKG.xsd</DependentUpon>
     </None>
@@ -4090,6 +4152,28 @@
     </None>
     <None Include="Dataset\dsApendice05_EKG.xss">
       <DependentUpon>dsApendice05_EKG.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice08_Espiro01.xsc">
+      <DependentUpon>dsApendice08_Espiro01.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice08_Espiro01.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsApendice08_Espiro01.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsApendice08_Espiro01.xss">
+      <DependentUpon>dsApendice08_Espiro01.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice08_Espiro02.xsc">
+      <DependentUpon>dsApendice08_Espiro02.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsApendice08_Espiro02.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsApendice08_Espiro02.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsApendice08_Espiro02.xss">
+      <DependentUpon>dsApendice08_Espiro02.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DsAudiometriaAudiomax.xsc">
       <DependentUpon>DsAudiometriaAudiomax.xsd</DependentUpon>
@@ -4146,6 +4230,28 @@
     <None Include="Dataset\dsCuestionariogradodeafectividad.xss">
       <DependentUpon>dsCuestionariogradodeafectividad.xsd</DependentUpon>
     </None>
+    <None Include="Dataset\dsEspiroCuestionarioGoldField.xsc">
+      <DependentUpon>dsEspiroCuestionarioGoldField.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsEspiroCuestionarioGoldField.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEspiroCuestionarioGoldField.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsEspiroCuestionarioGoldField.xss">
+      <DependentUpon>dsEspiroCuestionarioGoldField.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsFichaMedicaOcupacional_CHO.xsc">
+      <DependentUpon>dsFichaMedicaOcupacional_CHO.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsFichaMedicaOcupacional_CHO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFichaMedicaOcupacional_CHO.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsFichaMedicaOcupacional_CHO.xss">
+      <DependentUpon>dsFichaMedicaOcupacional_CHO.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\dsFobiasocial02.xsc">
       <DependentUpon>dsFobiasocial02.xsd</DependentUpon>
     </None>
@@ -4178,6 +4284,17 @@
     </None>
     <None Include="Dataset\dsFondoOjo.xss">
       <DependentUpon>dsFondoOjo.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsInformeElectroCardiografiaoGoldField_EKG.xsc">
+      <DependentUpon>dsInformeElectroCardiografiaoGoldField_EKG.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsInformeElectroCardiografiaoGoldField_EKG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInformeElectroCardiografiaoGoldField_EKG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsInformeElectroCardiografiaoGoldField_EKG.xss">
+      <DependentUpon>dsInformeElectroCardiografiaoGoldField_EKG.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DsInformeFobias.xsc">
       <DependentUpon>DsInformeFobias.xsd</DependentUpon>
@@ -4938,6 +5055,17 @@
     </None>
     <None Include="Dataset\dsTiempoTrabajador.xss">
       <DependentUpon>dsTiempoTrabajador.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsfichaComplementaria_HO.xsc">
+      <DependentUpon>dsfichaComplementaria_HO.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsfichaComplementaria_HO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsfichaComplementaria_HO.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsfichaComplementaria_HO.xss">
+      <DependentUpon>dsfichaComplementaria_HO.xsd</DependentUpon>
     </None>
     <None Include="Dataset\Fobiasocial01.xsc">
       <DependentUpon>Fobiasocial01.xsd</DependentUpon>

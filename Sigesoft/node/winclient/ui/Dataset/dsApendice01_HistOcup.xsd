@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsApendice01_HO" targetNamespace="http://tempuri.org/dsApendice01_HO.xsd" xmlns:mstns="http://tempuri.org/dsApendice01_HO.xsd" xmlns="http://tempuri.org/dsApendice01_HO.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+  <xs:element name="dsApendice01_HO" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsApendice01_HO" msprop:Generator_UserDSName="dsApendice01_HO">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Apencice01_HO" msprop:Generator_TableClassName="Apencice01_HODataTable" msprop:Generator_TableVarName="tableApencice01_HO" msprop:Generator_RowChangedName="Apencice01_HORowChanged" msprop:Generator_TablePropName="Apencice01_HO" msprop:Generator_RowDeletingName="Apencice01_HORowDeleting" msprop:Generator_RowChangingName="Apencice01_HORowChanging" msprop:Generator_RowEvHandlerName="Apencice01_HORowChangeEventHandler" msprop:Generator_RowDeletedName="Apencice01_HORowDeleted" msprop:Generator_RowClassName="Apencice01_HORow" msprop:Generator_UserTableName="Apencice01_HO" msprop:Generator_RowEvArgName="Apencice01_HORowChangeEvent">
+        <xs:element name="Apendice01_HO" msprop:Generator_TableClassName="Apendice01_HODataTable" msprop:Generator_TableVarName="tableApendice01_HO" msprop:Generator_TablePropName="Apendice01_HO" msprop:Generator_RowDeletingName="Apendice01_HORowDeleting" msprop:Generator_RowChangingName="Apendice01_HORowChanging" msprop:Generator_RowEvHandlerName="Apendice01_HORowChangeEventHandler" msprop:Generator_RowDeletedName="Apendice01_HORowDeleted" msprop:Generator_UserTableName="Apendice01_HO" msprop:Generator_RowChangedName="Apendice01_HORowChanged" msprop:Generator_RowEvArgName="Apendice01_HORowChangeEvent" msprop:Generator_RowClassName="Apendice01_HORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ApellidoNombre" msprop:Generator_ColumnVarNameInTable="columnApellidoNombre" msprop:Generator_ColumnPropNameInRow="ApellidoNombre" msprop:Generator_ColumnPropNameInTable="ApellidoNombreColumn" msprop:Generator_UserColumnName="ApellidoNombre" type="xs:string" minOccurs="0" />

@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crfichaComplementariaHO_EKG : ReportClass {
+    public class crInformeElectroCardiografiaoGoldField_EKG : ReportClass {
         
-        public crfichaComplementariaHO_EKG() {
+        public crInformeElectroCardiografiaoGoldField_EKG() {
         }
         
         public override string ResourceName {
             get {
-                return "crfichaComplementariaHO_EKG.rpt";
+                return "crInformeElectroCardiografiaoGoldField_EKG.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,8 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.crfichaComplementariaHO_EKG.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.crInformeElectroCardiografiaoGoldField_EKG.rpt" +
+                    "";
             }
             set {
                 // Do nothing
@@ -90,9 +91,9 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrfichaComplementariaHO_EKG : Component, ICachedReport {
+    public class CachedcrInformeElectroCardiografiaoGoldField_EKG : Component, ICachedReport {
         
-        public CachedcrfichaComplementariaHO_EKG() {
+        public CachedcrInformeElectroCardiografiaoGoldField_EKG() {
         }
         
         [Browsable(false)]
@@ -129,7 +130,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crfichaComplementariaHO_EKG rpt = new crfichaComplementariaHO_EKG();
+            crInformeElectroCardiografiaoGoldField_EKG rpt = new crInformeElectroCardiografiaoGoldField_EKG();
             rpt.Site = this.Site;
             return rpt;
         }

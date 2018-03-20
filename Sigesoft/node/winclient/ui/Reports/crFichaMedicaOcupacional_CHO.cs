@@ -16,14 +16,14 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crFichaMedicaOcupacional_EKG : ReportClass {
+    public class crFichaMedicaOcupacional_CHO : ReportClass {
         
-        public crFichaMedicaOcupacional_EKG() {
+        public crFichaMedicaOcupacional_CHO() {
         }
         
         public override string ResourceName {
             get {
-                return "crFichaMedicaOcupacional_EKG.rpt";
+                return "crFichaMedicaOcupacional_CHO.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         
         public override string FullResourceName {
             get {
-                return "Sigesoft.Node.WinClient.UI.Reports.crFichaMedicaOcupacional_EKG.rpt";
+                return "Sigesoft.Node.WinClient.UI.Reports.crFichaMedicaOcupacional_CHO.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrFichaMedicaOcupacional_EKG : Component, ICachedReport {
+    public class CachedcrFichaMedicaOcupacional_CHO : Component, ICachedReport {
         
-        public CachedcrFichaMedicaOcupacional_EKG() {
+        public CachedcrFichaMedicaOcupacional_CHO() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crFichaMedicaOcupacional_EKG rpt = new crFichaMedicaOcupacional_EKG();
+            crFichaMedicaOcupacional_CHO rpt = new crFichaMedicaOcupacional_CHO();
             rpt.Site = this.Site;
             return rpt;
         }

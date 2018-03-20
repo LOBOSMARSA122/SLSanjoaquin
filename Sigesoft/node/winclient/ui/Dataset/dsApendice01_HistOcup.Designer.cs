@@ -20,17 +20,17 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsApendice01_HO")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet1 : global::System.Data.DataSet {
+    public partial class dsApendice01_HO : global::System.Data.DataSet {
         
-        private Apencice01_HODataTable tableApencice01_HO;
+        private Apendice01_HODataTable tableApendice01_HO;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataSet1() {
+        public dsApendice01_HO() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsApendice01_HO(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Apencice01_HO"] != null)) {
-                    base.Tables.Add(new Apencice01_HODataTable(ds.Tables["Apencice01_HO"]));
+                if ((ds.Tables["Apendice01_HO"] != null)) {
+                    base.Tables.Add(new Apendice01_HODataTable(ds.Tables["Apendice01_HO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Apencice01_HODataTable Apencice01_HO {
+        public Apendice01_HODataTable Apendice01_HO {
             get {
-                return this.tableApencice01_HO;
+                return this.tableApendice01_HO;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet1 cln = ((DataSet1)(base.Clone()));
+            dsApendice01_HO cln = ((dsApendice01_HO)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Apencice01_HO"] != null)) {
-                    base.Tables.Add(new Apencice01_HODataTable(ds.Tables["Apencice01_HO"]));
+                if ((ds.Tables["Apendice01_HO"] != null)) {
+                    base.Tables.Add(new Apendice01_HODataTable(ds.Tables["Apendice01_HO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableApencice01_HO = ((Apencice01_HODataTable)(base.Tables["Apencice01_HO"]));
+            this.tableApendice01_HO = ((Apendice01_HODataTable)(base.Tables["Apendice01_HO"]));
             if ((initTable == true)) {
-                if ((this.tableApencice01_HO != null)) {
-                    this.tableApencice01_HO.InitVars();
+                if ((this.tableApendice01_HO != null)) {
+                    this.tableApendice01_HO.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet1";
+            this.DataSetName = "dsApendice01_HO";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet1.xsd";
+            this.Namespace = "http://tempuri.org/dsApendice01_HO.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableApencice01_HO = new Apencice01_HODataTable();
-            base.Tables.Add(this.tableApencice01_HO);
+            this.tableApendice01_HO = new Apendice01_HODataTable();
+            base.Tables.Add(this.tableApendice01_HO);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeApencice01_HO() {
+        private bool ShouldSerializeApendice01_HO() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet1 ds = new DataSet1();
+            dsApendice01_HO ds = new dsApendice01_HO();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Apencice01_HORowChangeEventHandler(object sender, Apencice01_HORowChangeEvent e);
+        public delegate void Apendice01_HORowChangeEventHandler(object sender, Apendice01_HORowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Apencice01_HODataTable : global::System.Data.TypedTableBase<Apencice01_HORow> {
+        public partial class Apendice01_HODataTable : global::System.Data.TypedTableBase<Apendice01_HORow> {
             
             private global::System.Data.DataColumn columnApellidoNombre;
             
@@ -327,8 +327,8 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Apencice01_HODataTable() {
-                this.TableName = "Apencice01_HO";
+            public Apendice01_HODataTable() {
+                this.TableName = "Apendice01_HO";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -336,7 +336,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Apencice01_HODataTable(global::System.Data.DataTable table) {
+            internal Apendice01_HODataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -353,7 +353,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Apencice01_HODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Apendice01_HODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -553,33 +553,33 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Apencice01_HORow this[int index] {
+            public Apendice01_HORow this[int index] {
                 get {
-                    return ((Apencice01_HORow)(this.Rows[index]));
+                    return ((Apendice01_HORow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Apencice01_HORowChangeEventHandler Apencice01_HORowChanging;
+            public event Apendice01_HORowChangeEventHandler Apendice01_HORowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Apencice01_HORowChangeEventHandler Apencice01_HORowChanged;
+            public event Apendice01_HORowChangeEventHandler Apendice01_HORowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Apencice01_HORowChangeEventHandler Apencice01_HORowDeleting;
+            public event Apendice01_HORowChangeEventHandler Apendice01_HORowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Apencice01_HORowChangeEventHandler Apencice01_HORowDeleted;
+            public event Apendice01_HORowChangeEventHandler Apendice01_HORowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddApencice01_HORow(Apencice01_HORow row) {
+            public void AddApendice01_HORow(Apendice01_HORow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Apencice01_HORow AddApencice01_HORow(
+            public Apendice01_HORow AddApendice01_HORow(
                         string ApellidoNombre, 
                         string NumeroRegistro, 
                         string FechaNacimiento, 
@@ -603,7 +603,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
                         byte[] FirmaMedico, 
                         byte[] HuellaTrabajador, 
                         byte[] b_logo) {
-                Apencice01_HORow rowApencice01_HORow = ((Apencice01_HORow)(this.NewRow()));
+                Apendice01_HORow rowApendice01_HORow = ((Apendice01_HORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ApellidoNombre,
                         NumeroRegistro,
@@ -628,15 +628,15 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
                         FirmaMedico,
                         HuellaTrabajador,
                         b_logo};
-                rowApencice01_HORow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowApencice01_HORow);
-                return rowApencice01_HORow;
+                rowApendice01_HORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowApendice01_HORow);
+                return rowApendice01_HORow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Apencice01_HODataTable cln = ((Apencice01_HODataTable)(base.Clone()));
+                Apendice01_HODataTable cln = ((Apendice01_HODataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -644,7 +644,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Apencice01_HODataTable();
+                return new Apendice01_HODataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -728,28 +728,28 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Apencice01_HORow NewApencice01_HORow() {
-                return ((Apencice01_HORow)(this.NewRow()));
+            public Apendice01_HORow NewApendice01_HORow() {
+                return ((Apendice01_HORow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Apencice01_HORow(builder);
+                return new Apendice01_HORow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Apencice01_HORow);
+                return typeof(Apendice01_HORow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Apencice01_HORowChanged != null)) {
-                    this.Apencice01_HORowChanged(this, new Apencice01_HORowChangeEvent(((Apencice01_HORow)(e.Row)), e.Action));
+                if ((this.Apendice01_HORowChanged != null)) {
+                    this.Apendice01_HORowChanged(this, new Apendice01_HORowChangeEvent(((Apendice01_HORow)(e.Row)), e.Action));
                 }
             }
             
@@ -757,8 +757,8 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Apencice01_HORowChanging != null)) {
-                    this.Apencice01_HORowChanging(this, new Apencice01_HORowChangeEvent(((Apencice01_HORow)(e.Row)), e.Action));
+                if ((this.Apendice01_HORowChanging != null)) {
+                    this.Apendice01_HORowChanging(this, new Apendice01_HORowChangeEvent(((Apendice01_HORow)(e.Row)), e.Action));
                 }
             }
             
@@ -766,8 +766,8 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Apencice01_HORowDeleted != null)) {
-                    this.Apencice01_HORowDeleted(this, new Apencice01_HORowChangeEvent(((Apencice01_HORow)(e.Row)), e.Action));
+                if ((this.Apendice01_HORowDeleted != null)) {
+                    this.Apendice01_HORowDeleted(this, new Apendice01_HORowChangeEvent(((Apendice01_HORow)(e.Row)), e.Action));
                 }
             }
             
@@ -775,14 +775,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Apencice01_HORowDeleting != null)) {
-                    this.Apencice01_HORowDeleting(this, new Apencice01_HORowChangeEvent(((Apencice01_HORow)(e.Row)), e.Action));
+                if ((this.Apendice01_HORowDeleting != null)) {
+                    this.Apendice01_HORowDeleting(this, new Apendice01_HORowChangeEvent(((Apendice01_HORow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveApencice01_HORow(Apencice01_HORow row) {
+            public void RemoveApendice01_HORow(Apendice01_HORow row) {
                 this.Rows.Remove(row);
             }
             
@@ -791,7 +791,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet1 ds = new DataSet1();
+                dsApendice01_HO ds = new dsApendice01_HO();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -809,7 +809,7 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Apencice01_HODataTable";
+                attribute2.FixedValue = "Apendice01_HODataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -853,15 +853,15 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Apencice01_HORow : global::System.Data.DataRow {
+        public partial class Apendice01_HORow : global::System.Data.DataRow {
             
-            private Apencice01_HODataTable tableApencice01_HO;
+            private Apendice01_HODataTable tableApendice01_HO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Apencice01_HORow(global::System.Data.DataRowBuilder rb) : 
+            internal Apendice01_HORow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableApencice01_HO = ((Apencice01_HODataTable)(this.Table));
+                this.tableApendice01_HO = ((Apendice01_HODataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -869,14 +869,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string ApellidoNombre {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.ApellidoNombreColumn]));
+                        return ((string)(this[this.tableApendice01_HO.ApellidoNombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ApellidoNombre\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ApellidoNombre\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.ApellidoNombreColumn] = value;
+                    this[this.tableApendice01_HO.ApellidoNombreColumn] = value;
                 }
             }
             
@@ -885,14 +885,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string NumeroRegistro {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.NumeroRegistroColumn]));
+                        return ((string)(this[this.tableApendice01_HO.NumeroRegistroColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumeroRegistro\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumeroRegistro\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.NumeroRegistroColumn] = value;
+                    this[this.tableApendice01_HO.NumeroRegistroColumn] = value;
                 }
             }
             
@@ -901,14 +901,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string FechaNacimiento {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.FechaNacimientoColumn]));
+                        return ((string)(this[this.tableApendice01_HO.FechaNacimientoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaNacimiento\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaNacimiento\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.FechaNacimientoColumn] = value;
+                    this[this.tableApendice01_HO.FechaNacimientoColumn] = value;
                 }
             }
             
@@ -917,14 +917,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Sexo {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.SexoColumn]));
+                        return ((string)(this[this.tableApendice01_HO.SexoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Sexo\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Sexo\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.SexoColumn] = value;
+                    this[this.tableApendice01_HO.SexoColumn] = value;
                 }
             }
             
@@ -933,14 +933,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string LugarProcedencia {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.LugarProcedenciaColumn]));
+                        return ((string)(this[this.tableApendice01_HO.LugarProcedenciaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LugarProcedencia\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LugarProcedencia\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.LugarProcedenciaColumn] = value;
+                    this[this.tableApendice01_HO.LugarProcedenciaColumn] = value;
                 }
             }
             
@@ -949,14 +949,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Profesion {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.ProfesionColumn]));
+                        return ((string)(this[this.tableApendice01_HO.ProfesionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Profesion\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Profesion\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.ProfesionColumn] = value;
+                    this[this.tableApendice01_HO.ProfesionColumn] = value;
                 }
             }
             
@@ -965,14 +965,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string LugarNacimiento {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.LugarNacimientoColumn]));
+                        return ((string)(this[this.tableApendice01_HO.LugarNacimientoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LugarNacimiento\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LugarNacimiento\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.LugarNacimientoColumn] = value;
+                    this[this.tableApendice01_HO.LugarNacimientoColumn] = value;
                 }
             }
             
@@ -981,14 +981,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string FechaInicio {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.FechaInicioColumn]));
+                        return ((string)(this[this.tableApendice01_HO.FechaInicioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaInicio\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaInicio\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.FechaInicioColumn] = value;
+                    this[this.tableApendice01_HO.FechaInicioColumn] = value;
                 }
             }
             
@@ -997,14 +997,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Empresa {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.EmpresaColumn]));
+                        return ((string)(this[this.tableApendice01_HO.EmpresaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Empresa\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Empresa\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.EmpresaColumn] = value;
+                    this[this.tableApendice01_HO.EmpresaColumn] = value;
                 }
             }
             
@@ -1013,14 +1013,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Altitud {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.AltitudColumn]));
+                        return ((string)(this[this.tableApendice01_HO.AltitudColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Altitud\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Altitud\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.AltitudColumn] = value;
+                    this[this.tableApendice01_HO.AltitudColumn] = value;
                 }
             }
             
@@ -1029,15 +1029,15 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string ActividadEmpresa_ {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.ActividadEmpresa_Column]));
+                        return ((string)(this[this.tableApendice01_HO.ActividadEmpresa_Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ActividadEmpresa \' de la tabla \'Apencice01_HO\' es DBNull." +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ActividadEmpresa \' de la tabla \'Apendice01_HO\' es DBNull." +
                                 "", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.ActividadEmpresa_Column] = value;
+                    this[this.tableApendice01_HO.ActividadEmpresa_Column] = value;
                 }
             }
             
@@ -1046,14 +1046,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string AreaTrabajo {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.AreaTrabajoColumn]));
+                        return ((string)(this[this.tableApendice01_HO.AreaTrabajoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AreaTrabajo\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AreaTrabajo\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.AreaTrabajoColumn] = value;
+                    this[this.tableApendice01_HO.AreaTrabajoColumn] = value;
                 }
             }
             
@@ -1062,14 +1062,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Ocupacional {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.OcupacionalColumn]));
+                        return ((string)(this[this.tableApendice01_HO.OcupacionalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ocupacional\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ocupacional\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.OcupacionalColumn] = value;
+                    this[this.tableApendice01_HO.OcupacionalColumn] = value;
                 }
             }
             
@@ -1078,14 +1078,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string TiempoTrabajo {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.TiempoTrabajoColumn]));
+                        return ((string)(this[this.tableApendice01_HO.TiempoTrabajoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TiempoTrabajo\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TiempoTrabajo\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.TiempoTrabajoColumn] = value;
+                    this[this.tableApendice01_HO.TiempoTrabajoColumn] = value;
                 }
             }
             
@@ -1094,15 +1094,15 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string AgenteOcupacional {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.AgenteOcupacionalColumn]));
+                        return ((string)(this[this.tableApendice01_HO.AgenteOcupacionalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AgenteOcupacional\' de la tabla \'Apencice01_HO\' es DBNull." +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AgenteOcupacional\' de la tabla \'Apendice01_HO\' es DBNull." +
                                 "", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.AgenteOcupacionalColumn] = value;
+                    this[this.tableApendice01_HO.AgenteOcupacionalColumn] = value;
                 }
             }
             
@@ -1111,14 +1111,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string epp {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.eppColumn]));
+                        return ((string)(this[this.tableApendice01_HO.eppColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'epp\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'epp\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.eppColumn] = value;
+                    this[this.tableApendice01_HO.eppColumn] = value;
                 }
             }
             
@@ -1127,14 +1127,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Dia {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.DiaColumn]));
+                        return ((string)(this[this.tableApendice01_HO.DiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Dia\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Dia\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.DiaColumn] = value;
+                    this[this.tableApendice01_HO.DiaColumn] = value;
                 }
             }
             
@@ -1143,14 +1143,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Mes {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.MesColumn]));
+                        return ((string)(this[this.tableApendice01_HO.MesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.MesColumn] = value;
+                    this[this.tableApendice01_HO.MesColumn] = value;
                 }
             }
             
@@ -1159,14 +1159,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public string Anio {
                 get {
                     try {
-                        return ((string)(this[this.tableApencice01_HO.AnioColumn]));
+                        return ((string)(this[this.tableApendice01_HO.AnioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Anio\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Anio\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.AnioColumn] = value;
+                    this[this.tableApendice01_HO.AnioColumn] = value;
                 }
             }
             
@@ -1175,14 +1175,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public byte[] FirmaTrabajador {
                 get {
                     try {
-                        return ((byte[])(this[this.tableApencice01_HO.FirmaTrabajadorColumn]));
+                        return ((byte[])(this[this.tableApendice01_HO.FirmaTrabajadorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FirmaTrabajador\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FirmaTrabajador\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.FirmaTrabajadorColumn] = value;
+                    this[this.tableApendice01_HO.FirmaTrabajadorColumn] = value;
                 }
             }
             
@@ -1191,14 +1191,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public byte[] FirmaMedico {
                 get {
                     try {
-                        return ((byte[])(this[this.tableApencice01_HO.FirmaMedicoColumn]));
+                        return ((byte[])(this[this.tableApendice01_HO.FirmaMedicoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FirmaMedico\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FirmaMedico\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.FirmaMedicoColumn] = value;
+                    this[this.tableApendice01_HO.FirmaMedicoColumn] = value;
                 }
             }
             
@@ -1207,14 +1207,14 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public byte[] HuellaTrabajador {
                 get {
                     try {
-                        return ((byte[])(this[this.tableApencice01_HO.HuellaTrabajadorColumn]));
+                        return ((byte[])(this[this.tableApendice01_HO.HuellaTrabajadorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HuellaTrabajador\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HuellaTrabajador\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.HuellaTrabajadorColumn] = value;
+                    this[this.tableApendice01_HO.HuellaTrabajadorColumn] = value;
                 }
             }
             
@@ -1223,291 +1223,291 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
             public byte[] b_logo {
                 get {
                     try {
-                        return ((byte[])(this[this.tableApencice01_HO.b_logoColumn]));
+                        return ((byte[])(this[this.tableApendice01_HO.b_logoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'b_logo\' de la tabla \'Apencice01_HO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'b_logo\' de la tabla \'Apendice01_HO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableApencice01_HO.b_logoColumn] = value;
+                    this[this.tableApendice01_HO.b_logoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsApellidoNombreNull() {
-                return this.IsNull(this.tableApencice01_HO.ApellidoNombreColumn);
+                return this.IsNull(this.tableApendice01_HO.ApellidoNombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetApellidoNombreNull() {
-                this[this.tableApencice01_HO.ApellidoNombreColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.ApellidoNombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNumeroRegistroNull() {
-                return this.IsNull(this.tableApencice01_HO.NumeroRegistroColumn);
+                return this.IsNull(this.tableApendice01_HO.NumeroRegistroColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNumeroRegistroNull() {
-                this[this.tableApencice01_HO.NumeroRegistroColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.NumeroRegistroColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFechaNacimientoNull() {
-                return this.IsNull(this.tableApencice01_HO.FechaNacimientoColumn);
+                return this.IsNull(this.tableApendice01_HO.FechaNacimientoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFechaNacimientoNull() {
-                this[this.tableApencice01_HO.FechaNacimientoColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.FechaNacimientoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSexoNull() {
-                return this.IsNull(this.tableApencice01_HO.SexoColumn);
+                return this.IsNull(this.tableApendice01_HO.SexoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSexoNull() {
-                this[this.tableApencice01_HO.SexoColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.SexoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsLugarProcedenciaNull() {
-                return this.IsNull(this.tableApencice01_HO.LugarProcedenciaColumn);
+                return this.IsNull(this.tableApendice01_HO.LugarProcedenciaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLugarProcedenciaNull() {
-                this[this.tableApencice01_HO.LugarProcedenciaColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.LugarProcedenciaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProfesionNull() {
-                return this.IsNull(this.tableApencice01_HO.ProfesionColumn);
+                return this.IsNull(this.tableApendice01_HO.ProfesionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetProfesionNull() {
-                this[this.tableApencice01_HO.ProfesionColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.ProfesionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsLugarNacimientoNull() {
-                return this.IsNull(this.tableApencice01_HO.LugarNacimientoColumn);
+                return this.IsNull(this.tableApendice01_HO.LugarNacimientoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLugarNacimientoNull() {
-                this[this.tableApencice01_HO.LugarNacimientoColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.LugarNacimientoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFechaInicioNull() {
-                return this.IsNull(this.tableApencice01_HO.FechaInicioColumn);
+                return this.IsNull(this.tableApendice01_HO.FechaInicioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFechaInicioNull() {
-                this[this.tableApencice01_HO.FechaInicioColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.FechaInicioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEmpresaNull() {
-                return this.IsNull(this.tableApencice01_HO.EmpresaColumn);
+                return this.IsNull(this.tableApendice01_HO.EmpresaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEmpresaNull() {
-                this[this.tableApencice01_HO.EmpresaColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.EmpresaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAltitudNull() {
-                return this.IsNull(this.tableApencice01_HO.AltitudColumn);
+                return this.IsNull(this.tableApendice01_HO.AltitudColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAltitudNull() {
-                this[this.tableApencice01_HO.AltitudColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.AltitudColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsActividadEmpresa_Null() {
-                return this.IsNull(this.tableApencice01_HO.ActividadEmpresa_Column);
+                return this.IsNull(this.tableApendice01_HO.ActividadEmpresa_Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetActividadEmpresa_Null() {
-                this[this.tableApencice01_HO.ActividadEmpresa_Column] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.ActividadEmpresa_Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAreaTrabajoNull() {
-                return this.IsNull(this.tableApencice01_HO.AreaTrabajoColumn);
+                return this.IsNull(this.tableApendice01_HO.AreaTrabajoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAreaTrabajoNull() {
-                this[this.tableApencice01_HO.AreaTrabajoColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.AreaTrabajoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsOcupacionalNull() {
-                return this.IsNull(this.tableApencice01_HO.OcupacionalColumn);
+                return this.IsNull(this.tableApendice01_HO.OcupacionalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetOcupacionalNull() {
-                this[this.tableApencice01_HO.OcupacionalColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.OcupacionalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTiempoTrabajoNull() {
-                return this.IsNull(this.tableApencice01_HO.TiempoTrabajoColumn);
+                return this.IsNull(this.tableApendice01_HO.TiempoTrabajoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTiempoTrabajoNull() {
-                this[this.tableApencice01_HO.TiempoTrabajoColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.TiempoTrabajoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAgenteOcupacionalNull() {
-                return this.IsNull(this.tableApencice01_HO.AgenteOcupacionalColumn);
+                return this.IsNull(this.tableApendice01_HO.AgenteOcupacionalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAgenteOcupacionalNull() {
-                this[this.tableApencice01_HO.AgenteOcupacionalColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.AgenteOcupacionalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IseppNull() {
-                return this.IsNull(this.tableApencice01_HO.eppColumn);
+                return this.IsNull(this.tableApendice01_HO.eppColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SeteppNull() {
-                this[this.tableApencice01_HO.eppColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.eppColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDiaNull() {
-                return this.IsNull(this.tableApencice01_HO.DiaColumn);
+                return this.IsNull(this.tableApendice01_HO.DiaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDiaNull() {
-                this[this.tableApencice01_HO.DiaColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.DiaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMesNull() {
-                return this.IsNull(this.tableApencice01_HO.MesColumn);
+                return this.IsNull(this.tableApendice01_HO.MesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMesNull() {
-                this[this.tableApencice01_HO.MesColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.MesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAnioNull() {
-                return this.IsNull(this.tableApencice01_HO.AnioColumn);
+                return this.IsNull(this.tableApendice01_HO.AnioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAnioNull() {
-                this[this.tableApencice01_HO.AnioColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.AnioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFirmaTrabajadorNull() {
-                return this.IsNull(this.tableApencice01_HO.FirmaTrabajadorColumn);
+                return this.IsNull(this.tableApendice01_HO.FirmaTrabajadorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFirmaTrabajadorNull() {
-                this[this.tableApencice01_HO.FirmaTrabajadorColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.FirmaTrabajadorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFirmaMedicoNull() {
-                return this.IsNull(this.tableApencice01_HO.FirmaMedicoColumn);
+                return this.IsNull(this.tableApendice01_HO.FirmaMedicoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFirmaMedicoNull() {
-                this[this.tableApencice01_HO.FirmaMedicoColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.FirmaMedicoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHuellaTrabajadorNull() {
-                return this.IsNull(this.tableApencice01_HO.HuellaTrabajadorColumn);
+                return this.IsNull(this.tableApendice01_HO.HuellaTrabajadorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHuellaTrabajadorNull() {
-                this[this.tableApencice01_HO.HuellaTrabajadorColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.HuellaTrabajadorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isb_logoNull() {
-                return this.IsNull(this.tableApencice01_HO.b_logoColumn);
+                return this.IsNull(this.tableApendice01_HO.b_logoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setb_logoNull() {
-                this[this.tableApencice01_HO.b_logoColumn] = global::System.Convert.DBNull;
+                this[this.tableApendice01_HO.b_logoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1515,22 +1515,22 @@ namespace Sigesoft.Node.WinClient.UI.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Apencice01_HORowChangeEvent : global::System.EventArgs {
+        public class Apendice01_HORowChangeEvent : global::System.EventArgs {
             
-            private Apencice01_HORow eventRow;
+            private Apendice01_HORow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Apencice01_HORowChangeEvent(Apencice01_HORow row, global::System.Data.DataRowAction action) {
+            public Apendice01_HORowChangeEvent(Apendice01_HORow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Apencice01_HORow Row {
+            public Apendice01_HORow Row {
                 get {
                     return this.eventRow;
                 }

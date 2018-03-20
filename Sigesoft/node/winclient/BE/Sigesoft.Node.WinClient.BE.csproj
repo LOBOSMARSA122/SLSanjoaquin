@@ -46,9 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Custom\Anexo02_HistOcup.cs" />
+    <Compile Include="Custom\Anexo05_Espiro.cs" />
     <Compile Include="Custom\Antecedentes.cs" />
     <Compile Include="Custom\AntecedentesList.cs" />
     <Compile Include="Custom\Apendice01_HistOcup.cs" />
+    <Compile Include="Custom\Apendice08_Espiro01.cs" />
+    <Compile Include="Custom\Apendice08_Espiro02.cs" />
     <Compile Include="Custom\AudiometriaList.cs" />
     <Compile Include="Custom\AudiometriaSJ.cs" />
     <Compile Include="Custom\AudiometriaUserControlList.cs" />
@@ -89,10 +92,13 @@
     <Compile Include="Custom\DxFrecuenteDetalleList.cs" />
     <Compile Include="Custom\DxFrecuenteList.cs" />
     <Compile Include="Custom\EmailList.cs" />
+    <Compile Include="Custom\EspiroCuestionarioGoldField.cs" />
     <Compile Include="Custom\FacturacionDetalleList.cs" />
     <Compile Include="Custom\FacturacionList.cs" />
     <Compile Include="Custom\FamilyMedicalAntecedentsList.cs" />
     <Compile Include="Custom\FichaAudiometricaAudiomax.cs" />
+    <Compile Include="Custom\FichaComplementaria_HO.cs" />
+    <Compile Include="Custom\FichaMedicaOcupacional_CHO.cs" />
     <Compile Include="Custom\Formulate.cs" />
     <Compile Include="Custom\Group.cs" />
     <Compile Include="Custom\GesList.cs" />
@@ -103,6 +109,7 @@
     <Compile Include="Custom\HojaRutaCabecera.cs" />
     <Compile Include="Custom\HojaRutaDetalle.cs" />
     <Compile Include="Custom\ImprimirFactura.cs" />
+    <Compile Include="Custom\InformeElectroCardiografiaoGoldField_EKG.cs" />
     <Compile Include="Custom\InterfaceSeguimiento.cs" />
     <Compile Include="Custom\KeyTagControl.cs" />
     <Compile Include="Custom\ListaComun.cs" />
