@@ -32,7 +32,9 @@ namespace Sigesoft.Node.WinClient.BE
 
         public string v_UnidadMedida { get; set; }
         public string v_ComponentId { get; set; }
-        
+
+        public string v_ServicioId { get; set; }
+        public DateTime? d_ServiceDate { get; set; }
        
     }
 }

@@ -44,7 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bytescout.Spreadsheet">
-      <HintPath>..\..\..\..\..\..\Compartida\Debug\Bytescout.Spreadsheet.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\Bytescout.Spreadsheet.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine">
       <HintPath>c:\program files\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>

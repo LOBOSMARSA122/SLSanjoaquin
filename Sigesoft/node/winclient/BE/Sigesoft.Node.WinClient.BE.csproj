@@ -96,6 +96,8 @@
     <Compile Include="Custom\Group.cs" />
     <Compile Include="Custom\GesList.cs" />
     <Compile Include="Custom\GrupoFactorSanguineo.cs" />
+    <Compile Include="Custom\HistoriaGrupoFactor.cs" />
+    <Compile Include="Custom\HistorialTriaje.cs" />
     <Compile Include="Custom\HistoryList.cs" />
     <Compile Include="Custom\HojaRutaCabecera.cs" />
     <Compile Include="Custom\HojaRutaDetalle.cs" />

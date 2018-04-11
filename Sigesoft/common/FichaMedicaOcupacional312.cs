@@ -1106,7 +1106,7 @@ namespace NetPdf
             string ICC = Antropometria.Count() == 0 ? string.Empty : ((ServiceComponentFieldValuesList)Antropometria.Find(p => p.v_ComponentFieldId == Sigesoft.Common.Constants.ANTROPOMETRIA_INDICE_CINTURA_ID)).v_Value1;
             string PerimetroCadera = Antropometria.Count() == 0 ? string.Empty : ((ServiceComponentFieldValuesList)Antropometria.Find(p => p.v_ComponentFieldId == Sigesoft.Common.Constants.ANTROPOMETRIA_PERIMETRO_CADERA_ID)).v_Value1;
             string PerimetroAbdominal = Antropometria.Count() == 0 ? string.Empty : ((ServiceComponentFieldValuesList)Antropometria.Find(p => p.v_ComponentFieldId == Sigesoft.Common.Constants.ANTROPOMETRIA_PERIMETRO_ABDOMINAL_ID)).v_Value1;
-            string PorcentajeGrasaCorporal = Antropometria.Count() == 0 ? string.Empty : ((ServiceComponentFieldValuesList)Antropometria.Find(p => p.v_ComponentFieldId == Sigesoft.Common.Constants.ANTROPOMETRIA_PORCENTAJE_GRASA_CORPORAL_ID)).v_Value1;
+            string PorcentajeGrasaCorporal = "";
 
             //Funciones Vitales
             string FrecResp = FuncionesVitales.Count() == 0 ? string.Empty : ((ServiceComponentFieldValuesList)FuncionesVitales.Find(p => p.v_ComponentFieldId == Sigesoft.Common.Constants.FUNCIONES_VITALES_FREC_RESPIRATORIA_ID)).v_Value1;

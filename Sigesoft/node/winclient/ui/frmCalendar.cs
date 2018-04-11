@@ -14,11 +14,13 @@ using Infragistics.Win;
 using Infragistics.Win.UltraWinGrid.DocumentExport;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using Sigesoft.Node.WinClient.UI.Configuration;
 
 namespace Sigesoft.Node.WinClient.UI
 {
     public partial class frmCalendar : Form
     {
+        
         string strFilterExpression;
         string _PacientId;
         List<string> _ListaCalendar;
@@ -267,6 +269,7 @@ namespace Sigesoft.Node.WinClient.UI
             List<ServiceComponentList> ListServiceComponent = new List<ServiceComponentList>();
 
             DateTime FechaAgenda = DateTime.Parse(grdDataCalendar.Selected.Rows[0].Cells[4].Value.ToString());
+
             if (FechaAgenda.Date != DateTime.Now.Date)
             {
                 MessageBox.Show("No se permite Iniciar Circuito con una fecha que no sea la actual.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -582,8 +585,7 @@ namespace Sigesoft.Node.WinClient.UI
         {
             btnConsentimiento.Enabled = btnExportExcel.Enabled = btnExportPdf.Enabled =  btnAdjuntar.Enabled =(grdDataCalendar.Selected.Rows.Count > 0);
             btnSendEmail.Enabled = (grdDataCalendar.Selected.Rows.Count > 0 && _sendEmailEnabled);
-            
-
+                       
             if (grdDataCalendar.Selected.Rows.Count != 0)
             {
                 mnuAreaTrabajo.Enabled = true;
@@ -983,7 +985,25 @@ namespace Sigesoft.Node.WinClient.UI
                     //btnFechaEntrega.Enabled = false;
                     //btnAdjuntarArchivo.Enabled = false;
                 }
+            }
 
+            var grid = grdDataCalendar.Rows;
+            var count = 0;
+            foreach (var item in grid)
+            {
+                if ((bool)item.Cells["b_Seleccionar"].Value)
+                {
+                    count += 1;
+                }
+            }
+
+            if (count > 0)
+            {
+                btnCambiarProtocolo.Enabled = true;
+            }
+            else
+            {
+                btnCambiarProtocolo.Enabled = false;
             }
         }
 
@@ -1258,6 +1278,41 @@ namespace Sigesoft.Node.WinClient.UI
             frmAdjuntarConsentimiento frm = new frmAdjuntarConsentimiento(_serviceId);
             frm.Show();
         }
+
+        private void btnCambiarProtocolo_Click(object sender, EventArgs e)
+        {
+            ServiceBL oServiceBL = new ServiceBL();
+            frmProtocolManagement frm = new frmProtocolManagement("View",  (int)ServiceType.Empresarial,(int)MasterService.Eso);
+            frm.ShowDialog();
+
+            if (frm.DialogResult == System.Windows.Forms.DialogResult.Cancel)
+                return;
+
+            if (string.IsNullOrEmpty(frm._pstrProtocolId))
+                return;
+
+           var protocolId = frm._pstrProtocolId;
+
+            var check = grdDataCalendar.Rows;
+            foreach (var item in check)
+            {
+                if ((bool)item.Cells["b_Seleccionar"].Value)
+                {
+                    var serviceId = item.Cells["v_ServiceId"].Value.ToString();
+                    oServiceBL.CambiarProtocoloDeServicio(serviceId, protocolId);
+                }
+            }
+            btnFilter_Click(sender, e);
+            MessageBox.Show("Se completo correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            
+
+            
+         
+           
+            
+       
+        }       
     
     }
 }
