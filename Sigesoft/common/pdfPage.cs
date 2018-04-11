@@ -85,103 +85,18 @@ namespace NetPdf
         //override the OnPageEnd event handler to add our footer
         public override void OnEndPage(PdfWriter writer, Document doc)
         {
-            //I use a PdfPtable with 2 columns to position my footer where I want it
-            PdfPTable footerTbl = new PdfPTable(1);
-
-            //set the width of the table to be the same as the document
+            var rutaImg = Sigesoft.Common.Utils.GetApplicationConfigValue("imgFooter");
+            var footerTbl = new PdfPTable(1);
             footerTbl.TotalWidth = doc.PageSize.Width;
+            var widths = new[] { 100f };
+            footerTbl.SetWidths(widths);
+            footerTbl.HorizontalAlignment = Element.ALIGN_LEFT;
 
-            //Center the table on the page
-            footerTbl.HorizontalAlignment = Element.ALIGN_JUSTIFIED;
+            Image jpg = Image.GetInstance(rutaImg);
+            var imageCell = new PdfPCell(jpg);
 
-            //////////////////////////////////////////////////////////////String text = string.Format("Página {0} de ", writer.PageNumber);
-
-            //////////////////////////////////////////////////////////////float len = bf.GetWidthPoint(text, 8);
-
-            //////////////////////////////////////////////////////////////Rectangle pageSize = doc.PageSize;
-
-            //////////////////////////////////////////////////////////////cb.SetRGBColorFill(128, 128, 128);
-
-            //////////////////////////////////////////////////////////////cb.BeginText();
-            //////////////////////////////////////////////////////////////cb.SetFontAndSize(bf, 8);
-            //////////////////////////////////////////////////////////////cb.SetTextMatrix(pageSize.GetLeft(40), pageSize.GetBottom(30));
-            //////////////////////////////////////////////////////////////cb.ShowText(text);
-            //////////////////////////////////////////////////////////////cb.EndText();
-
-            //////////////////////////////////////////////////////////////cb.AddTemplate(templateNumPage, pageSize.GetLeft(40) + len, pageSize.GetBottom(30));
-
-            //////////////////////////////////////////////////////////////cb.BeginText();
-            //////////////////////////////////////////////////////////////cb.SetFontAndSize(bf, 8);
-            //////////////////////////////////////////////////////////////cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT,
-            //////////////////////////////////////////////////////////////    "Impreso El " + PrintTime.ToString(),
-            //////////////////////////////////////////////////////////////    pageSize.GetRight(40),
-            //////////////////////////////////////////////////////////////    pageSize.GetBottom(30), 0);
-            //////////////////////////////////////////////////////////////cb.EndText();
-
-
-            // Page number         
-
-            String pageNumber = "_______________________________________________________________________________________________________";// string.Format("Página {0} de", writer.PageNumber);
-
-            //Create a paragraph that contains the footer text
-            Paragraph para = new Paragraph(pageNumber, footer);
-
-            //add a carriage return
-            para.Add(Environment.NewLine);
-            para.Add(" ");
-            
-            //add a carriage return
-            para.Add(Environment.NewLine);
-            para.Add("Informes: 459-5250                                                               -                                                   Servicios Médicos JBR SAC");
-            
-            //add a carriage return
-            para.Add(Environment.NewLine);
-            para.Add("Salud Ocupacional: 253-2176                                              -                                                  Av. Gran Chimú 613, Zárate - SJL");
-
-            //add a carriage return
-            para.Add(Environment.NewLine);
-            para.Add("informes@sanjoaquin.com.pe                                            -                                                   www.sanjoaquin.com.pe ");
-
-            //create a cell instance to hold the text
-            PdfPCell cell = new PdfPCell(para);
-            cell.HorizontalAlignment = Element.ALIGN_JUSTIFIED;
-            //set cell border to 0
-            cell.Border = PdfPCell.NO_BORDER;
-
-            //add some padding to bring away from the edge
-            cell.PaddingLeft = 65;
-
-            //add cell to table
-            footerTbl.AddCell(cell);
-
-            cell = new PdfPCell(Image.GetInstance(templateNumPage));
-            //set cell border to 0
-            cell.Border = PdfPCell.NO_BORDER;
-
-            //add cell to table
-            footerTbl.AddCell(cell);
-
-            //create new instance of Paragraph for 2nd cell text
-            para = new Paragraph("Algun Texto de la Segunda Celda", footer);
-
-            //create new instance of cell to hold the text
-            cell = new PdfPCell(para);
-
-            //align the text to the right of the cell
-            cell.HorizontalAlignment = Element.ALIGN_RIGHT;
-            //set border to 0
-            cell.Border = PdfPCell.NO_BORDER;
-
-            // add some padding to take away from the edge of the page
-            cell.PaddingRight = 10;
-
-            //add the cell to the table
-            footerTbl.AddCell(cell);
-
-            //write the rows out to the PDF output stream.
-            footerTbl.WriteSelectedRows(0, -1, 0, (doc.BottomMargin + 10), writer.DirectContent);
-
-
+            footerTbl.AddCell(imageCell);
+             footerTbl.WriteSelectedRows(0, -1, 0, (doc.BottomMargin + 10), writer.DirectContent);
         }
 
         public override void OnCloseDocument(PdfWriter writer, Document document)
