@@ -11,5 +11,6 @@ namespace Sigesoft.Node.WinClient.BE
         public string Paciente { get; set; }
         public DateTime? FechaServicio { get; set; }
         public string DNI { get; set; }
+        public string Apellidos { get; set; }
     }
 }

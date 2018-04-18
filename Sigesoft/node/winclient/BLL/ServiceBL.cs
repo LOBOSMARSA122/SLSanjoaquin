@@ -2178,7 +2178,6 @@ namespace Sigesoft.Node.WinClient.BLL
                                           where (rec.i_IsDeleted == isDeleted) &&
                                                 (mrec.i_TypifyingId == recomId) &&
                                                 (s.v_ServiceId == pstrServiceId)
-
                                           select new RecomendationList
                                           {
                                               v_ComponentFieldValuesRecommendationId = rec.v_ComponentFieldValuesRecommendationId,
@@ -2206,7 +2205,6 @@ namespace Sigesoft.Node.WinClient.BLL
                                           where (res.i_IsDeleted == isDeleted) &&
                                                 (mres.i_TypifyingId == restricId) &&
                                                 (s.v_ServiceId == pstrServiceId)
-
                                           select new RestrictionList
                                           {
                                               v_ComponentFieldValuesRestrictionId = res.v_ComponentFieldValuesRestrictionId,
@@ -2229,7 +2227,6 @@ namespace Sigesoft.Node.WinClient.BLL
                                     join dise in dbContext.diseases on cfsv.v_Diseases equals dise.v_DiseasesId
                                     where (cfsv.i_IsDeleted == isDeleted) &&
                                           (s.v_ServiceId == pstrServiceId)
-
                                     select new ComponentFieldValues
                                     {
                                         v_ComponentFieldValuesId = cfsv.v_ComponentFieldValuesId,
@@ -2284,7 +2281,6 @@ namespace Sigesoft.Node.WinClient.BLL
                                   where (cfs.i_IsDeleted == isDeleted) &&
                                         (cf.i_IsDeleted == isDeleted) &&
                                         (s.v_ServiceId == pstrServiceId)
-
                                   select new ComponentFieldsList
                                   {
                                       v_ComponentFieldId = cf.v_ComponentFieldId,
@@ -25018,6 +25014,7 @@ namespace Sigesoft.Node.WinClient.BLL
                                  {
                                      Empresa = C.v_Name,
                                      Paciente = D.v_FirstLastName + " " + D.v_SecondLastName + " " + D.v_FirstName,
+                                     Apellidos = D.v_FirstLastName + " " + D.v_SecondLastName,
                                      FechaServicio = A.d_ServiceDate,
                                      DNI = D.v_DocNumber
                                  });
@@ -25029,6 +25026,7 @@ namespace Sigesoft.Node.WinClient.BLL
                            {
                                Empresa = a.Empresa,
                                Paciente = a.Paciente,
+                               Apellidos = a.Apellidos,
                                FechaServicio = a.FechaServicio,
                                DNI = a.DNI
                            }).FirstOrDefault();

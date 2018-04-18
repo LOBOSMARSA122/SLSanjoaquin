@@ -909,31 +909,29 @@ namespace Sigesoft.Node.WinClient.UI.Reports
             var _DataService = _serviceBL.GetServiceReport(_serviceId);
             var _listaHabitoNocivos = _historyBL.GetNoxiousHabitsReport(_pacientId);
 
-            var Antropometria = _serviceBL.ValoresComponente(_serviceId, Constants.ANTROPOMETRIA_ID);
-            var FuncionesVitales = _serviceBL.ValoresComponente(_serviceId, Constants.FUNCIONES_VITALES_ID);
-            var ExamenFisico = _serviceBL.ValoresComponente(_serviceId, Constants.EXAMEN_FISICO_ID);
-            var Oftalmologia = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
-            var Psicologia = _serviceBL.ValoresExamenComponete(_serviceId, Constants.PSICOLOGIA_ID, 195);
-            var OIT = _serviceBL.ValoresExamenComponete(_serviceId, Constants.OIT_ID, 211);
-            var RX = _serviceBL.ValoresExamenComponete(_serviceId, Constants.RX_TORAX_ID, 135);
-            var Laboratorio = _serviceBL.ValoresComponente(_serviceId, Constants.INFORME_LABORATORIO_ID);
-            //var Audiometria = _serviceBL.ValoresComponente(_serviceId, Constants.AUDIOMETRIA_ID);
+            //var Antropometria = _serviceBL.ValoresComponente(_serviceId, Constants.ANTROPOMETRIA_ID);
+            //var FuncionesVitales = _serviceBL.ValoresComponente(_serviceId, Constants.FUNCIONES_VITALES_ID);
+            //var ExamenFisico = _serviceBL.ValoresComponente(_serviceId, Constants.EXAMEN_FISICO_ID);
+            //var Oftalmologia = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
+            //var Psicologia = _serviceBL.ValoresExamenComponete(_serviceId, Constants.PSICOLOGIA_ID, 195);
+            //var OIT = _serviceBL.ValoresExamenComponete(_serviceId, Constants.OIT_ID, 211);
+            //var RX = _serviceBL.ValoresExamenComponete(_serviceId, Constants.RX_TORAX_ID, 135);
+            //var Laboratorio = _serviceBL.ValoresComponente(_serviceId, Constants.INFORME_LABORATORIO_ID);
             var Audiometria = _serviceBL.GetDiagnosticForAudiometria(_serviceId, Constants.AUDIOMETRIA_ID);
-            var Espirometria = _serviceBL.ValoresExamenComponete(_serviceId, Constants.ESPIROMETRIA_ID, 210);
+            //var Espirometria = _serviceBL.ValoresExamenComponete(_serviceId, Constants.ESPIROMETRIA_ID, 210);
             var _DiagnosticRepository = _serviceBL.GetServiceDisgnosticsReports(_serviceId);
             var _Recomendation = _serviceBL.GetServiceRecommendationByServiceId(_serviceId);
-            var _ExamenesServicio = _serviceBL.GetServiceComponentsReport(_serviceId);
-            var ValoresDxLab = new List<ServiceComponentFieldValuesList>();
+            //var _ExamenesServicio = _serviceBL.GetServiceComponentsReport(_serviceId);
+            //var ValoresDxLab = new List<ServiceComponentFieldValuesList>();
             var MedicalCenter = _serviceBL.GetInfoMedicalCenter();
-            var TestIhihara = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
-            var TestEstereopsis = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
-
+            //var TestIhihara = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
+            //var TestEstereopsis = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
+            var _Valores = _serviceBL.GetServiceComponentsReport(_serviceId);
 
             FichaMedicaOcupacional312.CreateFichaMedicalOcupacional312Report(_DataService,
                         filiationData, _listAtecedentesOcupacionales, _listaPatologicosFamiliares,
-                        _listMedicoPersonales, _listaHabitoNocivos, Antropometria, FuncionesVitales,
-                        ExamenFisico, Oftalmologia, Psicologia, OIT, RX, Laboratorio, Audiometria, Espirometria,
-                        _DiagnosticRepository, _Recomendation, _ExamenesServicio, ValoresDxLab, MedicalCenter,TestIhihara,TestEstereopsis,
+                        _listMedicoPersonales, _listaHabitoNocivos, Audiometria,
+                        _DiagnosticRepository, _Recomendation, MedicalCenter,_Valores,
                         pathFile);
         }
 
@@ -1400,33 +1398,33 @@ namespace Sigesoft.Node.WinClient.UI.Reports
             }
 
             if (Publicar)
-            {     
-                #region Adjuntar Archivos Adjuntos    
-        
-                    //List<string> files = Directory.GetFiles(Application.StartupPath + @"\Interconsultas\", "*.pdf").ToList();
+            {
+                #region Adjuntar Archivos Adjuntos
 
-                    //var Resultado = files.Find(p => p == Application.StartupPath + @"\Interconsultas\" + _serviceId + ".pdf");
-                    //if (Resultado != null)
-                    //{
-                    //    _filesNameToMerge.Add(Application.StartupPath + @"\Interconsultas\" + _serviceId + ".pdf");
-                    //}
+                //List<string> files = Directory.GetFiles(Application.StartupPath + @"\Interconsultas\", "*.pdf").ToList();
 
-          
-                    //var ListaPdf = _serviceBL.GetFilePdfsByServiceId(ref objOperationResult, _serviceId);
-                    //if (ListaPdf != null)
-                    //{
-                    //    if (ListaPdf.ToList().Count != 0)
-                    //    {
-                    //        foreach (var item in ListaPdf)
-                    //        {
-                    //            var multimediaFile = _multimediaFileBL.GetMultimediaFileById(ref objOperationResult, item.v_MultimediaFileId);
-                    //            var path = ruta + _serviceId + "-" + item.v_FileName;
-                    //            File.WriteAllBytes(path, multimediaFile.ByteArrayFile);
-                    //            _filesNameToMerge.Add(path);
+                //var Resultado = files.Find(p => p == Application.StartupPath + @"\Interconsultas\" + _serviceId + ".pdf");
+                //if (Resultado != null)
+                //{
+                //    _filesNameToMerge.Add(Application.StartupPath + @"\Interconsultas\" + _serviceId + ".pdf");
+                //}
 
-                    //        }
-                    //    }           
-                    //}
+
+                //var ListaPdf = _serviceBL.GetFilePdfsByServiceId(ref objOperationResult, _serviceId);
+                //if (ListaPdf != null)
+                //{
+                //    if (ListaPdf.ToList().Count != 0)
+                //    {
+                //        foreach (var item in ListaPdf)
+                //        {
+                //            var multimediaFile = _multimediaFileBL.GetMultimediaFileById(ref objOperationResult, item.v_MultimediaFileId);
+                //            var path = ruta + _serviceId + "-" + item.v_FileName;
+                //            File.WriteAllBytes(path, multimediaFile.ByteArrayFile);
+                //            _filesNameToMerge.Add(path);
+
+                //        }
+                //    }           
+                //}
 
 
                 string rutaInterconsulta = Common.Utils.GetApplicationConfigValue("Interconsulta").ToString();
@@ -1441,7 +1439,7 @@ namespace Sigesoft.Node.WinClient.UI.Reports
                 }
 
 
-              
+
 
 
                 var ListaPdf = _serviceBL.GetFilePdfsByServiceId(ref objOperationResult, _serviceId);
@@ -1455,102 +1453,113 @@ namespace Sigesoft.Node.WinClient.UI.Reports
                             string rutaOrigenArchivo = "";
                             if (multimediaFile.ByteArrayFile == null)
                             {
-                                var a = multimediaFile.FileName.Split('-');
-                                var consultorio = a[2].Substring(0, a[2].Length - 4);
-                                if (consultorio == "ESPIROMETRÍA")
-                                {
-                                    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgESPIROOrigen").ToString();
-                                }
-                                else if (consultorio == "RAYOS X")
-                                {
-                                    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgRxOrigen").ToString();
-                                }
-                                else if (consultorio == "CARDIOLOGÍA")
-                                {
-                                    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgEKGOrigen").ToString();
-                                }
-                                else if (consultorio == "LABORATORIO")
-                                {
-                                    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgLABOrigen").ToString();
-                                }
-                                else if (consultorio == "PSICOLOGIA")
-                                {
-                                    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgPsicoOrigen").ToString();
-                                }
-                                if (rutaOrigenArchivo == null)
-                                {
-                                    MessageBox.Show("No se ha configurado una ruta para subir el archivo.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    return;
-                                }
-                                var path = rutaOrigenArchivo + item.v_FileName;
-                                //File.WriteAllBytes(path, multimediaFile.ByteArrayFile);
-                                _filesNameToMerge.Add(path);
+                                #region Adjunto
+                                //var a = multimediaFile.FileName.Split('-');
+                                //var consultorio = a[2].Substring(0, a[2].Length - 4);
+                                //if (consultorio == "ESPIROMETRÍA")
+                                //{
+                                //    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgESPIROOrigen").ToString();
+                                //}
+                                //else if (consultorio == "RAYOS X")
+                                //{
+                                //    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgRxOrigen").ToString();
+                                //}
+                                //else if (consultorio == "CARDIOLOGÍA")
+                                //{
+                                //    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgEKGOrigen").ToString();
+                                //}
+                                //else if (consultorio == "LABORATORIO")
+                                //{
+                                //    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgLABOrigen").ToString();
+                                //}
+                                //else if (consultorio == "PSICOLOGIA")
+                                //{
+                                //    rutaOrigenArchivo = Common.Utils.GetApplicationConfigValue("ImgPsicoOrigen").ToString();
+                                //}
+                                //if (rutaOrigenArchivo == null)
+                                //{
+                                //    MessageBox.Show("No se ha configurado una ruta para subir el archivo.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                //    return;
+                                //}
+                                //var path = rutaOrigenArchivo + item.v_FileName;
+                                ////File.WriteAllBytes(path, multimediaFile.ByteArrayFile);
+                                //_filesNameToMerge.Add(path);
+                                #endregion
                             }
+                           
                             else
                             {
                                 var path = ruta + _serviceId + "-" + item.v_FileName;
                                 File.WriteAllBytes(path, multimediaFile.ByteArrayFile);
                                 _filesNameToMerge.Add(path);
                             }
-                          
+
 
                         }
                     }
                 }
 
-                    //Obtner DNI y Fecha del servicio
-                    //var o = _serviceBL.GetServiceShort(serviceId);
-                    string Fecha = o.FechaServicio.Value.Day.ToString().PadLeft(2, '0') +  o.FechaServicio.Value.Month.ToString().PadLeft(2, '0') +  o.FechaServicio.Value.Year.ToString();
-                    DirectoryInfo rutaOrigen = null;
-           
-
-                    ////ELECTRO
-                    // rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgEKGOrigen").ToString());
-                    // FileInfo[] files1 = rutaOrigen.GetFiles();
-      
-                    // foreach (FileInfo file in files1)
-                    // {
-                    //     if (file.ToString().Count() > 16)
-                    //     {
-                    //         if (file.ToString().Substring(0, 17) == o.DNI + "-" + Fecha)
-                    //         {
-                    //             _filesNameToMerge.Add(rutaOrigen+file.ToString());
-                    //         };
-                    //     }
-                    // }
+                //Obtner DNI y Fecha del servicio
+                //var o = _serviceBL.GetServiceShort(serviceId);
+                string Fecha = o.FechaServicio.Value.Day.ToString().PadLeft(2, '0') + o.FechaServicio.Value.Month.ToString().PadLeft(2, '0') + o.FechaServicio.Value.Year.ToString();
+                DirectoryInfo rutaOrigen = null;
 
 
-                    // //ESPIRO
-                    // rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgESPIROOrigen").ToString());
-                    // FileInfo[] files2 = rutaOrigen.GetFiles();
+                //ELECTRO
+                rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgEKGOrigen").ToString());
+                FileInfo[] files1 = rutaOrigen.GetFiles();
 
-                    // foreach (FileInfo file in files2)
-                    // {
-                    //     if (file.ToString().Count() > 16)
-                    //     {
-                    //         if (file.ToString().Substring(0, 17) == o.DNI + "-" + Fecha)
-                    //         {
-                    //             _filesNameToMerge.Add(rutaOrigen + file.ToString());
-                    //         };
-                    //     }
-                    // }
-
-                    string rutaConsentimiento = Common.Utils.GetApplicationConfigValue("Consentimiento").ToString();
-
-                    List<string> filesConsentimientos = Directory.GetFiles(rutaConsentimiento, "*.pdf").ToList();
-
-                    var resultadoConsentimiento = filesConsentimientos.Find(p => p == rutaConsentimiento + serviceId + "-CI.pdf");
-                    if (resultadoConsentimiento != null)
+                foreach (FileInfo file in files1)
+                {
+                    if (file.ToString().Count() > 16)
                     {
-                        _filesNameToMerge.Add(rutaConsentimiento + _serviceId + "-CI.pdf");
+                        if (file.ToString().Substring(0, 17) == o.DNI + "-" + Fecha)
+                        {
+                            _filesNameToMerge.Add(rutaOrigen + file.ToString());
+                        };
                     }
-                     var x = _filesNameToMerge.ToList();
-                     _mergeExPDF.FilesName = x;
-                     _mergeExPDF.DestinationFile = Application.StartupPath + @"\TempMerge\" + _serviceId + ".pdf"; ;
-                     _mergeExPDF.DestinationFile = ruta + _serviceId + ".pdf"; ;
-                     _mergeExPDF.Execute();
+                       else if (file.ToString().ToUpper() == o.Apellidos + "-2.PDF")
+                        {
+                            _filesNameToMerge.Add(rutaOrigen + file.ToString());
+                        }
+                }
 
-            #endregion
+
+                //ESPIRO
+                rutaOrigen = new DirectoryInfo(Common.Utils.GetApplicationConfigValue("ImgESPIROOrigen").ToString());
+                FileInfo[] files2 = rutaOrigen.GetFiles();
+
+                foreach (FileInfo file in files2)
+                {
+                    if (file.ToString().Count() > 16)
+                    {
+                        if (file.ToString().Substring(0, 17) == o.DNI + "-" + Fecha)
+                        {
+                            _filesNameToMerge.Add(rutaOrigen + file.ToString());
+                        }
+                        else if (file.ToString().ToUpper() == o.Apellidos + "-1.PDF")
+                        {
+                            _filesNameToMerge.Add(rutaOrigen + file.ToString());
+                        }
+                    }
+                }
+
+                string rutaConsentimiento = Common.Utils.GetApplicationConfigValue("Consentimiento").ToString();
+
+                List<string> filesConsentimientos = Directory.GetFiles(rutaConsentimiento, "*.pdf").ToList();
+
+                var resultadoConsentimiento = filesConsentimientos.Find(p => p == rutaConsentimiento + serviceId + "-CI.pdf");
+                if (resultadoConsentimiento != null)
+                {
+                    _filesNameToMerge.Add(rutaConsentimiento + _serviceId + "-CI.pdf");
+                }
+                var x = _filesNameToMerge.ToList();
+                _mergeExPDF.FilesName = x;
+                _mergeExPDF.DestinationFile = Application.StartupPath + @"\TempMerge\" + _serviceId + ".pdf"; ;
+                _mergeExPDF.DestinationFile = ruta + _serviceId + ".pdf"; ;
+                _mergeExPDF.Execute();
+
+                #endregion
             }
 
 

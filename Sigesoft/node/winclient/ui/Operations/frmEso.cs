@@ -7027,30 +7027,29 @@ namespace Sigesoft.Node.WinClient.UI.Operations
                 var _DataService = _serviceBL.GetServiceReport(_serviceId);
                 var _listaHabitoNocivos = _historyBL.GetNoxiousHabitsReport(_personId);
 
-                var Antropometria = _serviceBL.ValoresComponente(_serviceId, Constants.ANTROPOMETRIA_ID);
-                var FuncionesVitales = _serviceBL.ValoresComponente(_serviceId, Constants.FUNCIONES_VITALES_ID);
-                var ExamenFisico = _serviceBL.ValoresComponente(_serviceId, Constants.EXAMEN_FISICO_ID);
-                var Oftalmologia = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
-                var Psicologia = _serviceBL.ValoresExamenComponete(_serviceId, Constants.PSICOLOGIA_ID, 195);
-                var OIT = _serviceBL.ValoresExamenComponete(_serviceId, Constants.OIT_ID, 211);
-                var RX = _serviceBL.ValoresExamenComponete(_serviceId, Constants.RX_TORAX_ID, 135);
-                var Laboratorio = _serviceBL.ValoresComponente(_serviceId, Constants.INFORME_LABORATORIO_ID);
-                //var Audiometria = _serviceBL.ValoresComponente(_serviceId, Constants.AUDIOMETRIA_ID);
+                //var Antropometria = _serviceBL.ValoresComponente(_serviceId, Constants.ANTROPOMETRIA_ID);
+                //var FuncionesVitales = _serviceBL.ValoresComponente(_serviceId, Constants.FUNCIONES_VITALES_ID);
+                //var ExamenFisico = _serviceBL.ValoresComponente(_serviceId, Constants.EXAMEN_FISICO_ID);
+                //var Oftalmologia = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
+                //var Psicologia = _serviceBL.ValoresExamenComponete(_serviceId, Constants.PSICOLOGIA_ID, 195);
+                //var OIT = _serviceBL.ValoresExamenComponete(_serviceId, Constants.OIT_ID, 211);
+                //var RX = _serviceBL.ValoresExamenComponete(_serviceId, Constants.RX_TORAX_ID, 135);
+                //var Laboratorio = _serviceBL.ValoresComponente(_serviceId, Constants.INFORME_LABORATORIO_ID);
                 var Audiometria = _serviceBL.GetDiagnosticForAudiometria(_serviceId, Constants.AUDIOMETRIA_ID);
-                var Espirometria = _serviceBL.ValoresExamenComponete(_serviceId, Constants.ESPIROMETRIA_ID, 210);
+                //var Espirometria = _serviceBL.ValoresExamenComponete(_serviceId, Constants.ESPIROMETRIA_ID, 210);
                 var _DiagnosticRepository = _serviceBL.GetServiceDisgnosticsReports(_serviceId);
                 var _Recomendation = _serviceBL.GetServiceRecommendationByServiceId(_serviceId);
-                var _ExamenesServicio = _serviceBL.GetServiceComponentsReport(_serviceId);
-                var ValoresDxLab = _serviceBL.ValoresComponenteAMC_(_serviceId, 1);
+                //var _ExamenesServicio = _serviceBL.GetServiceComponentsReport(_serviceId);
+                var ValoresDxLab = new List<ServiceComponentFieldValuesList>();
                 var MedicalCenter = _serviceBL.GetInfoMedicalCenter();
-                var TestIhihara = _serviceBL.ValoresComponente(_serviceId, Constants.TEST_ISHIHARA_ID);
-                var TestEstereopsis = _serviceBL.ValoresComponente(_serviceId, Constants.TEST_ESTEREOPSIS_ID);
+                //var TestIhihara = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
+                //var TestEstereopsis = _serviceBL.ValoresComponente(_serviceId, Constants.OFTALMOLOGIA_ID);
+                var _Valores = _serviceBL.GetServiceComponentsReport(_serviceId);
 
                 FichaMedicaOcupacional312.CreateFichaMedicalOcupacional312Report(_DataService,
                             filiationData, _listAtecedentesOcupacionales, _listaPatologicosFamiliares,
-                            _listMedicoPersonales, _listaHabitoNocivos, Antropometria, FuncionesVitales,
-                            ExamenFisico, Oftalmologia, Psicologia, OIT, RX, Laboratorio, Audiometria, Espirometria,
-                            _DiagnosticRepository, _Recomendation, _ExamenesServicio, ValoresDxLab, MedicalCenter,TestIhihara,TestEstereopsis,
+                            _listMedicoPersonales, _listaHabitoNocivos,Audiometria, 
+                            _DiagnosticRepository, _Recomendation, MedicalCenter, _Valores,
                             pathFile);
             }
         }
