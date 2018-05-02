@@ -825,7 +825,14 @@ namespace Sigesoft.Node.WinClient.UI.Configuration
 
         private void cbOrganizationInvoice_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbOrganizationInvoice.SelectedValue == "-1") return;
+            if (cbOrganizationInvoice.SelectedValue != null)
+            {
+                var id1 = cbOrganizationInvoice.SelectedValue.ToString();
 
+                cbOrganization.SelectedValue = id1;
+                cbIntermediaryOrganization.SelectedValue = id1;
+            }
         }
 
         private void txtCostCenter_TextChanged(object sender, EventArgs e)
