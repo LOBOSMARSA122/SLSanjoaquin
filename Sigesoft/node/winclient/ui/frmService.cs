@@ -881,7 +881,7 @@ namespace Sigesoft.Node.WinClient.UI
                         }
                         else if (e.Row.Cells["i_ServiceStatusId"].Value.ToString() == ((int)ServiceStatus.Culminado).ToString())
                         {
-                            e.Row.Appearance.BackColor = Color.SkyBlue;
+                            e.Row.Appearance.BackColor = Color.LightGreen;
                             e.Row.Appearance.BackColor2 = Color.White;
                             //Y doy el efecto degradado vertical
                             e.Row.Appearance.BackGradientStyle = Infragistics.Win.GradientStyle.VerticalBump;

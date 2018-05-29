@@ -147,8 +147,8 @@
             this.btnMassive = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.btnDetallado = new System.Windows.Forms.Button();
-            this.btnConsentimiento = new System.Windows.Forms.Button();
             this.btnImprimirHojaRuta = new System.Windows.Forms.Button();
+            this.btnConsentimiento = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
             this.ultraGridDocumentExporter1 = new Infragistics.Win.UltraWinGrid.DocumentExport.UltraGridDocumentExporter(this.components);
@@ -1141,6 +1141,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btnDetallado);
             this.splitContainer1.Panel2.Controls.Add(this.btnImprimirHojaRuta);
+            this.splitContainer1.Panel2.Controls.Add(this.btnConsentimiento);
             this.splitContainer1.Panel2.Controls.Add(this.grdDataServiceComponent);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
@@ -1403,30 +1404,6 @@
             this.btnDetallado.UseVisualStyleBackColor = false;
             this.btnDetallado.Click += new System.EventHandler(this.btnDetallado_Click);
             // 
-            // btnConsentimiento
-            // 
-            this.btnConsentimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsentimiento.BackColor = System.Drawing.SystemColors.Control;
-            this.btnConsentimiento.Enabled = false;
-            this.btnConsentimiento.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnConsentimiento.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnConsentimiento.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnConsentimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsentimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsentimiento.ForeColor = System.Drawing.Color.Black;
-            this.btnConsentimiento.Image = global::Sigesoft.Node.WinClient.UI.Resources.printer_mono;
-            this.btnConsentimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsentimiento.Location = new System.Drawing.Point(481, 574);
-            this.btnConsentimiento.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConsentimiento.Name = "btnConsentimiento";
-            this.btnConsentimiento.Size = new System.Drawing.Size(157, 24);
-            this.btnConsentimiento.TabIndex = 96;
-            this.btnConsentimiento.Text = "Consentimiento Informado";
-            this.btnConsentimiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsentimiento.UseVisualStyleBackColor = false;
-            this.btnConsentimiento.Visible = false;
-            this.btnConsentimiento.Click += new System.EventHandler(this.btnConsentimiento_Click);
-            // 
             // btnImprimirHojaRuta
             // 
             this.btnImprimirHojaRuta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -1440,15 +1417,38 @@
             this.btnImprimirHojaRuta.ForeColor = System.Drawing.Color.Black;
             this.btnImprimirHojaRuta.Image = global::Sigesoft.Node.WinClient.UI.Resources.printer_go;
             this.btnImprimirHojaRuta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimirHojaRuta.Location = new System.Drawing.Point(162, 418);
+            this.btnImprimirHojaRuta.Location = new System.Drawing.Point(298, 418);
             this.btnImprimirHojaRuta.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimirHojaRuta.Name = "btnImprimirHojaRuta";
-            this.btnImprimirHojaRuta.Size = new System.Drawing.Size(274, 24);
+            this.btnImprimirHojaRuta.Size = new System.Drawing.Size(138, 24);
             this.btnImprimirHojaRuta.TabIndex = 95;
-            this.btnImprimirHojaRuta.Text = "Imprimir Hoja de Ruta y Consentimiento para firmar";
+            this.btnImprimirHojaRuta.Text = "Imprimir Hoja de Ruta";
             this.btnImprimirHojaRuta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimirHojaRuta.UseVisualStyleBackColor = false;
             this.btnImprimirHojaRuta.Click += new System.EventHandler(this.btnImprimirHojaRuta_Click);
+            // 
+            // btnConsentimiento
+            // 
+            this.btnConsentimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConsentimiento.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConsentimiento.Enabled = false;
+            this.btnConsentimiento.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnConsentimiento.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnConsentimiento.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnConsentimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsentimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsentimiento.ForeColor = System.Drawing.Color.Black;
+            this.btnConsentimiento.Image = global::Sigesoft.Node.WinClient.UI.Resources.printer_mono;
+            this.btnConsentimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsentimiento.Location = new System.Drawing.Point(127, 419);
+            this.btnConsentimiento.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConsentimiento.Name = "btnConsentimiento";
+            this.btnConsentimiento.Size = new System.Drawing.Size(157, 24);
+            this.btnConsentimiento.TabIndex = 96;
+            this.btnConsentimiento.Text = "Consentimiento Informado";
+            this.btnConsentimiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsentimiento.UseVisualStyleBackColor = false;
+            this.btnConsentimiento.Click += new System.EventHandler(this.btnConsentimiento_Click);
             // 
             // frmCalendar
             // 
@@ -1456,7 +1456,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1116, 589);
-            this.Controls.Add(this.btnConsentimiento);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);

@@ -7,6 +7,7 @@ using iTextSharp.text;
 
 namespace NetPdf
 {
+     
     public class pdfPage : PdfPageEventHelper
     {
         public string Dato { get; set; }
@@ -47,21 +48,22 @@ namespace NetPdf
 
         public override void OnOpenDocument(PdfWriter writer, Document document)
         {
+           
             bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-            templateNumPage = writer.DirectContent.CreateTemplate(50, 50);
+            templateNumPage = writer.DirectContent.CreateTemplate(25, 50);
             cb = writer.DirectContent;
         }
 
         //override the OnStartPage event handler to add our header
         public override void OnStartPage(PdfWriter writer, Document doc)
         {
+
             ////I use a PdfPtable with 1 column to position my header where I want it
             //PdfPTable headerTbl = new PdfPTable(1);
 
             ////set the width of the table to be the same as the document
             //headerTbl.TotalWidth = doc.PageSize.Width;
-
-
+           
 
 
             ////I use an image logo in the header so I need to get an instance of the image to be able to insert it. I believe this is something you couldn't do with older versions of iTextSharp
@@ -211,6 +213,7 @@ namespace NetPdf
 
         public override void OnEndPage(PdfWriter writer, Document doc)
         {
+           
             var rutaImg = Sigesoft.Common.Utils.GetApplicationConfigValue("imgFooter2");
             var footerTbl = new PdfPTable(1);
             footerTbl.TotalWidth = doc.PageSize.Width;
@@ -222,7 +225,7 @@ namespace NetPdf
 
         public override void OnCloseDocument(PdfWriter writer, Document document)
         {
-
+            
             //ColumnText.ShowTextAligned(templateNumPage, Element.ALIGN_LEFT, new Phrase((writer.PageNumber - 1).ToString()), 0, (document.BottomMargin + 10), 0);
             templateNumPage.BeginText();
             templateNumPage.SetFontAndSize(bf, 8);

@@ -98,6 +98,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
             this.lblRecordCountCalendar = new System.Windows.Forms.Label();
             this.btnGeneracionMasivaReportes = new System.Windows.Forms.Button();
@@ -145,7 +146,6 @@
             this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
             this.btnBotonOculto = new System.Windows.Forms.Button();
             this.btnActualizarPerson = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataService)).BeginInit();
@@ -558,6 +558,29 @@
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de Servicios";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_edit;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1138, 420);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 36);
+            this.button1.TabIndex = 151;
+            this.button1.Text = "Clonar Servicio";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnExport
             // 
@@ -1492,7 +1515,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label14.BackColor = System.Drawing.Color.LightGreen;
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.ImageKey = "(none)";
@@ -1646,29 +1669,6 @@
             this.btnActualizarPerson.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizarPerson.UseVisualStyleBackColor = false;
             this.btnActualizarPerson.Click += new System.EventHandler(this.btnActualizarPerson_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_edit;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1138, 420);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 36);
-            this.button1.TabIndex = 151;
-            this.button1.Text = "Clonar Servicio";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmService
             // 

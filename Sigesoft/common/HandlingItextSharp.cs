@@ -141,7 +141,7 @@ namespace NetPdf
                 //cell.Border = PdfPCell.NO_BORDER;
                 cell.Colspan = numColumns;
                 //cell.BackgroundColor = new BaseColor(252, 252, 252);
-                cell.BackgroundColor = new BaseColor(System.Drawing.Color.Gray);
+                cell.BackgroundColor = new BaseColor(System.Drawing.Color.White);
                 cell.HorizontalAlignment = Element.ALIGN_LEFT;
                 table.AddCell(cell);
             }

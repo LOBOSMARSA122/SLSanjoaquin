@@ -20,7 +20,7 @@ namespace NetPdf
         {
             //
             // step 1: creation of a document-object
-            Document document = new Document();
+            Document document = new Document(PageSize.A4, 35, 35, 5, 30);
             //Document document = new Document(new Rectangle(500f, 300f), 10, 10, 10, 10);
             //document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
             document.SetPageSize(iTextSharp.text.PageSize.A4);
@@ -43,11 +43,11 @@ namespace NetPdf
 
                 #region Fonts
 
-                Font fontTitle1 = FontFactory.GetFont("Calibri", 11, iTextSharp.text.Font.NORMAL, new BaseColor(System.Drawing.Color.Black));
-                Font fontTitle2 = FontFactory.GetFont("Calibri", 9, iTextSharp.text.Font.NORMAL, new BaseColor(System.Drawing.Color.Black));
-                Font fontTitleTable = FontFactory.GetFont("Calibri", 7, iTextSharp.text.Font.BOLD, new BaseColor(System.Drawing.Color.White));
+                Font fontTitle1 = FontFactory.GetFont("Calibri", 10, iTextSharp.text.Font.NORMAL, new BaseColor(System.Drawing.Color.Black));
+                Font fontTitle2 = FontFactory.GetFont("Calibri", 8, iTextSharp.text.Font.NORMAL, new BaseColor(System.Drawing.Color.Black));
+                Font fontTitleTable = FontFactory.GetFont("Calibri", 7, iTextSharp.text.Font.NORMAL, new BaseColor(System.Drawing.Color.White));
                 Font fontTitleTableNegro = FontFactory.GetFont("Calibri", 7, iTextSharp.text.Font.BOLD, new BaseColor(System.Drawing.Color.Black));
-                Font fontSubTitle = FontFactory.GetFont("Calibri", 8, iTextSharp.text.Font.BOLD, new BaseColor(System.Drawing.Color.White));
+                Font fontSubTitle = FontFactory.GetFont("Calibri", 7, iTextSharp.text.Font.NORMAL, new BaseColor(System.Drawing.Color.White));
                 Font fontSubTitleNegroNegrita = FontFactory.GetFont("Calibri", 7, iTextSharp.text.Font.BOLD, new BaseColor(System.Drawing.Color.Black));
 
                 Font fontColumnValue = FontFactory.GetFont("Calibri", 7, iTextSharp.text.Font.NORMAL, new BaseColor(System.Drawing.Color.Black));
@@ -125,7 +125,7 @@ namespace NetPdf
                 PdfPCell cell = null;
 
                 #endregion
-                document.Add(new Paragraph("\r\n"));
+                //document.Add(new Paragraph("\r\n"));
                 //document.Add(new Paragraph("\r\n"));
                #region Title
                 //List<PdfPCell> cells = null;
@@ -174,21 +174,21 @@ namespace NetPdf
                 #endregion
 
                 // Salto de linea
-                //document.Add(new Paragraph("\r\n"));
-
+                document.Add(new Paragraph("\r\n"));
+                
                 #region Datos personales del trabajador
 
                 cells = new List<PdfPCell>()
                 {
-                    new PdfPCell(new Phrase("PACIENTE:", fontColumnValue)), new PdfPCell(new Phrase(filiationData.v_FirstName + " " + filiationData.v_FirstLastName + " " + filiationData.v_SecondLastName, fontColumnValue)),                   
-                    new PdfPCell(new Phrase("EMPRESA:", fontColumnValue)), new PdfPCell(new Phrase(filiationData.v_FullWorkingOrganizationName, fontColumnValue)),     
-                    new PdfPCell(new Phrase("PUESTO:", fontColumnValue)), new PdfPCell(new Phrase(filiationData.v_CurrentOccupation, fontColumnValue)),     
-                    new PdfPCell(new Phrase("FECHA ATENCIÓN:", fontColumnValue)), new PdfPCell(new Phrase(filiationData.d_ServiceDate.Value.ToShortDateString(), fontColumnValue)),                                    
+                    new PdfPCell(new Phrase("PACIENTE:", fontSubTitleNegroNegrita)), new PdfPCell(new Phrase(filiationData.v_FirstName + " " + filiationData.v_FirstLastName + " " + filiationData.v_SecondLastName, fontColumnValue)),                   
+                    new PdfPCell(new Phrase("EMPRESA:", fontSubTitleNegroNegrita)), new PdfPCell(new Phrase(filiationData.v_FullWorkingOrganizationName, fontColumnValue)),     
+                    new PdfPCell(new Phrase("PUESTO:", fontSubTitleNegroNegrita)), new PdfPCell(new Phrase(filiationData.v_CurrentOccupation, fontColumnValue)),     
+                    new PdfPCell(new Phrase("FECHA ATENCIÓN:", fontSubTitleNegroNegrita)), new PdfPCell(new Phrase(filiationData.d_ServiceDate.Value.ToShortDateString(), fontColumnValue)),                                    
                 };
 
                 columnWidths = new float[] { 15f, 35f, 15f, 35f };
 
-                filiationWorker = HandlingItextSharp.GenerateTableFromCells(cells, columnWidths, null, "I. DATOS PERSONALES", fontTitleTableNegro, null);
+                filiationWorker = HandlingItextSharp.GenerateTableFromCells(cells, columnWidths, null, "I. DATOS PERSONALES", fontSubTitleNegroNegrita, null);
 
                 document.Add(filiationWorker);
 
