@@ -901,6 +901,12 @@
     <Compile Include="frmControlVacunas.Designer.cs">
       <DependentUpon>frmControlVacunas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDescargarAdjuntos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDescargarAdjuntos.Designer.cs">
+      <DependentUpon>frmDescargarAdjuntos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDescuento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2847,6 +2853,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmControlVacunas.resx">
       <DependentUpon>frmControlVacunas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDescargarAdjuntos.resx">
+      <DependentUpon>frmDescargarAdjuntos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDescuento.resx">
       <DependentUpon>frmDescuento.cs</DependentUpon>

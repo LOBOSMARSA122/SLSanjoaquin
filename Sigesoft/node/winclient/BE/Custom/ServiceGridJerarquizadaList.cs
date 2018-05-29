@@ -53,5 +53,6 @@ namespace Sigesoft.Node.WinClient.BE
         public int? i_FinalQualificationId { get; set; }
         public string v_Restriccion { get; set; }
         public decimal? d_Deducible { get; set; }
+        public string dni { get; set; }
     }
 }
