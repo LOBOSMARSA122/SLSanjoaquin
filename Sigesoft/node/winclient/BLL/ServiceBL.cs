@@ -9812,7 +9812,7 @@ namespace Sigesoft.Node.WinClient.BLL
                                 v_ProtocolId = A.v_ProtocolId,
                                 v_ProtocolName = I.v_Name,
                                 i_ServiceId = L.i_ServiceId,
-
+                                dni = B.v_DocNumber,
                                 v_DiagnosticRepositoryId = C.v_DiagnosticRepositoryId,
                                 v_DiseasesName = D.v_Name,
                                 d_ExpirationDateDiagnostic = C.d_ExpirationDateDiagnostic,
@@ -9899,7 +9899,7 @@ namespace Sigesoft.Node.WinClient.BLL
                                 item.v_ProtocolId =item.v_ProtocolId ;
                                 item.v_ProtocolName = item.v_ProtocolName;
                                 item.i_ServiceId =item.i_ServiceId ;
-
+                                item.dni = item.dni;
                                 item.v_DiagnosticRepositoryId =item.v_DiagnosticRepositoryId ;
                                 item.v_DiseasesName =item.v_DiseasesName;
                                 item.d_ExpirationDateDiagnostic = item.d_ExpirationDateDiagnostic;

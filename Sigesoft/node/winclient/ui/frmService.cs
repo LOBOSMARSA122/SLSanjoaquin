@@ -2255,6 +2255,32 @@ namespace Sigesoft.Node.WinClient.UI
             }
         }
 
+        private void verAdjuntosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if (grdDataService.Selected == null) return;
+            string dni = grdDataService.Selected.Rows[0].Cells["dni"].Value.ToString();
+            var FechaServicio = DateTime.Parse(grdDataService.Selected.Rows[0].Cells["d_ServiceDate"].Value.ToString());
+            string Fecha = FechaServicio.Day.ToString().PadLeft(2, '0') + FechaServicio.Month.ToString().PadLeft(2, '0') + FechaServicio.Year.ToString();
+
+            frmDescargarAdjuntos frm = new frmDescargarAdjuntos(Fecha, dni);
+            frm.ShowDialog();
+        }
+
+        private void verEditarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnArchivosAdj_Click(object sender, EventArgs e)
+        {
+            string dni = grdDataService.Selected.Rows[0].Cells["dni"].Value.ToString();
+            var FechaServicio = DateTime.Parse(grdDataService.Selected.Rows[0].Cells["d_ServiceDate"].Value.ToString());
+            string Fecha = FechaServicio.Day.ToString().PadLeft(2, '0') + FechaServicio.Month.ToString().PadLeft(2, '0') + FechaServicio.Year.ToString();
+            
+            frmDescargarAdjuntos frm = new frmDescargarAdjuntos(Fecha, dni);
+            frm.ShowDialog();
+        }
+
         //private void timer1_Tick(object sender, EventArgs e)
         //{
         //    //timer1.Stop();
