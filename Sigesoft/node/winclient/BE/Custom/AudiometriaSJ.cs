@@ -44,5 +44,6 @@ namespace Sigesoft.Node.WinClient.BE
         public string INFECCION_RESPIRATORIA_AGUDA { get; set; }
         public string EXP_ULT_HRS_RUIDOS { get; set; }
         public string OTROS { get; set; }
+        public string DX { get; set; }
     }
 }

@@ -34,7 +34,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("NroPoliza");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("NroFactura");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("b_FechaEntrega");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("v_ServiceId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("v_ServiceId", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Ascending, false);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("d_FechaNacimiento");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("v_CreationUser");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("d_CreationDate");
@@ -54,7 +54,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Moneda");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Valor");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Diagnosticos");
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Diagnosticos", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Diagnosticos", 0);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("v_DiseasesName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("d_ExpirationDateDiagnostic");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("v_RecomendationsName");
@@ -66,8 +66,8 @@
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmService));
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkIsCampania = new System.Windows.Forms.CheckBox();
             this.chkFC = new System.Windows.Forms.CheckBox();
@@ -77,6 +77,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.ddlConsultorio = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.ddlStatusAptitudId = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ddlCustomerOrganization = new System.Windows.Forms.ComboBox();
@@ -97,45 +98,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblRecordCountCalendar = new System.Windows.Forms.Label();
-            this.grdDataService = new Infragistics.Win.UltraWinGrid.UltraGrid();
-            this.cmService = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
-            this.verAdjuntosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.btnActualizarPerson = new System.Windows.Forms.Button();
-            this.btnBotonOculto = new System.Windows.Forms.Button();
-            this.btnImprimirExamenes = new System.Windows.Forms.Button();
-            this.btnInformeOftalmo = new System.Windows.Forms.Button();
-            this.btnFichaControl = new System.Windows.Forms.Button();
-            this.btnHis = new System.Windows.Forms.Button();
-            this.btnHistoriaClinica = new System.Windows.Forms.Button();
-            this.btnDermatologico = new System.Windows.Forms.Button();
-            this.btnEstudioEKG = new System.Windows.Forms.Button();
-            this.btnAdjuntarArchivo = new System.Windows.Forms.Button();
-            this.btnGenerarLiquidacion = new System.Windows.Forms.Button();
-            this.btnInformeRadiologicoOIT = new System.Windows.Forms.Button();
-            this.btnPruebaEsfuerzo = new System.Windows.Forms.Button();
-            this.btnOsteomuscular = new System.Windows.Forms.Button();
-            this.btnRadiologico = new System.Windows.Forms.Button();
-            this.btnHistoriaOcupacional = new System.Windows.Forms.Button();
-            this.btnOdontograma = new System.Windows.Forms.Button();
-            this.btn7D = new System.Windows.Forms.Button();
-            this.btnInformeMedicoTrabajador = new System.Windows.Forms.Button();
-            this.btnInformeAlturaEstructural = new System.Windows.Forms.Button();
-            this.btnInformeMusculoEsqueletico = new System.Windows.Forms.Button();
-            this.btnInforme312 = new System.Windows.Forms.Button();
-            this.btnInformePsicologico = new System.Windows.Forms.Button();
-            this.btnImprimirInformeMedicoEPS = new System.Windows.Forms.Button();
-            this.btnImprimirCertificadoAptitud = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
+            this.lblRecordCountCalendar = new System.Windows.Forms.Label();
             this.btnGeneracionMasivaReportes = new System.Windows.Forms.Button();
+            this.grdDataService = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.cmService = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.CertificadoAptitud = new System.Windows.Forms.ToolStripMenuItem();
             this.verEditarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Examenes = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,7 +115,37 @@
             this.btnTiempos = new System.Windows.Forms.Button();
             this.btnFechaEntrega = new System.Windows.Forms.Button();
             this.btnInterconsulta = new System.Windows.Forms.Button();
-            this.btnArchivosAdj = new System.Windows.Forms.Button();
+            this.btnAdjuntarArchivo = new System.Windows.Forms.Button();
+            this.btnImprimirExamenes = new System.Windows.Forms.Button();
+            this.btnGenerarLiquidacion = new System.Windows.Forms.Button();
+            this.btnDermatologico = new System.Windows.Forms.Button();
+            this.btnEstudioEKG = new System.Windows.Forms.Button();
+            this.btnInformeRadiologicoOIT = new System.Windows.Forms.Button();
+            this.btnPruebaEsfuerzo = new System.Windows.Forms.Button();
+            this.btnOsteomuscular = new System.Windows.Forms.Button();
+            this.btnRadiologico = new System.Windows.Forms.Button();
+            this.btnHistoriaOcupacional = new System.Windows.Forms.Button();
+            this.btnOdontograma = new System.Windows.Forms.Button();
+            this.btn7D = new System.Windows.Forms.Button();
+            this.btnInformeMedicoTrabajador = new System.Windows.Forms.Button();
+            this.btnInformeOftalmo = new System.Windows.Forms.Button();
+            this.btnInformeAlturaEstructural = new System.Windows.Forms.Button();
+            this.btnInformeMusculoEsqueletico = new System.Windows.Forms.Button();
+            this.btnInforme312 = new System.Windows.Forms.Button();
+            this.btnInformePsicologico = new System.Windows.Forms.Button();
+            this.btnImprimirInformeMedicoEPS = new System.Windows.Forms.Button();
+            this.btnImprimirCertificadoAptitud = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
+            this.btnHistoriaClinica = new System.Windows.Forms.Button();
+            this.btnHis = new System.Windows.Forms.Button();
+            this.btnFichaControl = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ultraGridExcelExporter1 = new Infragistics.Win.UltraWinGrid.ExcelExport.UltraGridExcelExporter(this.components);
+            this.btnBotonOculto = new System.Windows.Forms.Button();
+            this.btnActualizarPerson = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataService)).BeginInit();
@@ -290,6 +288,27 @@
             this.label11.Size = new System.Drawing.Size(59, 13);
             this.label11.TabIndex = 107;
             this.label11.Text = "Consultorio";
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFilter.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnFilter.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnFilter.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ForeColor = System.Drawing.Color.Black;
+            this.btnFilter.Image = global::Sigesoft.Node.WinClient.UI.Resources.find;
+            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilter.Location = new System.Drawing.Point(1143, 92);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(75, 24);
+            this.btnFilter.TabIndex = 106;
+            this.btnFilter.Text = "Filtrar";
+            this.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // ddlStatusAptitudId
             // 
@@ -540,6 +559,44 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de Servicios";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_edit;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1138, 420);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 36);
+            this.button1.TabIndex = 151;
+            this.button1.Text = "Clonar Servicio";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExport.Enabled = false;
+            this.btnExport.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_excel;
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(1138, 170);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(85, 42);
+            this.btnExport.TabIndex = 145;
+            this.btnExport.Text = "Exportar a Excel";
+            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // lblRecordCountCalendar
             // 
             this.lblRecordCountCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -552,6 +609,28 @@
             this.lblRecordCountCalendar.TabIndex = 52;
             this.lblRecordCountCalendar.Text = "No se ha realizado la búsqueda aún.";
             this.lblRecordCountCalendar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnGeneracionMasivaReportes
+            // 
+            this.btnGeneracionMasivaReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGeneracionMasivaReportes.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGeneracionMasivaReportes.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnGeneracionMasivaReportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnGeneracionMasivaReportes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnGeneracionMasivaReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeneracionMasivaReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeneracionMasivaReportes.ForeColor = System.Drawing.Color.Black;
+            this.btnGeneracionMasivaReportes.Image = global::Sigesoft.Node.WinClient.UI.Resources.report;
+            this.btnGeneracionMasivaReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGeneracionMasivaReportes.Location = new System.Drawing.Point(1138, 109);
+            this.btnGeneracionMasivaReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGeneracionMasivaReportes.Name = "btnGeneracionMasivaReportes";
+            this.btnGeneracionMasivaReportes.Size = new System.Drawing.Size(85, 56);
+            this.btnGeneracionMasivaReportes.TabIndex = 144;
+            this.btnGeneracionMasivaReportes.Text = "Generación \r\nmasiva \r\nde reportes";
+            this.btnGeneracionMasivaReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGeneracionMasivaReportes.UseVisualStyleBackColor = false;
+            this.btnGeneracionMasivaReportes.Click += new System.EventHandler(this.btnGeneracionMasivaReportes_Click);
             // 
             // grdDataService
             // 
@@ -743,141 +822,226 @@
             this.CertificadoAptitud,
             this.verEditarServicioToolStripMenuItem,
             this.Examenes,
-            this.vistaPreviaToolStripMenuItem,
-            this.verAdjuntosToolStripMenuItem});
+            this.vistaPreviaToolStripMenuItem});
             this.cmService.Name = "contextMenuStrip1";
-            this.cmService.Size = new System.Drawing.Size(354, 114);
+            this.cmService.Size = new System.Drawing.Size(354, 92);
             this.cmService.Text = "a";
             // 
-            // label15
+            // CertificadoAptitud
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.ImageKey = "(none)";
-            this.label15.Location = new System.Drawing.Point(65, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 15);
-            this.label15.TabIndex = 142;
-            this.label15.Text = "Servicio por Evaluar";
+            this.CertificadoAptitud.Image = global::Sigesoft.Node.WinClient.UI.Resources.application;
+            this.CertificadoAptitud.Name = "CertificadoAptitud";
+            this.CertificadoAptitud.Size = new System.Drawing.Size(353, 22);
+            this.CertificadoAptitud.Text = "Imprimir Certificado de Aptitud Medico Ocupacional";
+            this.CertificadoAptitud.Visible = false;
+            this.CertificadoAptitud.Click += new System.EventHandler(this.CertificadoAptitud_Click);
             // 
-            // label14
+            // verEditarServicioToolStripMenuItem
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.ImageKey = "(none)";
-            this.label14.Location = new System.Drawing.Point(320, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 15);
-            this.label14.TabIndex = 141;
-            this.label14.Text = "Evaluado y Auditado";
+            this.verEditarServicioToolStripMenuItem.Image = global::Sigesoft.Node.WinClient.UI.Resources.play_green;
+            this.verEditarServicioToolStripMenuItem.Name = "verEditarServicioToolStripMenuItem";
+            this.verEditarServicioToolStripMenuItem.Size = new System.Drawing.Size(353, 22);
+            this.verEditarServicioToolStripMenuItem.Text = "Ver / Editar Servicio";
+            this.verEditarServicioToolStripMenuItem.Visible = false;
             // 
-            // label13
+            // Examenes
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Gold;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.ImageKey = "(none)";
-            this.label13.Location = new System.Drawing.Point(197, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 15);
-            this.label13.TabIndex = 140;
-            this.label13.Text = "Servicio Evaluado";
+            this.Examenes.Image = global::Sigesoft.Node.WinClient.UI.Resources.brick_go;
+            this.Examenes.Name = "Examenes";
+            this.Examenes.Size = new System.Drawing.Size(353, 22);
+            this.Examenes.Text = "Imprimir Examenes";
+            this.Examenes.Visible = false;
+            this.Examenes.Click += new System.EventHandler(this.Examenes_Click);
             // 
-            // ultraGroupBox1
+            // vistaPreviaToolStripMenuItem
             // 
-            this.ultraGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ultraGroupBox1.Controls.Add(this.label15);
-            this.ultraGroupBox1.Controls.Add(this.label14);
-            this.ultraGroupBox1.Controls.Add(this.label13);
-            appearance10.BorderColor = System.Drawing.Color.Blue;
-            this.ultraGroupBox1.HeaderAppearance = appearance10;
-            this.ultraGroupBox1.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            this.ultraGroupBox1.Location = new System.Drawing.Point(460, 610);
-            this.ultraGroupBox1.Name = "ultraGroupBox1";
-            this.ultraGroupBox1.Size = new System.Drawing.Size(453, 36);
-            this.ultraGroupBox1.TabIndex = 136;
-            this.ultraGroupBox1.Text = "Leyenda";
+            this.vistaPreviaToolStripMenuItem.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_find;
+            this.vistaPreviaToolStripMenuItem.Name = "vistaPreviaToolStripMenuItem";
+            this.vistaPreviaToolStripMenuItem.Size = new System.Drawing.Size(353, 22);
+            this.vistaPreviaToolStripMenuItem.Text = "Vista Previa";
+            this.vistaPreviaToolStripMenuItem.Visible = false;
+            this.vistaPreviaToolStripMenuItem.Click += new System.EventHandler(this.vistaPreviaToolStripMenuItem_Click);
             // 
-            // openFileDialog1
+            // btnGenerarIds
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.btnGenerarIds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerarIds.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGenerarIds.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnGenerarIds.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnGenerarIds.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnGenerarIds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarIds.ForeColor = System.Drawing.Color.Black;
+            this.btnGenerarIds.Image = global::Sigesoft.Node.WinClient.UI.Resources.cog;
+            this.btnGenerarIds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarIds.Location = new System.Drawing.Point(1138, 340);
+            this.btnGenerarIds.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenerarIds.Name = "btnGenerarIds";
+            this.btnGenerarIds.Size = new System.Drawing.Size(85, 36);
+            this.btnGenerarIds.TabIndex = 141;
+            this.btnGenerarIds.Text = "Generar Ids";
+            this.btnGenerarIds.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGenerarIds.UseVisualStyleBackColor = false;
+            this.btnGenerarIds.Click += new System.EventHandler(this.btnGenerarIds_Click);
             // 
-            // verAdjuntosToolStripMenuItem
+            // btnEditarESO
             // 
-            this.verAdjuntosToolStripMenuItem.Name = "verAdjuntosToolStripMenuItem";
-            this.verAdjuntosToolStripMenuItem.Size = new System.Drawing.Size(353, 22);
-            this.verAdjuntosToolStripMenuItem.Text = "Ver Adjuntos";
-            this.verAdjuntosToolStripMenuItem.Click += new System.EventHandler(this.verAdjuntosToolStripMenuItem_Click);
+            this.btnEditarESO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditarESO.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEditarESO.Enabled = false;
+            this.btnEditarESO.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnEditarESO.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnEditarESO.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnEditarESO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarESO.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarESO.ForeColor = System.Drawing.Color.Black;
+            this.btnEditarESO.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_edit;
+            this.btnEditarESO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarESO.Location = new System.Drawing.Point(1138, 29);
+            this.btnEditarESO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarESO.Name = "btnEditarESO";
+            this.btnEditarESO.Size = new System.Drawing.Size(85, 36);
+            this.btnEditarESO.TabIndex = 50;
+            this.btnEditarESO.Text = "    &Ver / Editar Servicio";
+            this.btnEditarESO.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnEditarESO.UseVisualStyleBackColor = false;
+            this.btnEditarESO.Click += new System.EventHandler(this.btnEditarESO_Click);
             // 
-            // btnFilter
+            // btnAdminReportes
             // 
-            this.btnFilter.BackColor = System.Drawing.SystemColors.Control;
-            this.btnFilter.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnFilter.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnFilter.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.ForeColor = System.Drawing.Color.Black;
-            this.btnFilter.Image = global::Sigesoft.Node.WinClient.UI.Resources.find;
-            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFilter.Location = new System.Drawing.Point(1143, 92);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(75, 24);
-            this.btnFilter.TabIndex = 106;
-            this.btnFilter.Text = "Filtrar";
-            this.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            this.btnAdminReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdminReportes.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdminReportes.Enabled = false;
+            this.btnAdminReportes.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAdminReportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAdminReportes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdminReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminReportes.ForeColor = System.Drawing.Color.Black;
+            this.btnAdminReportes.Image = global::Sigesoft.Node.WinClient.UI.Resources.color_swatch;
+            this.btnAdminReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminReportes.Location = new System.Drawing.Point(1138, 69);
+            this.btnAdminReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdminReportes.Name = "btnAdminReportes";
+            this.btnAdminReportes.Size = new System.Drawing.Size(85, 36);
+            this.btnAdminReportes.TabIndex = 128;
+            this.btnAdminReportes.Text = "&Compagina  Exámenes";
+            this.btnAdminReportes.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnAdminReportes.UseVisualStyleBackColor = false;
+            this.btnAdminReportes.Click += new System.EventHandler(this.btnConsolidadoReportes_Click);
             // 
-            // btnActualizarPerson
+            // btnImportarExcel
             // 
-            this.btnActualizarPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarPerson.BackColor = System.Drawing.SystemColors.Control;
-            this.btnActualizarPerson.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnActualizarPerson.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnActualizarPerson.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnActualizarPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarPerson.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarPerson.Image = global::Sigesoft.Node.WinClient.UI.Resources.user_suit;
-            this.btnActualizarPerson.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarPerson.Location = new System.Drawing.Point(107, 610);
-            this.btnActualizarPerson.Margin = new System.Windows.Forms.Padding(2);
-            this.btnActualizarPerson.Name = "btnActualizarPerson";
-            this.btnActualizarPerson.Size = new System.Drawing.Size(85, 36);
-            this.btnActualizarPerson.TabIndex = 148;
-            this.btnActualizarPerson.Text = "Actualizar Person";
-            this.btnActualizarPerson.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnActualizarPerson.UseVisualStyleBackColor = false;
-            this.btnActualizarPerson.Click += new System.EventHandler(this.btnActualizarPerson_Click);
+            this.btnImportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImportarExcel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnImportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnImportarExcel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnImportarExcel.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnImportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarExcel.ForeColor = System.Drawing.Color.Black;
+            this.btnImportarExcel.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_excel;
+            this.btnImportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportarExcel.Location = new System.Drawing.Point(1138, 300);
+            this.btnImportarExcel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImportarExcel.Name = "btnImportarExcel";
+            this.btnImportarExcel.Size = new System.Drawing.Size(85, 36);
+            this.btnImportarExcel.TabIndex = 140;
+            this.btnImportarExcel.Text = "&Importar";
+            this.btnImportarExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImportarExcel.UseVisualStyleBackColor = false;
+            this.btnImportarExcel.Click += new System.EventHandler(this.btnImportarExcel_Click);
             // 
-            // btnBotonOculto
+            // btnTiempos
             // 
-            this.btnBotonOculto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBotonOculto.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBotonOculto.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnBotonOculto.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnBotonOculto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnBotonOculto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBotonOculto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBotonOculto.ForeColor = System.Drawing.Color.Black;
-            this.btnBotonOculto.Image = global::Sigesoft.Node.WinClient.UI.Resources.system_close;
-            this.btnBotonOculto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBotonOculto.Location = new System.Drawing.Point(20, 614);
-            this.btnBotonOculto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBotonOculto.Name = "btnBotonOculto";
-            this.btnBotonOculto.Size = new System.Drawing.Size(85, 36);
-            this.btnBotonOculto.TabIndex = 146;
-            this.btnBotonOculto.Text = "botón Oculto";
-            this.btnBotonOculto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBotonOculto.UseVisualStyleBackColor = false;
-            this.btnBotonOculto.Visible = false;
-            this.btnBotonOculto.Click += new System.EventHandler(this.btnBotonOculto_Click);
+            this.btnTiempos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTiempos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTiempos.Enabled = false;
+            this.btnTiempos.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnTiempos.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnTiempos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnTiempos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTiempos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTiempos.ForeColor = System.Drawing.Color.Black;
+            this.btnTiempos.Image = global::Sigesoft.Node.WinClient.UI.Resources.time;
+            this.btnTiempos.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnTiempos.Location = new System.Drawing.Point(1138, 380);
+            this.btnTiempos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTiempos.Name = "btnTiempos";
+            this.btnTiempos.Size = new System.Drawing.Size(85, 36);
+            this.btnTiempos.TabIndex = 132;
+            this.btnTiempos.Text = "Tiempos";
+            this.btnTiempos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTiempos.UseVisualStyleBackColor = false;
+            this.btnTiempos.Click += new System.EventHandler(this.btnTiempos_Click);
+            // 
+            // btnFechaEntrega
+            // 
+            this.btnFechaEntrega.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechaEntrega.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFechaEntrega.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnFechaEntrega.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnFechaEntrega.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFechaEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechaEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechaEntrega.ForeColor = System.Drawing.Color.Black;
+            this.btnFechaEntrega.Image = global::Sigesoft.Node.WinClient.UI.Resources.printer_go;
+            this.btnFechaEntrega.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFechaEntrega.Location = new System.Drawing.Point(1138, 260);
+            this.btnFechaEntrega.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFechaEntrega.Name = "btnFechaEntrega";
+            this.btnFechaEntrega.Size = new System.Drawing.Size(85, 36);
+            this.btnFechaEntrega.TabIndex = 134;
+            this.btnFechaEntrega.Text = "&Fecha de Entrega";
+            this.btnFechaEntrega.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFechaEntrega.UseVisualStyleBackColor = false;
+            this.btnFechaEntrega.Click += new System.EventHandler(this.btnFechaEntrega_Click);
+            // 
+            // btnInterconsulta
+            // 
+            this.btnInterconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInterconsulta.BackColor = System.Drawing.SystemColors.Control;
+            this.btnInterconsulta.Enabled = false;
+            this.btnInterconsulta.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnInterconsulta.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnInterconsulta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnInterconsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInterconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterconsulta.ForeColor = System.Drawing.Color.Black;
+            this.btnInterconsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.note_add;
+            this.btnInterconsulta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnInterconsulta.Location = new System.Drawing.Point(1138, 217);
+            this.btnInterconsulta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInterconsulta.Name = "btnInterconsulta";
+            this.btnInterconsulta.Size = new System.Drawing.Size(85, 39);
+            this.btnInterconsulta.TabIndex = 131;
+            this.btnInterconsulta.Text = "Generar Interconsulta";
+            this.btnInterconsulta.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnInterconsulta.UseVisualStyleBackColor = false;
+            this.btnInterconsulta.Click += new System.EventHandler(this.btnInterconsulta_Click);
+            // 
+            // btnAdjuntarArchivo
+            // 
+            this.btnAdjuntarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdjuntarArchivo.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdjuntarArchivo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAdjuntarArchivo.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAdjuntarArchivo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdjuntarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdjuntarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdjuntarArchivo.ForeColor = System.Drawing.Color.Black;
+            this.btnAdjuntarArchivo.Image = global::Sigesoft.Node.WinClient.UI.Resources.attach;
+            this.btnAdjuntarArchivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdjuntarArchivo.Location = new System.Drawing.Point(941, 617);
+            this.btnAdjuntarArchivo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdjuntarArchivo.Name = "btnAdjuntarArchivo";
+            this.btnAdjuntarArchivo.Size = new System.Drawing.Size(85, 36);
+            this.btnAdjuntarArchivo.TabIndex = 135;
+            this.btnAdjuntarArchivo.Text = "&Adjuntar Archivo";
+            this.btnAdjuntarArchivo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdjuntarArchivo.UseVisualStyleBackColor = false;
+            this.btnAdjuntarArchivo.Visible = false;
+            this.btnAdjuntarArchivo.Click += new System.EventHandler(this.btnAdjuntarArchivo_Click);
             // 
             // btnImprimirExamenes
             // 
@@ -903,98 +1067,29 @@
             this.btnImprimirExamenes.Visible = false;
             this.btnImprimirExamenes.Click += new System.EventHandler(this.btnImprimirExamenes_Click);
             // 
-            // btnInformeOftalmo
+            // btnGenerarLiquidacion
             // 
-            this.btnInformeOftalmo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInformeOftalmo.BackColor = System.Drawing.SystemColors.Control;
-            this.btnInformeOftalmo.Enabled = false;
-            this.btnInformeOftalmo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnInformeOftalmo.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnInformeOftalmo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnInformeOftalmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformeOftalmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformeOftalmo.ForeColor = System.Drawing.Color.Black;
-            this.btnInformeOftalmo.Image = ((System.Drawing.Image)(resources.GetObject("btnInformeOftalmo.Image")));
-            this.btnInformeOftalmo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformeOftalmo.Location = new System.Drawing.Point(404, 611);
-            this.btnInformeOftalmo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInformeOftalmo.Name = "btnInformeOftalmo";
-            this.btnInformeOftalmo.Size = new System.Drawing.Size(85, 38);
-            this.btnInformeOftalmo.TabIndex = 112;
-            this.btnInformeOftalmo.Text = "Informe Oftalmo.";
-            this.btnInformeOftalmo.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnInformeOftalmo.UseVisualStyleBackColor = false;
-            this.btnInformeOftalmo.Visible = false;
-            this.btnInformeOftalmo.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnFichaControl
-            // 
-            this.btnFichaControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFichaControl.BackColor = System.Drawing.SystemColors.Control;
-            this.btnFichaControl.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnFichaControl.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnFichaControl.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnFichaControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFichaControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFichaControl.ForeColor = System.Drawing.Color.Black;
-            this.btnFichaControl.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
-            this.btnFichaControl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFichaControl.Location = new System.Drawing.Point(1087, 611);
-            this.btnFichaControl.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFichaControl.Name = "btnFichaControl";
-            this.btnFichaControl.Size = new System.Drawing.Size(85, 43);
-            this.btnFichaControl.TabIndex = 139;
-            this.btnFichaControl.Text = "Ficha Control";
-            this.btnFichaControl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFichaControl.UseVisualStyleBackColor = false;
-            this.btnFichaControl.Visible = false;
-            this.btnFichaControl.Click += new System.EventHandler(this.btnFichaControl_Click);
-            // 
-            // btnHis
-            // 
-            this.btnHis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHis.BackColor = System.Drawing.SystemColors.Control;
-            this.btnHis.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnHis.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnHis.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnHis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHis.ForeColor = System.Drawing.Color.Black;
-            this.btnHis.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
-            this.btnHis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHis.Location = new System.Drawing.Point(1087, 617);
-            this.btnHis.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHis.Name = "btnHis";
-            this.btnHis.Size = new System.Drawing.Size(85, 38);
-            this.btnHis.TabIndex = 138;
-            this.btnHis.Text = "H.I.S";
-            this.btnHis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHis.UseVisualStyleBackColor = false;
-            this.btnHis.Visible = false;
-            this.btnHis.Click += new System.EventHandler(this.btnHis_Click);
-            // 
-            // btnHistoriaClinica
-            // 
-            this.btnHistoriaClinica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHistoriaClinica.BackColor = System.Drawing.SystemColors.Control;
-            this.btnHistoriaClinica.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnHistoriaClinica.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnHistoriaClinica.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnHistoriaClinica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistoriaClinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistoriaClinica.ForeColor = System.Drawing.Color.Black;
-            this.btnHistoriaClinica.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
-            this.btnHistoriaClinica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistoriaClinica.Location = new System.Drawing.Point(1070, 613);
-            this.btnHistoriaClinica.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHistoriaClinica.Name = "btnHistoriaClinica";
-            this.btnHistoriaClinica.Size = new System.Drawing.Size(85, 38);
-            this.btnHistoriaClinica.TabIndex = 137;
-            this.btnHistoriaClinica.Text = "&Historia Cínica";
-            this.btnHistoriaClinica.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHistoriaClinica.UseVisualStyleBackColor = false;
-            this.btnHistoriaClinica.Visible = false;
-            this.btnHistoriaClinica.Click += new System.EventHandler(this.btnHistoriaClinica_Click);
+            this.btnGenerarLiquidacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerarLiquidacion.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGenerarLiquidacion.Enabled = false;
+            this.btnGenerarLiquidacion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnGenerarLiquidacion.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnGenerarLiquidacion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnGenerarLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarLiquidacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarLiquidacion.ForeColor = System.Drawing.Color.Black;
+            this.btnGenerarLiquidacion.Image = global::Sigesoft.Node.WinClient.UI.Resources.accept;
+            this.btnGenerarLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarLiquidacion.Location = new System.Drawing.Point(881, 612);
+            this.btnGenerarLiquidacion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenerarLiquidacion.Name = "btnGenerarLiquidacion";
+            this.btnGenerarLiquidacion.Size = new System.Drawing.Size(85, 38);
+            this.btnGenerarLiquidacion.TabIndex = 130;
+            this.btnGenerarLiquidacion.Text = "&Marcar Generado";
+            this.btnGenerarLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGenerarLiquidacion.UseVisualStyleBackColor = false;
+            this.btnGenerarLiquidacion.Visible = false;
+            this.btnGenerarLiquidacion.Click += new System.EventHandler(this.btnGenerarLiquidacion_Click);
             // 
             // btnDermatologico
             // 
@@ -1043,53 +1138,6 @@
             this.btnEstudioEKG.UseVisualStyleBackColor = false;
             this.btnEstudioEKG.Visible = false;
             this.btnEstudioEKG.Click += new System.EventHandler(this.button9_Click_1);
-            // 
-            // btnAdjuntarArchivo
-            // 
-            this.btnAdjuntarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdjuntarArchivo.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdjuntarArchivo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnAdjuntarArchivo.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAdjuntarArchivo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnAdjuntarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdjuntarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdjuntarArchivo.ForeColor = System.Drawing.Color.Black;
-            this.btnAdjuntarArchivo.Image = global::Sigesoft.Node.WinClient.UI.Resources.attach;
-            this.btnAdjuntarArchivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdjuntarArchivo.Location = new System.Drawing.Point(941, 617);
-            this.btnAdjuntarArchivo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdjuntarArchivo.Name = "btnAdjuntarArchivo";
-            this.btnAdjuntarArchivo.Size = new System.Drawing.Size(85, 36);
-            this.btnAdjuntarArchivo.TabIndex = 135;
-            this.btnAdjuntarArchivo.Text = "&Adjuntar Archivo";
-            this.btnAdjuntarArchivo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdjuntarArchivo.UseVisualStyleBackColor = false;
-            this.btnAdjuntarArchivo.Visible = false;
-            this.btnAdjuntarArchivo.Click += new System.EventHandler(this.btnAdjuntarArchivo_Click);
-            // 
-            // btnGenerarLiquidacion
-            // 
-            this.btnGenerarLiquidacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerarLiquidacion.BackColor = System.Drawing.SystemColors.Control;
-            this.btnGenerarLiquidacion.Enabled = false;
-            this.btnGenerarLiquidacion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnGenerarLiquidacion.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnGenerarLiquidacion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnGenerarLiquidacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarLiquidacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarLiquidacion.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerarLiquidacion.Image = global::Sigesoft.Node.WinClient.UI.Resources.accept;
-            this.btnGenerarLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarLiquidacion.Location = new System.Drawing.Point(881, 612);
-            this.btnGenerarLiquidacion.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGenerarLiquidacion.Name = "btnGenerarLiquidacion";
-            this.btnGenerarLiquidacion.Size = new System.Drawing.Size(85, 38);
-            this.btnGenerarLiquidacion.TabIndex = 130;
-            this.btnGenerarLiquidacion.Text = "&Marcar Generado";
-            this.btnGenerarLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGenerarLiquidacion.UseVisualStyleBackColor = false;
-            this.btnGenerarLiquidacion.Visible = false;
-            this.btnGenerarLiquidacion.Click += new System.EventHandler(this.btnGenerarLiquidacion_Click);
             // 
             // btnInformeRadiologicoOIT
             // 
@@ -1283,6 +1331,30 @@
             this.btnInformeMedicoTrabajador.Visible = false;
             this.btnInformeMedicoTrabajador.Click += new System.EventHandler(this.btnInformeMedicoTrabajador_Click);
             // 
+            // btnInformeOftalmo
+            // 
+            this.btnInformeOftalmo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInformeOftalmo.BackColor = System.Drawing.SystemColors.Control;
+            this.btnInformeOftalmo.Enabled = false;
+            this.btnInformeOftalmo.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnInformeOftalmo.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnInformeOftalmo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnInformeOftalmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformeOftalmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformeOftalmo.ForeColor = System.Drawing.Color.Black;
+            this.btnInformeOftalmo.Image = ((System.Drawing.Image)(resources.GetObject("btnInformeOftalmo.Image")));
+            this.btnInformeOftalmo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformeOftalmo.Location = new System.Drawing.Point(404, 611);
+            this.btnInformeOftalmo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInformeOftalmo.Name = "btnInformeOftalmo";
+            this.btnInformeOftalmo.Size = new System.Drawing.Size(85, 38);
+            this.btnInformeOftalmo.TabIndex = 112;
+            this.btnInformeOftalmo.Text = "Informe Oftalmo.";
+            this.btnInformeOftalmo.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnInformeOftalmo.UseVisualStyleBackColor = false;
+            this.btnInformeOftalmo.Visible = false;
+            this.btnInformeOftalmo.Click += new System.EventHandler(this.button5_Click);
+            // 
             // btnInformeAlturaEstructural
             // 
             this.btnInformeAlturaEstructural.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1427,282 +1499,176 @@
             this.btnImprimirCertificadoAptitud.Visible = false;
             this.btnImprimirCertificadoAptitud.Click += new System.EventHandler(this.btnImprimirCertificadoAptitud_Click);
             // 
-            // button1
+            // label15
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_edit;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1138, 420);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 36);
-            this.button1.TabIndex = 151;
-            this.button1.Text = "Clonar Servicio";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.ImageKey = "(none)";
+            this.label15.Location = new System.Drawing.Point(65, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(104, 15);
+            this.label15.TabIndex = 142;
+            this.label15.Text = "Servicio por Evaluar";
             // 
-            // btnExport
+            // label14
             // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExport.Enabled = false;
-            this.btnExport.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_excel;
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(1138, 170);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(85, 42);
-            this.btnExport.TabIndex = 145;
-            this.btnExport.Text = "Exportar a Excel";
-            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.ImageKey = "(none)";
+            this.label14.Location = new System.Drawing.Point(320, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(107, 15);
+            this.label14.TabIndex = 141;
+            this.label14.Text = "Evaluado y Auditado";
             // 
-            // btnGeneracionMasivaReportes
+            // label13
             // 
-            this.btnGeneracionMasivaReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGeneracionMasivaReportes.BackColor = System.Drawing.SystemColors.Control;
-            this.btnGeneracionMasivaReportes.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnGeneracionMasivaReportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnGeneracionMasivaReportes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnGeneracionMasivaReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGeneracionMasivaReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGeneracionMasivaReportes.ForeColor = System.Drawing.Color.Black;
-            this.btnGeneracionMasivaReportes.Image = global::Sigesoft.Node.WinClient.UI.Resources.report;
-            this.btnGeneracionMasivaReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGeneracionMasivaReportes.Location = new System.Drawing.Point(1138, 109);
-            this.btnGeneracionMasivaReportes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGeneracionMasivaReportes.Name = "btnGeneracionMasivaReportes";
-            this.btnGeneracionMasivaReportes.Size = new System.Drawing.Size(85, 56);
-            this.btnGeneracionMasivaReportes.TabIndex = 144;
-            this.btnGeneracionMasivaReportes.Text = "Generación \r\nmasiva \r\nde reportes";
-            this.btnGeneracionMasivaReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGeneracionMasivaReportes.UseVisualStyleBackColor = false;
-            this.btnGeneracionMasivaReportes.Click += new System.EventHandler(this.btnGeneracionMasivaReportes_Click);
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Gold;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.ImageKey = "(none)";
+            this.label13.Location = new System.Drawing.Point(197, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(95, 15);
+            this.label13.TabIndex = 140;
+            this.label13.Text = "Servicio Evaluado";
             // 
-            // CertificadoAptitud
+            // ultraGroupBox1
             // 
-            this.CertificadoAptitud.Image = global::Sigesoft.Node.WinClient.UI.Resources.application;
-            this.CertificadoAptitud.Name = "CertificadoAptitud";
-            this.CertificadoAptitud.Size = new System.Drawing.Size(353, 22);
-            this.CertificadoAptitud.Text = "Imprimir Certificado de Aptitud Medico Ocupacional";
-            this.CertificadoAptitud.Visible = false;
-            this.CertificadoAptitud.Click += new System.EventHandler(this.CertificadoAptitud_Click);
+            this.ultraGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ultraGroupBox1.Controls.Add(this.label15);
+            this.ultraGroupBox1.Controls.Add(this.label14);
+            this.ultraGroupBox1.Controls.Add(this.label13);
+            appearance8.BorderColor = System.Drawing.Color.Blue;
+            this.ultraGroupBox1.HeaderAppearance = appearance8;
+            this.ultraGroupBox1.HeaderBorderStyle = Infragistics.Win.UIElementBorderStyle.None;
+            this.ultraGroupBox1.Location = new System.Drawing.Point(460, 610);
+            this.ultraGroupBox1.Name = "ultraGroupBox1";
+            this.ultraGroupBox1.Size = new System.Drawing.Size(453, 36);
+            this.ultraGroupBox1.TabIndex = 136;
+            this.ultraGroupBox1.Text = "Leyenda";
             // 
-            // verEditarServicioToolStripMenuItem
+            // btnHistoriaClinica
             // 
-            this.verEditarServicioToolStripMenuItem.Image = global::Sigesoft.Node.WinClient.UI.Resources.play_green;
-            this.verEditarServicioToolStripMenuItem.Name = "verEditarServicioToolStripMenuItem";
-            this.verEditarServicioToolStripMenuItem.Size = new System.Drawing.Size(353, 22);
-            this.verEditarServicioToolStripMenuItem.Text = "Ver / Editar Servicio";
-            this.verEditarServicioToolStripMenuItem.Visible = false;
-            this.verEditarServicioToolStripMenuItem.Click += new System.EventHandler(this.verEditarServicioToolStripMenuItem_Click);
+            this.btnHistoriaClinica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistoriaClinica.BackColor = System.Drawing.SystemColors.Control;
+            this.btnHistoriaClinica.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnHistoriaClinica.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnHistoriaClinica.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnHistoriaClinica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistoriaClinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistoriaClinica.ForeColor = System.Drawing.Color.Black;
+            this.btnHistoriaClinica.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
+            this.btnHistoriaClinica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistoriaClinica.Location = new System.Drawing.Point(1070, 613);
+            this.btnHistoriaClinica.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHistoriaClinica.Name = "btnHistoriaClinica";
+            this.btnHistoriaClinica.Size = new System.Drawing.Size(85, 38);
+            this.btnHistoriaClinica.TabIndex = 137;
+            this.btnHistoriaClinica.Text = "&Historia Cínica";
+            this.btnHistoriaClinica.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHistoriaClinica.UseVisualStyleBackColor = false;
+            this.btnHistoriaClinica.Visible = false;
+            this.btnHistoriaClinica.Click += new System.EventHandler(this.btnHistoriaClinica_Click);
             // 
-            // Examenes
+            // btnHis
             // 
-            this.Examenes.Image = global::Sigesoft.Node.WinClient.UI.Resources.brick_go;
-            this.Examenes.Name = "Examenes";
-            this.Examenes.Size = new System.Drawing.Size(353, 22);
-            this.Examenes.Text = "Imprimir Examenes";
-            this.Examenes.Visible = false;
-            this.Examenes.Click += new System.EventHandler(this.Examenes_Click);
+            this.btnHis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHis.BackColor = System.Drawing.SystemColors.Control;
+            this.btnHis.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnHis.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnHis.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnHis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHis.ForeColor = System.Drawing.Color.Black;
+            this.btnHis.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
+            this.btnHis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHis.Location = new System.Drawing.Point(1087, 617);
+            this.btnHis.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHis.Name = "btnHis";
+            this.btnHis.Size = new System.Drawing.Size(85, 38);
+            this.btnHis.TabIndex = 138;
+            this.btnHis.Text = "H.I.S";
+            this.btnHis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHis.UseVisualStyleBackColor = false;
+            this.btnHis.Visible = false;
+            this.btnHis.Click += new System.EventHandler(this.btnHis_Click);
             // 
-            // vistaPreviaToolStripMenuItem
+            // btnFichaControl
             // 
-            this.vistaPreviaToolStripMenuItem.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_find;
-            this.vistaPreviaToolStripMenuItem.Name = "vistaPreviaToolStripMenuItem";
-            this.vistaPreviaToolStripMenuItem.Size = new System.Drawing.Size(353, 22);
-            this.vistaPreviaToolStripMenuItem.Text = "Vista Previa";
-            this.vistaPreviaToolStripMenuItem.Visible = false;
-            this.vistaPreviaToolStripMenuItem.Click += new System.EventHandler(this.vistaPreviaToolStripMenuItem_Click);
+            this.btnFichaControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFichaControl.BackColor = System.Drawing.SystemColors.Control;
+            this.btnFichaControl.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnFichaControl.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnFichaControl.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFichaControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFichaControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFichaControl.ForeColor = System.Drawing.Color.Black;
+            this.btnFichaControl.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_white_acrobat;
+            this.btnFichaControl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFichaControl.Location = new System.Drawing.Point(1087, 611);
+            this.btnFichaControl.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFichaControl.Name = "btnFichaControl";
+            this.btnFichaControl.Size = new System.Drawing.Size(85, 43);
+            this.btnFichaControl.TabIndex = 139;
+            this.btnFichaControl.Text = "Ficha Control";
+            this.btnFichaControl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFichaControl.UseVisualStyleBackColor = false;
+            this.btnFichaControl.Visible = false;
+            this.btnFichaControl.Click += new System.EventHandler(this.btnFichaControl_Click);
             // 
-            // btnGenerarIds
+            // openFileDialog1
             // 
-            this.btnGenerarIds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerarIds.BackColor = System.Drawing.SystemColors.Control;
-            this.btnGenerarIds.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnGenerarIds.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnGenerarIds.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnGenerarIds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarIds.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerarIds.Image = global::Sigesoft.Node.WinClient.UI.Resources.cog;
-            this.btnGenerarIds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarIds.Location = new System.Drawing.Point(1138, 340);
-            this.btnGenerarIds.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGenerarIds.Name = "btnGenerarIds";
-            this.btnGenerarIds.Size = new System.Drawing.Size(85, 36);
-            this.btnGenerarIds.TabIndex = 141;
-            this.btnGenerarIds.Text = "Generar Ids";
-            this.btnGenerarIds.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGenerarIds.UseVisualStyleBackColor = false;
-            this.btnGenerarIds.Click += new System.EventHandler(this.btnGenerarIds_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnEditarESO
+            // btnBotonOculto
             // 
-            this.btnEditarESO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarESO.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEditarESO.Enabled = false;
-            this.btnEditarESO.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnEditarESO.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEditarESO.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnEditarESO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarESO.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarESO.ForeColor = System.Drawing.Color.Black;
-            this.btnEditarESO.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_edit;
-            this.btnEditarESO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarESO.Location = new System.Drawing.Point(1138, 29);
-            this.btnEditarESO.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditarESO.Name = "btnEditarESO";
-            this.btnEditarESO.Size = new System.Drawing.Size(85, 36);
-            this.btnEditarESO.TabIndex = 50;
-            this.btnEditarESO.Text = "    &Ver / Editar Servicio";
-            this.btnEditarESO.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnEditarESO.UseVisualStyleBackColor = false;
-            this.btnEditarESO.Click += new System.EventHandler(this.btnEditarESO_Click);
+            this.btnBotonOculto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBotonOculto.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBotonOculto.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnBotonOculto.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnBotonOculto.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnBotonOculto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBotonOculto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBotonOculto.ForeColor = System.Drawing.Color.Black;
+            this.btnBotonOculto.Image = global::Sigesoft.Node.WinClient.UI.Resources.system_close;
+            this.btnBotonOculto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBotonOculto.Location = new System.Drawing.Point(20, 614);
+            this.btnBotonOculto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBotonOculto.Name = "btnBotonOculto";
+            this.btnBotonOculto.Size = new System.Drawing.Size(85, 36);
+            this.btnBotonOculto.TabIndex = 146;
+            this.btnBotonOculto.Text = "botón Oculto";
+            this.btnBotonOculto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBotonOculto.UseVisualStyleBackColor = false;
+            this.btnBotonOculto.Visible = false;
+            this.btnBotonOculto.Click += new System.EventHandler(this.btnBotonOculto_Click);
             // 
-            // btnAdminReportes
+            // btnActualizarPerson
             // 
-            this.btnAdminReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdminReportes.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdminReportes.Enabled = false;
-            this.btnAdminReportes.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnAdminReportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAdminReportes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnAdminReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdminReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminReportes.ForeColor = System.Drawing.Color.Black;
-            this.btnAdminReportes.Image = global::Sigesoft.Node.WinClient.UI.Resources.color_swatch;
-            this.btnAdminReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminReportes.Location = new System.Drawing.Point(1138, 69);
-            this.btnAdminReportes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdminReportes.Name = "btnAdminReportes";
-            this.btnAdminReportes.Size = new System.Drawing.Size(85, 36);
-            this.btnAdminReportes.TabIndex = 128;
-            this.btnAdminReportes.Text = "&Compagina  Exámenes";
-            this.btnAdminReportes.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnAdminReportes.UseVisualStyleBackColor = false;
-            this.btnAdminReportes.Click += new System.EventHandler(this.btnConsolidadoReportes_Click);
-            // 
-            // btnImportarExcel
-            // 
-            this.btnImportarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImportarExcel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnImportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnImportarExcel.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnImportarExcel.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnImportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportarExcel.ForeColor = System.Drawing.Color.Black;
-            this.btnImportarExcel.Image = global::Sigesoft.Node.WinClient.UI.Resources.page_excel;
-            this.btnImportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportarExcel.Location = new System.Drawing.Point(1138, 300);
-            this.btnImportarExcel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnImportarExcel.Name = "btnImportarExcel";
-            this.btnImportarExcel.Size = new System.Drawing.Size(85, 36);
-            this.btnImportarExcel.TabIndex = 140;
-            this.btnImportarExcel.Text = "&Importar";
-            this.btnImportarExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImportarExcel.UseVisualStyleBackColor = false;
-            this.btnImportarExcel.Click += new System.EventHandler(this.btnImportarExcel_Click);
-            // 
-            // btnTiempos
-            // 
-            this.btnTiempos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTiempos.BackColor = System.Drawing.SystemColors.Control;
-            this.btnTiempos.Enabled = false;
-            this.btnTiempos.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnTiempos.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnTiempos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnTiempos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTiempos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTiempos.ForeColor = System.Drawing.Color.Black;
-            this.btnTiempos.Image = global::Sigesoft.Node.WinClient.UI.Resources.time;
-            this.btnTiempos.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnTiempos.Location = new System.Drawing.Point(1138, 380);
-            this.btnTiempos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTiempos.Name = "btnTiempos";
-            this.btnTiempos.Size = new System.Drawing.Size(85, 36);
-            this.btnTiempos.TabIndex = 132;
-            this.btnTiempos.Text = "Tiempos";
-            this.btnTiempos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTiempos.UseVisualStyleBackColor = false;
-            this.btnTiempos.Click += new System.EventHandler(this.btnTiempos_Click);
-            // 
-            // btnFechaEntrega
-            // 
-            this.btnFechaEntrega.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechaEntrega.BackColor = System.Drawing.SystemColors.Control;
-            this.btnFechaEntrega.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnFechaEntrega.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnFechaEntrega.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnFechaEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechaEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechaEntrega.ForeColor = System.Drawing.Color.Black;
-            this.btnFechaEntrega.Image = global::Sigesoft.Node.WinClient.UI.Resources.printer_go;
-            this.btnFechaEntrega.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFechaEntrega.Location = new System.Drawing.Point(1138, 260);
-            this.btnFechaEntrega.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFechaEntrega.Name = "btnFechaEntrega";
-            this.btnFechaEntrega.Size = new System.Drawing.Size(85, 36);
-            this.btnFechaEntrega.TabIndex = 134;
-            this.btnFechaEntrega.Text = "&Fecha de Entrega";
-            this.btnFechaEntrega.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFechaEntrega.UseVisualStyleBackColor = false;
-            this.btnFechaEntrega.Click += new System.EventHandler(this.btnFechaEntrega_Click);
-            // 
-            // btnInterconsulta
-            // 
-            this.btnInterconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInterconsulta.BackColor = System.Drawing.SystemColors.Control;
-            this.btnInterconsulta.Enabled = false;
-            this.btnInterconsulta.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnInterconsulta.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnInterconsulta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnInterconsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInterconsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInterconsulta.ForeColor = System.Drawing.Color.Black;
-            this.btnInterconsulta.Image = global::Sigesoft.Node.WinClient.UI.Resources.note_add;
-            this.btnInterconsulta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnInterconsulta.Location = new System.Drawing.Point(1138, 217);
-            this.btnInterconsulta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInterconsulta.Name = "btnInterconsulta";
-            this.btnInterconsulta.Size = new System.Drawing.Size(85, 39);
-            this.btnInterconsulta.TabIndex = 131;
-            this.btnInterconsulta.Text = "Generar Interconsulta";
-            this.btnInterconsulta.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnInterconsulta.UseVisualStyleBackColor = false;
-            this.btnInterconsulta.Click += new System.EventHandler(this.btnInterconsulta_Click);
-            // 
-            // btnArchivosAdj
-            // 
-            this.btnArchivosAdj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnArchivosAdj.BackColor = System.Drawing.SystemColors.Control;
-            this.btnArchivosAdj.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnArchivosAdj.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnArchivosAdj.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnArchivosAdj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArchivosAdj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArchivosAdj.ForeColor = System.Drawing.Color.Black;
-            this.btnArchivosAdj.Image = global::Sigesoft.Node.WinClient.UI.Resources.application_edit;
-            this.btnArchivosAdj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArchivosAdj.Location = new System.Drawing.Point(1144, 607);
-            this.btnArchivosAdj.Margin = new System.Windows.Forms.Padding(2);
-            this.btnArchivosAdj.Name = "btnArchivosAdj";
-            this.btnArchivosAdj.Size = new System.Drawing.Size(85, 36);
-            this.btnArchivosAdj.TabIndex = 152;
-            this.btnArchivosAdj.Text = "Archivos Adjuntos";
-            this.btnArchivosAdj.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnArchivosAdj.UseVisualStyleBackColor = false;
-            this.btnArchivosAdj.Visible = false;
-            this.btnArchivosAdj.Click += new System.EventHandler(this.btnArchivosAdj_Click);
+            this.btnActualizarPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarPerson.BackColor = System.Drawing.SystemColors.Control;
+            this.btnActualizarPerson.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnActualizarPerson.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnActualizarPerson.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnActualizarPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarPerson.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizarPerson.Image = global::Sigesoft.Node.WinClient.UI.Resources.user_suit;
+            this.btnActualizarPerson.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarPerson.Location = new System.Drawing.Point(107, 610);
+            this.btnActualizarPerson.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizarPerson.Name = "btnActualizarPerson";
+            this.btnActualizarPerson.Size = new System.Drawing.Size(85, 36);
+            this.btnActualizarPerson.TabIndex = 148;
+            this.btnActualizarPerson.Text = "Actualizar Person";
+            this.btnActualizarPerson.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarPerson.UseVisualStyleBackColor = false;
+            this.btnActualizarPerson.Click += new System.EventHandler(this.btnActualizarPerson_Click);
             // 
             // frmService
             // 
@@ -1712,7 +1678,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1238, 660);
-            this.Controls.Add(this.btnArchivosAdj);
             this.Controls.Add(this.btnActualizarPerson);
             this.Controls.Add(this.btnBotonOculto);
             this.Controls.Add(this.btnImprimirExamenes);
@@ -1840,7 +1805,5 @@
         private System.Windows.Forms.Button btnActualizarPerson;
         private System.Windows.Forms.CheckBox chkIsCampania;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ToolStripMenuItem verAdjuntosToolStripMenuItem;
-        private System.Windows.Forms.Button btnArchivosAdj;
     }
 }

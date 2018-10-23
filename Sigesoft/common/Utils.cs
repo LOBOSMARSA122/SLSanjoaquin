@@ -1418,5 +1418,10 @@ namespace Sigesoft.Common
             public int Years { get; set; }
             public int Months { get; set; }
         }
+
+        public static int GetAge(DateTime FechaNacimiento)
+        {
+            return int.Parse((DateTime.Today.AddTicks(-FechaNacimiento.Ticks).Year - 1).ToString());
+        }
     }
 }

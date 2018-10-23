@@ -91,6 +91,9 @@
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <Private>True</Private>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\..\ExternalLibraries\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Infragistics4.Documents.Excel.v13.1, Version=13.1.20131.1001, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
       <Private>True</Private>
     </Reference>
@@ -145,7 +148,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="ScrapperReniecSunat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Utils\ScrapperReniecSunat.dll</HintPath>
+      <HintPath>..\..\..\..\ExternalLibraries\ScrapperReniecSunat.dll</HintPath>
     </Reference>
     <Reference Include="SigPlusNET">
       <HintPath>..\..\..\..\ExternalLibraries\SigPlusNET.dll</HintPath>
@@ -223,6 +226,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsAudiometriaAudiomax.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsAudiometriaSJ.cs">
+      <DependentUpon>dsAudiometriaSJ.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Dataset\dsAudiometriaSJ.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -901,12 +908,6 @@
     <Compile Include="frmControlVacunas.Designer.cs">
       <DependentUpon>frmControlVacunas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDescargarAdjuntos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDescargarAdjuntos.Designer.cs">
-      <DependentUpon>frmDescargarAdjuntos.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDescuento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1162,6 +1163,12 @@
     <Compile Include="Operations\frmEso.Designer.cs">
       <DependentUpon>frmEso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Operations\frmEsoV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\frmEsoV2.Designer.cs">
+      <DependentUpon>frmEsoV2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operations\Popups\frmAtxResultadoExamenAuxiliar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1191,6 +1198,12 @@
     </Compile>
     <Compile Include="Operations\Popups\frmSelectSignature.Designer.cs">
       <DependentUpon>frmSelectSignature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\Popups\FrmWorkerData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\Popups\FrmWorkerData.Designer.cs">
+      <DependentUpon>FrmWorkerData.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportDocument.cs" />
     <Compile Include="ReporteAsistencia.cs" />
@@ -2854,9 +2867,6 @@
     <EmbeddedResource Include="frmControlVacunas.resx">
       <DependentUpon>frmControlVacunas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDescargarAdjuntos.resx">
-      <DependentUpon>frmDescargarAdjuntos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDescuento.resx">
       <DependentUpon>frmDescuento.cs</DependentUpon>
     </EmbeddedResource>
@@ -2983,6 +2993,9 @@
     <EmbeddedResource Include="Operations\frmEso.resx">
       <DependentUpon>frmEso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operations\frmEsoV2.resx">
+      <DependentUpon>frmEsoV2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operations\Popups\frmAtxResultadoExamenAuxiliar.resx">
       <DependentUpon>frmAtxResultadoExamenAuxiliar.cs</DependentUpon>
     </EmbeddedResource>
@@ -2997,6 +3010,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Operations\Popups\frmSelectSignature.resx">
       <DependentUpon>frmSelectSignature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\Popups\FrmWorkerData.resx">
+      <DependentUpon>FrmWorkerData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\crOccupationalCertificate_SeguroC.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -4919,6 +4935,7 @@
     <Content Include="Backgrounds\FOTO-20.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Utils\HtmlAgilityPack.dll" />
     <Content Include="Utils\ScrapperReniecSunat.dll" />
     <None Include="Resources\flechaRoja.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

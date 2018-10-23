@@ -2842,12 +2842,6 @@ namespace Sigesoft.Common
 
         public const string NEUTROFILOS_10_9 = "N009-MF000001902";
         public const string NEUTROFILOS_10_9_DESEABLE = "N009-MF000001903";
-
-        public const string EOSINOFILOS = "N009-MF000002847";
-        public const string EOSINOFILOS_DESEABLE = "N009-MF000002848";
-
-        public const string BASOFILOS = "N009-MF000002849";
-        public const string BASOFILOS_DESEABLE = "N009-MF000002850";
         #endregion
 
         #region OSTEO_MUSCULAR

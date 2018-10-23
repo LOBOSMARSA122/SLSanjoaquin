@@ -9,15 +9,10 @@ namespace NetPdf
 {
     public class pdfPage : PdfPageEventHelper
     {
-        public string Dato { get; set; }
-        public byte[] FirmaTrabajador { get; set; }
-        public byte[] HuellaTrabajador { get; set; }
-        public string Dni { get; set; }
-        public string EmpresaId { get; set; }
         /** The template with the total number of pages. */
         PdfTemplate templateNumPage;
 
-        // This is the contentbyte object of the writer
+        // This is the contentbyte object of the writerE:\SLSigesoft_SanJoaquin\Sigesoft\common\pdfPage.cs
         PdfContentByte cb;
 
         // this is the BaseFont we are going to use for the header / footer
@@ -31,16 +26,9 @@ namespace NetPdf
         {
             get
             {
-                int color1 = int.Parse(Sigesoft.Common.Utils.GetApplicationConfigValue("color1").ToString());
-                int color2 = int.Parse(Sigesoft.Common.Utils.GetApplicationConfigValue("color2").ToString());
-                int color3 = int.Parse(Sigesoft.Common.Utils.GetApplicationConfigValue("color3").ToString());
                 // create a basecolor to use for the footer font, if needed.
-                BaseColor grey = new BaseColor(color1, color2, color3);
-                //HOLO 0, 98, 145
-                //SAN MARTIN 98, 24, 99
-                //PREVIMEDIC 28, 170, 192
-                //RVMEDIC 16, 64, 40
-                Font font = FontFactory.GetFont("Calibri", 9, iTextSharp.text.Font.BOLD, grey);
+                BaseColor grey = new BaseColor(0, 128, 128);
+                Font font = FontFactory.GetFont("Calibri", 8, iTextSharp.text.Font.BOLD, grey);
                 return font;
             }
         }
@@ -61,9 +49,9 @@ namespace NetPdf
             ////set the width of the table to be the same as the document
             //headerTbl.TotalWidth = doc.PageSize.Width;
 
+         
 
-
-
+          
             ////I use an image logo in the header so I need to get an instance of the image to be able to insert it. I believe this is something you couldn't do with older versions of iTextSharp
             //Image logo = Image.GetInstance(@"Resources\Logo-Laboral-Medical1.jpg");
             ////Image logo = Image.GetInstance(HttpContext.Current.Server.MapPath("/images/logo.jpg"));
@@ -82,7 +70,7 @@ namespace NetPdf
             ////add a bit of padding to bring it away from the right edge
             //cell.PaddingLeft = 20;
             //cell.PaddingTop = -10;
-
+           
             ////remove the border
             //cell.Border = PdfPCell.NO_BORDER;
 
@@ -95,129 +83,105 @@ namespace NetPdf
         }
 
         //override the OnPageEnd event handler to add our footer
-
-        #region antiguo Pie Pagina...
-
-        //public override void OnEndPage(PdfWriter writer, Document doc)
-        //{
-
-        //    if (EmpresaId == "N009-OO000000582")
-        //    {
-        //        var fontColour = new BaseColor(35, 31, 32);
-        //        var calibri6 = FontFactory.GetFont("Calibri", 6, fontColour);
-        //        #region Firma Trabajador
-        //        var cellFirmaTrabajador = FirmaTrabajador != null ? new PdfPCell(HandlingItextSharp.GetImage(FirmaTrabajador, null, null, 120, 45)) : new PdfPCell(new Phrase(" ", calibri6));
-        //        //cellFirmaTrabajador.Colspan = 2;
-        //        //cellFirmaTrabajador.Rowspan = 8;
-        //        cellFirmaTrabajador.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-        //        cellFirmaTrabajador.VerticalAlignment = PdfPCell.ALIGN_MIDDLE;
-        //        #endregion
-
-        //        #region  Huella Trabajador
-        //        var cellHuellaTrabajador = HuellaTrabajador != null ? new PdfPCell(HandlingItextSharp.GetImage(HuellaTrabajador, null, null, 20, 40)) : new PdfPCell(new Phrase(" ", calibri6));
-        //        //cellHuellaTrabajador.Colspan = 2;
-        //        //cellHuellaTrabajador.Rowspan = 4;
-        //        cellHuellaTrabajador.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
-        //        cellHuellaTrabajador.VerticalAlignment = PdfPCell.ALIGN_MIDDLE;
-
-        //        #endregion
-        //        var cells = new List<PdfPCell>()
-        //        {
-
-        //            //Linea
-        //            new PdfPCell(new Phrase("Declaro que las respuestas son ciertas según mi leal saber y entender. En caso de ser requeridos, los resultados del examen médico ocupacional podrán ser revelados conforme al an¿rtículo 25 de la ley Genral de Salud  N°26842. ", calibri6)){HorizontalAlignment = PdfPCell.ALIGN_LEFT},
-        //            new PdfPCell(cellFirmaTrabajador), 
-        //            new PdfPCell(cellHuellaTrabajador){ FixedHeight = 55F}, 
-
-        //            new PdfPCell(new Phrase("HUELLA DIGITAL ÍNDICE DERECHO", calibri6)){HorizontalAlignment = PdfPCell.ALIGN_CENTER},
-
-
-        //        };
-        //        var columnWidths = new float[] { 50f, 30f, 20f };
-
-        //        var filiationWorker = HandlingItextSharp.GenerateTableFromCells(cells, columnWidths, "", calibri6);
-        //        //filiationWorker.SetTotalWidth(columnWidths);
-        //        filiationWorker.TotalWidth = doc.PageSize.Width;
-        //        filiationWorker.WriteSelectedRows(0, -1, 0, (doc.BottomMargin + 10), writer.DirectContent);
-        //    }
-        //    else
-        //    {
-        //        //I use a PdfPtable with 2 columns to position my footer where I want it
-        //        PdfPTable footerTbl = new PdfPTable(2);
-
-        //        //set the width of the table to be the same as the document
-        //        footerTbl.TotalWidth = doc.PageSize.Width;
-
-        //        float[] widths = new float[] { 30f, 70f };
-        //        footerTbl.SetWidths(widths);
-
-        //        //Center the table on the page
-        //        footerTbl.HorizontalAlignment = Element.ALIGN_LEFT;
-
-        //        var FontColour = new BaseColor(35, 31, 32);
-        //        var Calibri6 = FontFactory.GetFont("Calibri", 9, FontColour);
-
-        //        //create new instance of Paragraph for 2nd cell text
-        //        Paragraph para = new Paragraph("", Calibri6);
-
-        //        //create new instance of cell to hold the text
-        //        PdfPCell cell = new PdfPCell(para);
-
-        //        //align the text to the right of the cell
-        //        cell.HorizontalAlignment = Element.ALIGN_LEFT;
-        //        cell.PaddingLeft = 0;
-        //        //set border to 0
-        //        cell.Border = PdfPCell.NO_BORDER;
-
-        //        // add some padding to take away from the edge of the page
-
-
-        //        //add the cell to the table
-        //        footerTbl.AddCell(cell);
-
-        //        // Page Datos Empresa         
-        //        string linea1 = Sigesoft.Common.Utils.GetApplicationConfigValue("linea1").ToString();
-        //        String Direccion = linea1;
-
-        //        //Create a paragraph that contains the footer text
-        //        para = new Paragraph(Direccion, footer);
-
-        //        //add a carriage return
-        //        para.Add(Environment.NewLine);
-        //        string WebSite = Sigesoft.Common.Utils.GetApplicationConfigValue("linea2").ToString();
-        //        para.Add(WebSite);
-
-        //        //create a cell instance to hold the text
-        //        cell = new PdfPCell(para);
-        //        cell.HorizontalAlignment = Element.ALIGN_LEFT;
-        //        cell.PaddingRight = 0;
-        //        //set cell border to 0           
-        //        cell.BorderWidth = 0;
-        //        //add some padding to bring away from the edge           
-
-        //        //add cell to table
-        //        footerTbl.AddCell(cell);
-
-        //        //write the rows out to the PDF output stream.
-        //        footerTbl.WriteSelectedRows(0, -1, 0, (doc.BottomMargin + 10), writer.DirectContent);
-
-        //    }
-
-
-        //}
-
-        #endregion
-
-
         public override void OnEndPage(PdfWriter writer, Document doc)
         {
-            var rutaImg = Sigesoft.Common.Utils.GetApplicationConfigValue("imgFooter2");
-            var footerTbl = new PdfPTable(1);
-            footerTbl.TotalWidth = doc.PageSize.Width;
-            var imageCell = new PdfPCell(HandlingItextSharp.GetImage(rutaImg, null, null, 520, 41)) { Border = PdfPCell.NO_BORDER };
+            //I use a PdfPtable with 2 columns to position my footer where I want it
+            PdfPTable footerTbl = new PdfPTable(1);
 
-            footerTbl.AddCell(imageCell);
-            footerTbl.WriteSelectedRows(0, -1, doc.LeftMargin, (doc.BottomMargin + 10), writer.DirectContent);
+            //set the width of the table to be the same as the document
+            footerTbl.TotalWidth = doc.PageSize.Width;
+
+            //Center the table on the page
+            footerTbl.HorizontalAlignment = Element.ALIGN_JUSTIFIED;
+
+            //////////////////////////////////////////////////////////////String text = string.Format("Página {0} de ", writer.PageNumber);
+
+            //////////////////////////////////////////////////////////////float len = bf.GetWidthPoint(text, 8);
+
+            //////////////////////////////////////////////////////////////Rectangle pageSize = doc.PageSize;
+
+            //////////////////////////////////////////////////////////////cb.SetRGBColorFill(128, 128, 128);
+
+            //////////////////////////////////////////////////////////////cb.BeginText();
+            //////////////////////////////////////////////////////////////cb.SetFontAndSize(bf, 8);
+            //////////////////////////////////////////////////////////////cb.SetTextMatrix(pageSize.GetLeft(40), pageSize.GetBottom(30));
+            //////////////////////////////////////////////////////////////cb.ShowText(text);
+            //////////////////////////////////////////////////////////////cb.EndText();
+
+            //////////////////////////////////////////////////////////////cb.AddTemplate(templateNumPage, pageSize.GetLeft(40) + len, pageSize.GetBottom(30));
+
+            //////////////////////////////////////////////////////////////cb.BeginText();
+            //////////////////////////////////////////////////////////////cb.SetFontAndSize(bf, 8);
+            //////////////////////////////////////////////////////////////cb.ShowTextAligned(PdfContentByte.ALIGN_RIGHT,
+            //////////////////////////////////////////////////////////////    "Impreso El " + PrintTime.ToString(),
+            //////////////////////////////////////////////////////////////    pageSize.GetRight(40),
+            //////////////////////////////////////////////////////////////    pageSize.GetBottom(30), 0);
+            //////////////////////////////////////////////////////////////cb.EndText();
+
+
+            // Page number         
+
+            String pageNumber = "_______________________________________________________________________________________________________";// string.Format("Página {0} de", writer.PageNumber);
+
+            //Create a paragraph that contains the footer text
+            Paragraph para = new Paragraph(pageNumber, footer);
+
+            //add a carriage return
+            para.Add(Environment.NewLine);
+            para.Add(" ");
+            
+            //add a carriage return
+            para.Add(Environment.NewLine);
+            para.Add("Informes: 459-5250                                                               -                                                   Servicios Médicos JBR SAC");
+            
+            //add a carriage return
+            para.Add(Environment.NewLine);
+            para.Add("Salud Ocupacional: 253-2176                                              -                                                  Av. Gran Chimú 613, Zárate - SJL");
+
+            //add a carriage return
+            para.Add(Environment.NewLine);
+            para.Add("informes@sanjoaquin.com.pe                                            -                                                   www.sanjoaquin.com.pe ");
+
+            //create a cell instance to hold the text
+            PdfPCell cell = new PdfPCell(para);
+            cell.HorizontalAlignment = Element.ALIGN_JUSTIFIED;
+            //set cell border to 0
+            cell.Border = PdfPCell.NO_BORDER;
+
+            //add some padding to bring away from the edge
+            cell.PaddingLeft = 65;
+
+            //add cell to table
+            footerTbl.AddCell(cell);
+
+            cell = new PdfPCell(Image.GetInstance(templateNumPage));
+            //set cell border to 0
+            cell.Border = PdfPCell.NO_BORDER;
+
+            //add cell to table
+            footerTbl.AddCell(cell);
+
+            //create new instance of Paragraph for 2nd cell text
+            para = new Paragraph("Algun Texto de la Segunda Celda", footer);
+
+            //create new instance of cell to hold the text
+            cell = new PdfPCell(para);
+
+            //align the text to the right of the cell
+            cell.HorizontalAlignment = Element.ALIGN_RIGHT;
+            //set border to 0
+            cell.Border = PdfPCell.NO_BORDER;
+
+            // add some padding to take away from the edge of the page
+            cell.PaddingRight = 10;
+
+            //add the cell to the table
+            footerTbl.AddCell(cell);
+
+            //write the rows out to the PDF output stream.
+            footerTbl.WriteSelectedRows(0, -1, 0, (doc.BottomMargin + 10), writer.DirectContent);
+
+
         }
 
         public override void OnCloseDocument(PdfWriter writer, Document document)
@@ -229,7 +193,7 @@ namespace NetPdf
             templateNumPage.SetTextMatrix(0, 0);
             templateNumPage.ShowText("" + (writer.PageNumber - 1));
             templateNumPage.EndText();
-        }
+        } 
 
     }
 }

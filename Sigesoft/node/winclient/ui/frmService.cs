@@ -345,48 +345,50 @@ namespace Sigesoft.Node.WinClient.UI
 
         private void btnEditarESO_Click(object sender, EventArgs e)
         {
+            //Form frm = new Operations.FrmEsoV2(_serviceId, "TRIAJE", "Service", Globals.ClientSession.i_RoleId.Value, Globals.ClientSession.i_CurrentExecutionNodeId, Globals.ClientSession.i_SystemUserId);
+            //frm.ShowDialog();
             Form frm;
-           int TserviceId = int.Parse(grdDataService.Selected.Rows[0].Cells["i_ServiceId"].Value.ToString());
-           if (TserviceId == (int)MasterService.AtxMedicaParticular)
-           {
-               frm = new Operations.frmMedicalConsult(_serviceId, null, null);
-               frm.ShowDialog();
-           }
-           else
-           {
-               //Obtener Estado del servicio
-               var EstadoServicio = int.Parse(grdDataService.Selected.Rows[0].Cells["i_ServiceStatusId"].Value.ToString());
+            int TserviceId = int.Parse(grdDataService.Selected.Rows[0].Cells["i_ServiceId"].Value.ToString());
+            if (TserviceId == (int)MasterService.AtxMedicaParticular)
+            {
+                frm = new Operations.frmMedicalConsult(_serviceId, null, null);
+                frm.ShowDialog();
+            }
+            else
+            {
+                //Obtener Estado del servicio
+                var EstadoServicio = int.Parse(grdDataService.Selected.Rows[0].Cells["i_ServiceStatusId"].Value.ToString());
 
-               if (EstadoServicio == (int)ServiceStatus.Culminado)
-               {
-                   //Obtener el usuario
-                   int UserId= Globals.ClientSession.i_SystemUserId ;
-                   if (UserId==11)
-	                {
+                if (EstadoServicio == (int)ServiceStatus.Culminado)
+                {
+                    //Obtener el usuario
+                    int UserId = Globals.ClientSession.i_SystemUserId;
+                    if (UserId == 11)
+                    {
                         this.Enabled = false;
                         frm = new Operations.frmEso(_serviceId, null, "Service");
                         frm.ShowDialog();
                         this.Enabled = true;
-	                }
-                   else
-                   {
+                    }
+                    else
+                    {
                         this.Enabled = false;
                         frm = new Operations.frmEso(_serviceId, null, "View");
                         frm.ShowDialog();
-                        this.Enabled = true;                   
-                   }
-                  
-               }
-               else 
-               {
-                   this.Enabled = false;
-                   frm = new Operations.frmEso(_serviceId, null, "Service");
-                   frm.ShowDialog();
-                   this.Enabled = true;
-               }
+                        this.Enabled = true;
+                    }
 
-             
-           }
+                }
+                else
+                {
+                    this.Enabled = false;
+                    frm = new Operations.frmEso(_serviceId, null, "Service");
+                    frm.ShowDialog();
+                    this.Enabled = true;
+                }
+
+
+            }
 
            btnFilter_Click(sender, e);
                   
@@ -2253,32 +2255,6 @@ namespace Sigesoft.Node.WinClient.UI
                 // Refrescar grilla
                 btnFilter_Click(sender, e);
             }
-        }
-
-        private void verAdjuntosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //if (grdDataService.Selected == null) return;
-            string dni = grdDataService.Selected.Rows[0].Cells["dni"].Value.ToString();
-            var FechaServicio = DateTime.Parse(grdDataService.Selected.Rows[0].Cells["d_ServiceDate"].Value.ToString());
-            string Fecha = FechaServicio.Day.ToString().PadLeft(2, '0') + FechaServicio.Month.ToString().PadLeft(2, '0') + FechaServicio.Year.ToString();
-
-            frmDescargarAdjuntos frm = new frmDescargarAdjuntos(Fecha, dni);
-            frm.ShowDialog();
-        }
-
-        private void verEditarServicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnArchivosAdj_Click(object sender, EventArgs e)
-        {
-            string dni = grdDataService.Selected.Rows[0].Cells["dni"].Value.ToString();
-            var FechaServicio = DateTime.Parse(grdDataService.Selected.Rows[0].Cells["d_ServiceDate"].Value.ToString());
-            string Fecha = FechaServicio.Day.ToString().PadLeft(2, '0') + FechaServicio.Month.ToString().PadLeft(2, '0') + FechaServicio.Year.ToString();
-            
-            frmDescargarAdjuntos frm = new frmDescargarAdjuntos(Fecha, dni);
-            frm.ShowDialog();
         }
 
         //private void timer1_Tick(object sender, EventArgs e)
